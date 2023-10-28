@@ -11,7 +11,7 @@ const Index = () => {
             <button onClick={() => navigate('/nosotros')}>Ir al nosotros</button>
             <button onClick={() => navigate('/servicios')}>Ir al servicios</button>
             <button onClick={() => navigate('/capital-humano')}>Ir al capital humano</button>
-            <button onClick={() => navigate('/capital-contacto')}>Ir al contacto</button>
+            <button onClick={() => navigate('/contacto')}>Ir al contacto</button>
         </div>
     );
 }
