@@ -1,0 +1,67 @@
+.azteca-header {
+    margin: 0;
+    padding: 0;
+    height: 108px;
+    background-color: #FFFF;
+    display: flex;
+    color: rgb(46, 79, 141);
+
+    &_icono {
+        background-color: rgba(0, 0, 0, 0.1);
+        width: 211px;
+        height: 100%;
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+    }
+
+    &_nav {
+        background-color: rgba(0, 0, 0, 0.2);
+        flex-grow: 1; 
+        height: 100%;
+        display: flex;
+        align-items: center; 
+        gap: 46px; 
+        list-style-type: none; 
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block; 
+            margin-left: 10px;
+
+            a {
+                padding: 5px 10px; 
+                text-decoration: none; 
+                color: inherit; 
+                font-size: 24px;
+            }
+        }
+    }
+
+    &_contacto {
+        background-color: rgba(0, 0, 0, 0.3);
+        width: auto;
+        height: 100%;
+        display: flex;
+        align-items: center; 
+        justify-content: flex-end; 
+        gap: 20px;
+        padding-right: 20px; 
+        padding: 0px 20px;
+    
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px; 
+    
+            .material-icons-outlined {
+                font-size: 24px; 
+            }
+    
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
