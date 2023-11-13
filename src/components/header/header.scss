@@ -1,74 +1,242 @@
 .azteca-header {
     margin: 0;
-    padding: 0;
-    height: 108px;
-    background-color: #FFFF;
-    display: flex;
+    width:100%;
+    top:0;
+    left:0;
+    padding: 1em 2em;
+    background-color: #ffffff;
+    z-index:9999;
+
+    .ul-burguer {
+        position:absolute;
+        text-align:right;
+        right:3.5em;
+        top:50%;
+        margin:0;
+        transform:translate(0,-50%);
+
+        li {
+            list-style-type:none;
+
+            a {
+                background-color:#00286e;
+                color:white;
+                display:block;
+                padding:0.5em 1em;
+                border:0;
+                border-radius:0.2em;
+                text-decoration:none;
+            }
+        }
+    }
 
     &_icono {
-        width: 211px;
-        height: 100%;
-        padding: 0px 40px;
-        display: flex;
-        align-items: center; 
-        justify-content: center; 
         user-select: none;
+        top:50%;
+        position:relative;
+        transform:translate(0,-50%);
 
-        > img{
-            width: 200px;
-            height: auto;
+        > img {
+            width:90%;
+            display:block;
+            margin:0 auto;
         }
     }
 
     &_nav {
-        flex-grow: 1; 
-        height: 100%;
-        display: flex;
-        align-items: center; 
-        gap: 46px; 
         list-style-type: none; 
         margin: 0;
         padding: 0;
         user-select: none;
+        top:50%;
+        transform:translate(0,-50%);
+        position:relative;
 
         li {
             display: inline-block; 
-            margin-left: 10px;
+            margin-left: 0.5em;
+
+            &:first-child {
+                margin-left:0;
+            }
 
             a {
                 padding: 5px 10px; 
                 text-decoration: none; 
-                color: inherit; 
-                font-size: 24px;
-                
+                color: inherit;
+                text-transform:uppercase;
+                font-size: 1.2em;
 
-                &.active { 
-                    border-bottom: 3px solid #000;  
+                span {
+                    position:relative;
+                }
+                
+                &.active span::before {
+                    content:'';
+                    position:absolute;
+                    height:3px;
+                    bottom:-0.6em;
+                    background-color:black;
+                    width:100%;
+                }
+
+                &:hover span::before {
+                    content:'';
+                    position:absolute;
+                    height:3px;
+                    bottom:-0.6em;
+                    background-color:black;
+                    width:100%;
                 }
             }
         }
     }
 
-    &_contacto {
-        width: auto;
-        height: 100%;
-        display: flex;
-        align-items: center; 
-        justify-content: flex-end; 
-        gap: 80px;
-        padding-right: 20px; 
-        padding: 0px 20px;
-    
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px; 
-    
+    .contact-item {
+        position:relative;
+        top:50%;
+        transform:translate(0,-50%);
+        float: right;
 
+        .icon {
+            position:absolute;
+            left:-3.1em;
+            top:50%;
+            transform:translate(0,-50%);
+        }
+
+        p {
+            font-weight: bold;
+            margin: 0;
+            line-height:1.3em;
+
+            span {
+                display:block;
+            }
+        }
+    }
+}
+
+.grey-full {
+    background-color:rgba(1,1,1,0.9);
+    display:none;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:999;
+
+    &.view {
+        display:block;
+    }
+}
+
+.azteca-header_nav_mobile {
+    display:none;
+    padding:3em 1.8em;
+    background-color:white;
+    position:fixed;
+    height:100%;
+    top:0;
+    width:18em;
+    right:-18em;
+    z-index:9999;
+    margin:0;
+    box-shadow:0 -1em 1.2em rgba(1,1,1,0.6);
+
+    &.view {
+        right:0;
+    }
+
+    .logo-mobile {
+        max-width:80%;
+        display:block;
+        margin:0 auto;
+        margin-bottom:2em;
+    }
+
+    li {
+        padding:0;
+        list-style-type:none;
+
+        a {
+            color:black;
+            text-decoration:none;
+            font-size:1.1em;
+        }
+    }
+
+    .close-nav-mobile {
+        color:white;
+        position:absolute;
+        top:0;
+        left:0;
+        background-color:red;
+        padding:0.3em 1em;
+        font-size:0.8em;
+    }
+}
+
+//Media queries
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 576px) {}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 768px) {
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 992px) {
+
+    .azteca-header_nav_mobile {
+        display:block;
+    }
+
+    .azteca-header {
+        padding:1.6em 2em;
     
+        &_nav {
+    
+            li {
+                margin-left: 0.6em;
+    
+                a {
+                    padding: 0.5em 0; 
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1200px) {
+    .azteca-header {
+        padding:1em 0;
+
+        .contact-item {
+            float:inherit;
+
+            .icon {
+                left:-2.5em;
+                width:2em;
+            }
+
             p {
-                font-weight: bold;
-                margin: 0;
+                font-size:1.1em;
+            }
+        }
+    
+        &_nav {
+    
+            li {
+                margin-left: 0.6em;
+    
+                a {
+                    padding: 0.5em 0; 
+                    font-size: 1em;
+                }
             }
         }
     }
