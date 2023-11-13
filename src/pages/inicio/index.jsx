@@ -47,6 +47,10 @@ const Index = () => {
         {
             titulo: 'titulo 3',
             texto: 'texto 3'
+        },
+        {
+            titulo: 'titulo 3',
+            texto: 'texto 3'
         }
     ]
 
