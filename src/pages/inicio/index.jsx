@@ -1,12 +1,15 @@
 import React from 'react';
 import Header from '../../components/header/Index';
+import Card from '../../components/cardImagenSoluciones/index'
+
+
 import pts from '../../assets/img/hero-inicio-pts.png';
 import img from '../../assets/img/hero-inicio-img.png';
 import solucionesHeader from '../../assets/img/soluciones-title.png';
 
-import solucionesImgTrailer from '../../assets/img/soluciones-img-trailer.png';
-import solucionesImgConductor from '../../assets/img/soluciones-img-conductor.png';
-import solucionesImgEquipo from '../../assets/img/soluciones-img-equipo.png';
+// import solucionesImgTrailer from '../../assets/img/soluciones-img-trailer.png';
+// import solucionesImgConductor from '../../assets/img/soluciones-img-conductor.png';
+// import solucionesImgEquipo from '../../assets/img/soluciones-img-equipo.png';
 
 import solucionesExperiencia from '../../assets/img/soluciones-experiencia.png';
 import solucionesUnidad from '../../assets/img/soluciones-unidad.png';
@@ -29,6 +32,25 @@ import proyectosPipa from '../../assets/img/proyectos-img-pipa.png';
 import './inicio.scss';
 
 const Index = () => {
+
+
+    const solucionesCards = [
+        {
+            titulo: 'titulo 1',
+            texto: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptates tempore earum fuga expedita debitis architecto nam, sint ab quod, quo possimus natus pariatur non ullam quibusdam reprehenderit sequi facere.'
+            
+        },
+        {
+            titulo: 'titulo 2',
+            texto: 'texto 2'
+        },
+        {
+            titulo: 'titulo 3',
+            texto: 'texto 3'
+        }
+    ]
+
+
     return (
         <>
             <Header />
@@ -70,7 +92,7 @@ const Index = () => {
 
                         {/* Combertir a componenete */}
 
-                        <div className="azteca-soluciones_content_panel-item">
+                        {/* <div className="azteca-soluciones_content_panel-item">
                             <div className="azteca-soluciones_content_panel-item-img" style={{ backgroundImage: `url(${solucionesImgTrailer})` }}>
                                 <div className="azteca-soluciones_content_panel-item-box">
                                     <label className='azteca-soluciones_content_panel-item-box_title'>Nuestros equipos</label><br />
@@ -110,7 +132,13 @@ const Index = () => {
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
+
+                        {solucionesCards.map(infomacion => <Card titulo={infomacion.titulo} texto={infomacion.texto}/>)}
+
+                            
+                        
+                      
 
                     </div>
 

@@ -1,0 +1,141 @@
+.azteca-soluciones{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #E5EAEE;
+
+    &_content{
+        // background-color: blue;
+        width: 80%;
+
+        &_header{
+            // background-color: rgb(231, 220, 220);
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            >img{
+                width: 400px !important;
+                margin: 20px 0px;
+                max-width: 100%; /* Establece un tamaño máximo para la imagen */
+                overflow: hidden; /* Oculta cualquier parte de la imagen que se extienda más allá del tamaño máximo */
+            }
+        }
+        &_title{
+            text-align: center;
+            color: #091727;
+            padding: 40px;
+            font-size: 18px;
+        }
+        &_panel{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            gap: 40px;
+
+            &-item{
+                width: 350px;
+                height: 400px;
+                overflow: hidden;
+                border-radius: 5px;
+
+                &-img{
+                    background-size: cover;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                }
+
+                &-box{
+                    position: absolute;
+                    transform: translateX(100%);
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    transition: transform 0.3s;
+                    
+
+                    &_title{
+                        // background-color: rgb(87, 35, 35);
+                        // margin: 10px;
+                        font-size: 22px;
+                        font-weight: bold;
+                        padding: 20px;
+                    }
+
+                    &_text{
+                        // background-color: yellow;
+                        font-size: 18px;
+                        padding: 0px 20px 20px 20px;
+                        // margin: 0px 10px 10px 10px;
+                    }
+
+                    
+                }
+            }
+
+            &-item:hover .azteca-soluciones_content_panel-item-box {
+                transform: translateX(0%); // El texto se desplaza de derecha a izquierda en hover
+            }
+        }
+        
+    }
+
+    &_score {
+        margin: 50px 0px;
+        display: flex;
+        // justify-content: space-between; /* Espacio entre elementos */
+        align-items: center; /* Centrado verticalmente */
+        justify-content: center;
+        gap: 30px;
+        width: 90%;
+
+        &_box{
+            width: 300px;
+            // height: 150px;
+            background-color: white;
+            border-radius: 10px;
+            border-radius: 10px;
+            padding: 20px;
+
+            &_infomacion{
+                display: flex;
+                height: 80px;
+                margin-bottom: 15px;
+
+                &_cantidad{
+                    width: 70%;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    font-size: 48px;
+                    font-weight: bold;
+                    color: rgb(204, 62, 62);
+
+                }
+
+
+            }
+
+            &_texto{
+                display: flex;
+                // background-color: yellow;
+                justify-content: center;
+         
+                font-weight: bold;
+                color: #091727;
+            }
+
+        }
+    }
+}
