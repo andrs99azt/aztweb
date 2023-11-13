@@ -4,19 +4,23 @@
     height: 108px;
     background-color: #FFFF;
     display: flex;
-    color: rgb(46, 79, 141);
 
     &_icono {
-        background-color: rgba(0, 0, 0, 0.1);
         width: 211px;
         height: 100%;
+        padding: 0px 40px;
         display: flex;
         align-items: center; 
         justify-content: center; 
+        user-select: none;
+
+        > img{
+            width: 200px;
+            height: auto;
+        }
     }
 
     &_nav {
-        background-color: rgba(0, 0, 0, 0.2);
         flex-grow: 1; 
         height: 100%;
         display: flex;
@@ -25,6 +29,7 @@
         list-style-type: none; 
         margin: 0;
         padding: 0;
+        user-select: none;
 
         li {
             display: inline-block; 
@@ -35,18 +40,22 @@
                 text-decoration: none; 
                 color: inherit; 
                 font-size: 24px;
+                
+
+                &.active { 
+                    border-bottom: 3px solid #000;  
+                }
             }
         }
     }
 
     &_contacto {
-        background-color: rgba(0, 0, 0, 0.3);
         width: auto;
         height: 100%;
         display: flex;
         align-items: center; 
         justify-content: flex-end; 
-        gap: 20px;
+        gap: 80px;
         padding-right: 20px; 
         padding: 0px 20px;
     
@@ -55,11 +64,10 @@
             align-items: center;
             gap: 10px; 
     
-            .material-icons-outlined {
-                font-size: 24px; 
-            }
+
     
             p {
+                font-weight: bold;
                 margin: 0;
             }
         }
