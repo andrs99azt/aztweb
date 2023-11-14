@@ -1,11 +1,46 @@
+@import url('./fonts.scss');
+@import url('./variable.scss');
+
+////Fuentes
+//Raleway
+.raleway {
+    &_extrab { font-family: 'Raleway-ExtraBold'; }
+    &_bold { font-family: 'Raleway-Bold'; }
+    &_black { font-family: 'Raleway-Black';}
+    &_semib { font-family: 'Raleway-Semib';}
+    &_light { font-family: 'Raleway-Light';}
+    &_thin { font-family: 'Raleway-Thin';}
+    &_medium {font-family: 'Raleway-Medium';}
+}
+
+//Roboto
+.roboto {
+    font-family: 'Roboto-Regular';
+    &_medium { font-family: 'Roboto-Medium'; }
+    &_bold { font-family: 'Roboto-Bold'; }
+}
+
+//Square
+.square {
+    &_bold {
+        font-family: 'Square-Bold';
+    }
+}
+
+//Franklin
+.franklin {
+    &_heavy {
+        font-family: 'Franklin-Heavy';
+    }
+}
+
 #root{
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0px;
     top: 0px;
-
-    font-family: 'raleway extra bold', sans-serif; 
+    font-family: "Raleway-Medium";
 }
 
 html {

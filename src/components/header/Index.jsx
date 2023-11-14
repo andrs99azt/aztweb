@@ -20,7 +20,7 @@ const Header = () => {
                             <img src={logoAzteca} alt="Logo Azteca" class="img-fluid"/>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-7 col-md-6 position-relative">
+                    <div class="col-xl-5 col-lg-7 col-md-6 position-relative">
                         <ul className="azteca-header_nav d-xl-block d-lg-block d-md-none">
                             <li><NavLink to="/" activeClassName="active"><span>Inicio</span></NavLink></li>
                             <li><NavLink to="/nosotros" activeClassName="active"><span>Nosotros</span></NavLink></li>
@@ -47,7 +47,7 @@ const Header = () => {
                             <p class="phone">Tel. (33) 3151-0720</p>
                         </div>
                     </div>
-                    <div class="col-xl-2 position-relative d-xl-block d-md-none">
+                    <div class="col-xl-3 position-relative d-xl-block d-md-none">
                         <div class="contact-item">
                             <img src={mail} alt="mail" class="img-fluid icon"/>
                             <p>ventas@azteca.com.mx <span>omaly.barron@tlazteca.com</span></p>
