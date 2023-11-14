@@ -17,6 +17,73 @@
     }
 
     &::after {
+        content:'';
         position:absolute;
+        right:0;
+        top:50%;
+        transform:translate(0,-50%);
+        width:20px;
+        height:20px;
+        background-color:black;
+        border-radius:50%;
     }
+}
+
+.azteca-nosotros-mision {
+    margin:2em 0;
+
+    .img {
+        height:13em;
+        width:100%;
+        background-color:#ececec;
+        margin-bottom:1.5em;
+        border-radius:1em;
+    }
+
+    .img-horizontal {
+        margin-bottom:0;
+    }
+
+    .vertical-align {
+        top:50%;
+        margin-left:2em;
+        position:relative;
+        transform:translate(0,-50%);
+    }
+}
+
+.azteca-nosotros-vision {
+    margin:2em 0;
+
+    .img {
+        height:13em;
+        width:100%;
+        background-color:#ececec;
+        margin-bottom:1.5em;
+        border-radius:1em;
+    }
+
+    .img-horizontal {
+        margin-bottom:0;
+    }
+
+    .vertical-align {
+        top:50%;
+        margin-left:2em;
+        position:relative;
+        transform:translate(0,-50%);
+    }
+}
+
+.azteca-nosotros-certificaciones {
+    .card {
+        height:190px;
+        background-color:#ececec;
+        margin-bottom:1.4em;
+    }
+}
+
+.azteca-nosotros-testimonios {
+    background-color:#e5eaee;
+    padding:5em 0;
 }

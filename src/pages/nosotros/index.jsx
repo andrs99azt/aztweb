@@ -25,10 +25,10 @@ const Index = () => {
                         <h3>¿Qué hacemos en Azteca?</h3>
                         <h2>Líder en transporte de líquidos</h2>
                         <div class="row">
-                            <div class="col-xl-6">
+                            <div class="col-xl-3">
                                <img src={logoAzteca} alt="Logo Azteca" class="img-fluid"/>
                             </div>
-                            <div class="col-xl-6">
+                            <div class="col-xl-5">
                                <h4>Desde 1986,Operando en todo México y ahora en E.U.A</h4>
                             </div>
                         </div>
@@ -53,10 +53,127 @@ const Index = () => {
 
                 <div class="line-black"></div>
 
-                <div class="row">
-
+                <div class="row azteca-nosotros-mision">
+                    <div class="col-xl-6">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="img"></div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="img"></div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="img img-horizontal"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 position-relative">
+                        <div class="vertical-align">
+                            <h2>Nuestra misión</h2>
+                            <p>Ser la mejor opción de transporte especializado, con la mejor rentabilidad ofreciendo siempre un servicio sobresaliente, siempre impulsados por nuestros valores, la mejora continua y la búsqueda constante de la excelencia; siempre a la vanguardia en el uso de tecnología y procesos, comprometidos con el medio ambiente y la comunidad. Garantizar la entrega eficiente del producto basados en una alta calidad de nuestros colaboradores y una flota eficaz y confiable para una transportación segura.</p>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="line-black"></div>
+
+                <div class="row azteca-nosotros-vision">
+                    <div class="col-xl-5 position-relative">
+                        <div class="vertical-align">
+                            <h2>Nuestra visión</h2>
+                            <p>Ser la mejor, más eficiente y más reconocida empresa de transporte especializado del país, y el mejor lugar para trabajar, excediendo siempre las expectativas de nuestros clientes, alcanzando un crecimiento sostenido para los accionistas y las mejores oportunidades para los colaboradores.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 offset-xl-1">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="img"></div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="img"></div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="img img-horizontal"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row azteca-nosotros-certificaciones">
+                    <div class="col-xl-8 offset-xl-2">
+                        <h2 class="text-center">Certificaciones</h2>
+                        <p class="text-center">Nuestra empresa cuenta con certificaciones que respaldan nuestra excelencia<br/> y compromiso con la seguridad en el transporte de líquidos, garantizando un<br/> servicio de calidad a nuestros clientes.</p>
+                    </div>
+                    <div class="col-xl-10 offset-xl-1">
+                        <div class="row">
+                            <div class="col-xl-3">
+                                <div class="card"></div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card"></div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card"></div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card"></div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card"></div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card"></div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card"></div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card"></div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card"></div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card"></div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container-fluid">
+                <div class="row azteca-nosotros-testimonios">
+                    <div class="col-xl-12">
+                        <div class="row">
+                            <h2 class="text-center">Testimonios</h2>
+                            <div class="col-xl-3"></div>
+                            <div class="col-xl-4">
+                                <p>Los testimonios de nuestros clientes son una parte esencial de nuestra empresa, y los valoramos profundamente. Cada comentario y experiencia compartida nos ayuda a entender mejor las necesidades y expectativas de nuestros clientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <h3>Alguna frase</h3>
+                        <h2>¡Únete a la familia!</h2>
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <button class="btn btn-danger">Ver vacantes</button>
+                            </div>
+                            <div class="col-xl-4">
+                                <button class="btn">Contacto</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>

@@ -29,7 +29,7 @@ const Header = () => {
                             <li><NavLink to="/contacto" activeClassName="active"><span>Contacto</span></NavLink></li>
                         </ul>
                         <ul class="d-xl-none d-lg-none d-md-block ul-burguer">
-                            <li><a href="#"><div class="burguer">Menú</div></a></li>
+                            <li><div class="burguer">Menú</div></li>
                         </ul>
                         <ul className="azteca-header_nav_mobile">
                             <img src={logoAzteca} alt="Logo Azteca" class="logo-mobile img-fluid"/>
