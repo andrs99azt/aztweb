@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../../components/header/Index';
+import Footer from '../../components/footer/Index';
 import Card from '../../components/cardImagenSoluciones/index'
 
 
@@ -151,7 +152,7 @@ const Index = () => {
 
                     {/* combertir a componenete */}
 
-                    <div class="azteca-soluciones_score_box">
+                    <div className="azteca-soluciones_score_box">
                         <div className="azteca-soluciones_score_box_infomacion">
                             <div className="azteca-soluciones_score_box_infomacion_cantidad">
                                 30+
@@ -164,7 +165,7 @@ const Index = () => {
 
                     </div>
 
-                    <div class="azteca-soluciones_score_box">
+                    <div className="azteca-soluciones_score_box">
                         <div className="azteca-soluciones_score_box_infomacion">
                             <div className="azteca-soluciones_score_box_infomacion_cantidad">
                                 18K+
@@ -177,7 +178,7 @@ const Index = () => {
 
                     </div>
 
-                    <div class="azteca-soluciones_score_box">
+                    <div className="azteca-soluciones_score_box">
                         <div className="azteca-soluciones_score_box_infomacion">
                             <div className="azteca-soluciones_score_box_infomacion_cantidad">
                                 200+
@@ -190,7 +191,7 @@ const Index = () => {
 
                     </div>
 
-                    <div class="azteca-soluciones_score_box">
+                    <div className="azteca-soluciones_score_box">
                         <div className="azteca-soluciones_score_box_infomacion">
                             <div className="azteca-soluciones_score_box_infomacion_cantidad">
                                 100+
@@ -408,6 +409,7 @@ const Index = () => {
                     </div>
 
                 </div>
+                <Footer/>
             </div>
 
         </>
