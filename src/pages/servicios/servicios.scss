@@ -1,0 +1,468 @@
+.azteca-cabecera-servicios {
+    padding:7em 1em 14em 1em;
+    background-image: url('../../assets/img/servicios/cabecera-servicios.jpg');
+    text-align: center;
+    position:relative;
+
+    &::before {
+        content:'';
+        position:absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: #2E4054;
+        opacity: 0.8;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    h3 {
+        position: relative;
+        z-index: 2;
+        color:white;
+        font-size: 1.1em;
+    }
+
+    h1 {
+        position: relative;
+        z-index: 2;
+        color:white;
+        text-transform: uppercase;
+        font-size: 2.8em;
+    }
+
+    p {
+        position: relative;
+        z-index: 2;
+        max-width: 60%;
+        color:white;
+        display: block;
+        margin:0 auto;
+    }
+}
+
+.splide {
+    box-shadow: 0 0 10px rgba(1,1,1,0.4);
+
+    .item-slide {
+        height: 25em;
+        border:0.4em solid #2E4054;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.splide__pagination {
+    bottom: -2.4em;
+
+    .splide__pagination__page {
+        width: 0.9em;
+        height: 0.9em;
+        margin:0.3em;
+        background-color: white;
+        border:3px solid #CC274C;
+
+        &.is-active {
+            background:#CC274C;
+            opacity: 1;
+            width: 0.65em;
+            height: 0.65em;
+        }
+    }
+}
+
+.azteca-logistica-servicios {
+    margin-top: -12em;
+    position:relative;
+    z-index: 2;
+    margin-bottom: 5em;
+
+    .splide {
+        .item-slide {
+            background-image: url('../../assets/img/servicios/santiago.jpg');
+        }
+    }
+
+    .informacion {
+        padding-left: 3em;
+
+        h2 {
+            margin-top: 2.3em;
+            color:#E5EAEE;
+            font-size: 2.7em;
+            margin-bottom: 0;
+        }
+    
+        h3 {
+            font-size: 1.4em;
+            color:#E5EAEE;
+            text-transform: uppercase;
+            margin-bottom: 1em;
+            letter-spacing: 0.03em;
+        }
+
+        p {
+            color:#2E4054;
+            padding-right: 5em;
+            line-height: 1.4em;
+            font-size: 1.1em;
+        }
+    }
+}
+
+.azteca-monitoreo-servicios {
+    padding:1em 1em;
+    position:relative;
+    z-index: 2;
+    margin-bottom: 5em;
+
+    .splide {
+        .item-slide {
+            background-image: url('../../assets/img/servicios/monitoreo.jpg');
+        }
+    }
+
+    &::before {
+        content:'';
+        background-color: #2E4054;
+        position:absolute;
+        margin-top: 12em;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 30em;
+        z-index: -1;
+    }
+
+    .img {
+        height: 24em;
+        background-color: #ececec;
+    }
+
+    .informacion {
+        padding-left: 3em;
+
+        h2 {
+            margin-top: 1.8em;
+            color:#2E4054;
+            font-size: 2.7em;
+            margin-bottom: 0;
+        }
+    
+        h3 {
+            font-size: 1.4em;
+            color:#2E4054;
+            text-transform: uppercase;
+            margin-bottom: 2em;
+            letter-spacing: 0.03em;
+        }
+
+        p {
+            color:white;
+            font-size: 1.1em;
+            padding-right: 5em;
+            line-height: 1.5em;
+        }
+    }
+}
+
+.azteca-lavado-servicios {
+    position:relative;
+    z-index: 2;
+    margin-bottom: 6em;
+
+    .splide {
+        .item-slide {
+            background-image: url('../../assets/img/servicios/lavado.jpg');
+        }
+    }
+
+    .img {
+        height: 24em;
+        background-color: #ececec;
+    }
+
+    .informacion {
+        padding-left: 3em;
+
+        h2 {
+            margin-top: 1.6em;
+            color:#E5EAEE;
+            font-size: 2.7em;
+            margin-bottom: 0;
+        }
+    
+        h3 {
+            font-size: 1.4em;
+            color:#E5EAEE;
+            text-transform: uppercase;
+            margin-bottom: 1.2em;
+        }
+
+        p {
+            color:#2E4054;
+            font-size: 1.1em;
+            padding-right: 5em;
+            line-height: 1.4em;
+        }
+    }
+}
+
+.azteca-unidades-servicios {
+
+    h2 {
+        text-transform: uppercase;
+        color: #2E4054;
+        margin-bottom: 1.2em;
+        font-size: 2.3em;
+    }
+
+    .unidad {
+        border:2px solid #142140;
+        padding:1.5em 2em;
+        border-radius: 0.6em;
+        margin-bottom: 2em;
+
+        &.azul {
+            background-color: #142140;
+            color:white;
+        }
+    
+        h4 {
+            color:#CC274C;
+            font-size: 1.3em;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    img {
+        border-radius: 1em;
+        margin-bottom: 4em;
+    }
+}
+
+.azteca-transportamos-servicios {
+    padding:4em 1em;
+    background-color: #E5EAEE;
+    position: relative;
+
+    .aceite-fondo {
+        position:absolute;
+        top:-2em;
+        left:20em;
+        width: 50em;
+        z-index:1;
+    }
+
+    .cards {
+        margin-bottom: 2em;
+        position:relative;
+        z-index:2;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        color: #2E4054;
+        margin-bottom: 1.2em;
+        font-size: 2.3em;
+
+        span {
+            display: block;
+        }
+    }
+
+    .transporte {
+        .img {
+            height: 18em;
+            border-radius: 0.8em;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            box-shadow: 0 0 1em rgba(1,1,1,0.3);
+
+            &.img-1 {
+                background-image: url('../../assets/img/servicios/transporte-1.png');
+            }
+            &.img-2 {
+                background-image: url('../../assets/img/servicios/transporte-2.png');
+            }
+            &.img-3 {
+                background-image: url('../../assets/img/servicios/transporte-3.png');
+            }
+            &.img-4 {
+                background-image: url('../../assets/img/servicios/transporte-4.png');
+            }
+            &.img-5 {
+                background-image: url('../../assets/img/servicios/transporte-5.png');
+            }
+            &.img-6 {
+                background-image: url('../../assets/img/servicios/transporte-6.png');
+            }
+            &.img-7 {
+                background-image: url('../../assets/img/servicios/transporte-7.png');
+            }
+            &.img-8 {
+                background-image: url('../../assets/img/servicios/transporte-8.png');
+            }
+        }
+        .contenido {
+            max-width: 87%;
+            display: block;
+            margin:0 auto;
+            background-color: white;
+            border-radius: 0.8em;
+            padding:2em 1.1em;
+            box-shadow: 0 0 1em rgba(1,1,1,0.2);
+            margin-top: -7em;
+
+            h3 {
+                font-size: 1.4em;
+                text-align: center;
+                margin-bottom: 0.5em;
+            }
+
+            p {
+                color: #8D9092;
+                font-size: 1.1em;
+                text-align: center;
+                line-height: 1.2em;
+                margin-bottom: 0;
+                height: 7em;
+            }
+        }
+    }
+}
+
+.azteca-conecta-clientes-servicios {
+    background-color: #2E4054;
+    position: relative;
+
+    .trailer {
+        position: relative;
+        z-index: 2;
+    }
+
+    .maguey {
+        position: absolute;
+        bottom:0;
+        left:0;
+        opacity: 0.6;
+        z-index: 1;
+    }
+
+    .liquido-derecho {
+        position: absolute;
+        width: 18em;
+        top:1em;
+        right:0;
+    }
+
+    .contenido {
+        top:50%;
+        position: relative;
+        transform: translate(0,-50%);
+
+        h2 {
+            color:white;
+            font-size: 2.7em;
+            line-height: 1em;
+
+            span {
+                display: block;
+            }
+        }
+
+        p {
+            color:white;
+            margin:1.4em 0;
+            font-size: 1.1em;
+        }
+
+        .btn-contacto {
+            background-color: #CC274C;
+            color: white;
+            border-radius: 0.7m;
+            padding:0.5em 1.2em;
+
+            &:hover {
+                background-color: #a01130;
+            }
+        }
+    }
+}
+
+.azteca-alcance-y-sedes {
+    padding:5em 1em;
+    background-color: #456282;
+
+    .mundo {
+        background-image: url('../../assets/img/servicios/planeta.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0 0 10px rgba(1,1,1,0.5);
+        border-radius: 50%;
+        height: 50em;
+    }
+
+    .pr-0 {
+        padding-right: 0;
+    }
+
+    .info {
+        background-color: white;
+        padding: 1em;
+        margin-bottom: 1.5em;
+        border-radius: 1em;
+        box-shadow: 0 0 10px rgba(1,1,1,0.3);
+        width: 100%;
+        border: 0.3em solid transparent;
+        height: 15em;
+
+        &.normal {
+            height: inherit;
+            padding-bottom: 1.5em;
+        }
+
+        &.active {
+            border: 0.3em solid #C22F51;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 1.5em;
+            color: #2E4054;
+        }
+
+        span {
+            font-size: 0.8em;
+            text-align: center;
+            display: block;
+            margin-bottom: 1em;
+            color:#2E4054;
+        }
+
+        p {
+            font-size: 1em;
+            text-align: center;
+            margin-bottom: 0;
+            line-height: 1.3em;
+            color:#2E4054;
+            position:relative;
+            top:0.5em;
+        }
+    }
+
+    .vertical-align {
+        top:50%;
+        position:relative;
+        transform: translate(0,-50%);
+    }
+}
