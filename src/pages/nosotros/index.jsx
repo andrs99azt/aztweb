@@ -1,4 +1,10 @@
 import React from 'react';
+
+//Splide slider
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css/core';
+import '@splidejs/react-splide/css';
+
 import logoAzteca from '../../assets/icons/logo-azteca.png';
 
 import Header from '../../components/header/Index';
@@ -131,7 +137,7 @@ const Index = () => {
                             <div className="col-xl-3">
                                 <div className="card carti-8"></div>
                             </div>
-                            <div className="col-xl-3">
+                            <div className="col-xl-3 offset-xl-1">
                                 <div className="card carti-9"></div>
                             </div>
                             <div className="col-xl-3">
@@ -139,9 +145,6 @@ const Index = () => {
                             </div>
                             <div className="col-xl-3">
                                 <div className="card carti-11"></div>
-                            </div>
-                            <div className="col-xl-3">
-                                <div className="card carti-12"></div>
                             </div>
                         </div>
                     </div>
@@ -164,56 +167,79 @@ const Index = () => {
                     <div className="row">
 
                         <div className="col-xl-12">
-                            <div className="row">
-                                <div className="col-xl-4">
-
-                                    <div className="slide">
-                                        <h4 className='roboto_medium'>"Transportes Azteca a superado mis expectativas".</h4>
+                            
+                            <Splide options={{ type: 'loop', perPage: 3, rewind: true, gap: '1.4rem', width: '100%' }}>
+                                <SplideSlide>
+                                    <div className="item-slide">
+                                        <div className="signo"></div>
+                                        <h3 className='roboto_medium'>"Transportes Azteca a superado mis expectativas."</h3>
                                         <div className="row">
                                             <div className="col-xl-3">
                                                 <div className="img"></div>
                                             </div>
                                             <div className="col-xl-9">
-                                                <h3>-Michel Sevilla</h3>
-                                                <p>Gerente Masseca</p>
+                                                <div className="informacion">
+                                                    <h4 className='roboto_medium'>-Michel Sevilla</h4>
+                                                    <p className='roboto'>Gerente Masseca</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                </div>
-                                <div className="col-xl-4">
-
-                                    <div className="slide">
-                                        <h4>"Transportes Azteca a superado mis expectativas".</h4>
+                                </SplideSlide>
+                                <SplideSlide>
+                                    <div className="item-slide">
+                                        <div className="signo"></div>
+                                        <h3 className='roboto_medium'>"El mejor servicio de transporte de líquidos que he contratado."</h3>
                                         <div className="row">
                                             <div className="col-xl-3">
                                                 <div className="img"></div>
                                             </div>
                                             <div className="col-xl-9">
-                                                <h3>-Michel Sevilla</h3>
-                                                <p>Gerente Masseca</p>
+                                                <div className="informacion">
+                                                    <h4 className='roboto_medium'>-Daniel Sánchez</h4>
+                                                    <p className='roboto'>Sub director de Jumex</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                </div>
-                                <div className="col-xl-4">
-
-                                    <div className="slide">
-                                        <h4>"Transportes Azteca a superado mis expectativas".</h4>
+                                </SplideSlide>
+                                <SplideSlide>
+                                    <div className="item-slide">
+                                        <div className="signo"></div>
+                                        <h3 className='roboto_medium'>"Tienen un gran manejo de su logística"</h3>
                                         <div className="row">
                                             <div className="col-xl-3">
                                                 <div className="img"></div>
                                             </div>
                                             <div className="col-xl-9">
-                                                <h3>-Michel Sevilla</h3>
-                                                <p>Gerente Masseca</p>
+                                                <div className="informacion">
+                                                    <h4 className='roboto_medium'>-Samantha Jiménez</h4>
+                                                    <p className='roboto'>Mercadóloga de Gamesa</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                </SplideSlide>
+                                <SplideSlide>
+                                    <div className="item-slide">
+                                        <div className="signo"></div>
+                                        <h3 className='roboto_medium'>"Nunca me ha decepcionado su servicio"</h3>
+                                        <div className="row">
+                                            <div className="col-xl-3">
+                                                <div className="img"></div>
+                                            </div>
+                                            <div className="col-xl-9">
+                                                <div className="informacion">
+                                                    <h4 className='roboto_medium'>-José Fernández</h4>
+                                                    <p className='roboto'>Directivo en Don Julio</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </SplideSlide>
 
-                                </div>
-                            </div>
+                            </Splide>
+
                         </div>
 
                     </div>

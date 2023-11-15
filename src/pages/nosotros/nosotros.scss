@@ -19,12 +19,12 @@
     }
 
     .top {
-        margin-bottom: em;
+        margin-bottom: 1em;
     }
 }
 
 .azteca-hacemos-nosotros {
-    padding:5em 1em;
+    padding:6em 1em 0 1em;
 
     .frase {
         position: absolute;
@@ -117,7 +117,7 @@
 }
 
 .azteca-nosotros-testimonios {
-    padding:4em 1em;
+    padding:5.5em 1em;
 
     h2 {
         text-transform: uppercase;
@@ -150,10 +150,26 @@
         }
     }
 
-    .slide {
+    .splide__pagination {
+        bottom: -2.3em;
+
+        .splide__pagination__page {
+            width: 1em;
+            height: 1em;
+            margin:0.3em;
+
+            &.is-active {
+                background: #393939;
+                width: 0.78em;
+                height: 0.78em;
+            }
+        }
+    }
+
+    .item-slide {
         border: 0.2em solid #2E4054;
         background-color: #ffffff;
-        padding: 3.5em;
+        padding: 3em;
         border-radius: 0.5em;
         z-index: 2;
         position: relative;
@@ -161,24 +177,47 @@
         .img {
             width:4em;
             height:4em;
-            background-color: red;
+            background-image: url('../../assets/img/nosotros/testi-avatar.png');
+            background-repeat: no-repeat;
+            background-position: center;
             border-radius: 50%;
         }
 
-        h4 {
-            font-size: 1.4em;
-            margin-bottom: 1.5em;
-        }
-
         h3 {
-            text-align: left;
-            font-size: 1.4em;
+            font-size: 1.5em;
             margin-bottom: 0;
+            height: 86px;
         }
 
-        p {
-            text-align: left;
-            font-size: 1em;
+        .signo {
+            background-image: url('../../assets/icons/signo-bottom.png');
+            width:5em;
+            height:4em;
+            margin-bottom: 2em;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.3;
+        }
+
+        .informacion {
+            top:50%;
+            transform: translate(0,-50%);
+            position:relative;
+    
+            h4 {
+                font-size: 1.2em;
+                text-align: left;
+                font-style: italic;
+                margin-bottom: 0;
+            }
+    
+            p {
+                color:#717171;
+                text-align: left;
+                font-size: 1em;
+                margin-bottom: 0;
+            }
         }
     }
 }
@@ -394,7 +433,7 @@
     }
 
     .card {
-        height:190px;
+        height:14em;
         border:0.2em solid #2E4054;
         background-size: contain;
         background-repeat: no-repeat;
@@ -402,17 +441,38 @@
         box-shadow: 0 0 10px rgba(1,1,1,0.8);
         margin-bottom:1.4em;
 
-        &.carti-1, &.carti-5, &.carti-9 {
+        &.carti-1 {
             background-image: url('../../assets/img/nosotros/iso.jpg');
         }
-        &.carti-2, &.carti-6, &.carti-10 {
+        &.carti-2 {
+            background-image: url('../../assets/img/nosotros/14001.jpg');
+        }
+        &.carti-3 {
             background-image: url('../../assets/img/nosotros/2018.jpg');
         }
-        &.carti-3, &.carti-7, &.carti-11 {
+        &.carti-4 {
+            background-image: url('../../assets/img/nosotros/37001.jpg');
+        }
+        &.carti-5 {
             background-image: url('../../assets/img/nosotros/2013.jpg');
         }
-        &.carti-4, &.carti-8, &.carti-12 {
+        &.carti-6 {
             background-image: url('../../assets/img/nosotros/45-2018.jpg');
+        }
+        &.carti-7 {
+            background-image: url('../../assets/img/nosotros/transporte.jpg');
+        }
+        &.carti-8 {
+            background-image: url('../../assets/img/nosotros/canacar.jpg');
+        }
+        &.carti-9 {
+            background-image: url('../../assets/img/nosotros/u.jpg');
+        }
+        &.carti-10 {
+            background-image: url('../../assets/img/nosotros/ctpat.jpg');
+        }
+        &.carti-11 {
+            background-image: url('../../assets/img/nosotros/juice.jpg');
         }
     }
 }
