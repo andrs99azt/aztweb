@@ -173,3 +173,195 @@ footer {
         }
     }
 }
+
+//Media queries
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+    footer {
+        h3 {
+            text-align: center!important;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    footer {
+        h3 {
+            font-size: 3em!important;
+            text-align: left!important;
+        }
+
+        .logo {
+            max-width: 50%;
+        }
+    }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 768px) {
+
+    footer {
+        position: relative;
+
+        h3 {
+            font-size: 1.1em!important;
+            text-align: left!important;
+        }
+
+        p {
+            margin-bottom: 1em;
+            font-size: 1em;
+        }
+
+        .icon {
+            img {
+                margin-bottom: 1em!important;
+            }
+        }
+
+        .logo {
+            max-width: 35%;
+        }
+
+        .links {
+            position: relative;
+            top:inherit;
+            transform: inherit;
+            display: block;
+            margin:2em 0;
+
+            h2 {
+                font-size: 1.5em!important;
+            }
+
+            ul {
+                margin:1em 0;
+                margin-left: 2em;
+
+                li {
+                    font-size: 0.8em;
+                }
+            }
+        }
+
+        .social {
+            top: inherit;
+            position: inherit;
+            transform: translate(-50%,0);
+            margin:0 auto;
+            display: inline-block;
+            text-align: center;
+
+            li {
+                margin-left: 1em;
+                display: inline-block;
+            }
+
+            img {
+                width: 3em;
+            }
+        }
+
+        .circle-top {
+            position: absolute;
+            z-index:10;
+            transform: inherit;
+            left: inherit;
+            right: 1.2em!important;
+            top: -2.3em;
+        }
+
+        .copy {
+            position: inherit;
+            
+            a, p {
+                text-align: center;
+                display:block;
+            }
+        }
+    }
+
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 992px) {
+    
+    footer {
+
+        h3 {
+            text-align: left!important;
+        }
+
+        p {
+            margin-bottom: 0.5em;
+            font-size: 1em;
+        }
+
+        .gris {
+            padding:1em 2em;
+        }
+
+        .social {
+            transform: inherit;
+            top: inherit;
+            left: 50%;
+            position: inherit;
+            transform: translate(-50%,0);
+            text-align: center;
+
+            li {
+                display: inline-block;
+                margin-left: 1em;
+            }
+        }
+
+        .copy {
+            position: inherit;
+
+            p, a {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .icon {
+            img {
+                width: 3.2em;
+                display: block;
+                margin:0 auto;
+                margin-bottom: 0.5em;
+            }
+        }
+
+        .logo {
+            max-width: 40%;
+        }
+
+        .circle-top {
+            right: 4.8em;
+            left: inherit;
+            transform: inherit;
+            z-index: 10;
+        }
+
+        .links {
+            margin:1.3em 0;
+
+            h2 {
+                font-size: 1.7em;
+            }
+
+            ul {
+                margin-left: 2.3em;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1200px) {
+}
