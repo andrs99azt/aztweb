@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect } from 'react';
 import Header from '../../components/header/Index';
 import Footer from '../../components/footer/Index';
 import logoAzteca from '../../assets/icons/logo-azteca.png';
@@ -7,6 +7,16 @@ import logoAzteca from '../../assets/icons/logo-azteca.png';
 import './contacto.scss';
 
 const Index = () => {
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0
+        });
+    };
+
+    useEffect(() => {
+        scrollToTop();
+    }, []);
 
     return (
         <div>

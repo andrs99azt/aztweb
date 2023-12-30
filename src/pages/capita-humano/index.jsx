@@ -308,7 +308,7 @@ const Index = () => {
                 </div>
             </div>
 
-            <div className="azteca-capital-humano-vacantes">
+            <div id='vacantes' className="azteca-capital-humano-vacantes">
             <div className="iniciar-vacantes"></div>
                 <div className="azteca-capital-humano-vacantes_content">
                     <div className="azteca-capital-humano-vacantes_content_header">
@@ -490,7 +490,6 @@ const Index = () => {
                 </div>
             </div>
 
-            
 
             <Footer/>
 

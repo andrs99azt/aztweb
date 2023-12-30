@@ -70,7 +70,22 @@ const useScrollAnimation = (selector,Setter, stateSetter) => {
     }, [selector, stateSetter]);
 };
 
+
+
 const Index = () => {
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0
+        });
+    };
+
+    useEffect(() => {
+        scrollToTop();
+    }, []);
+
+
+    
 
     const [solucionesAnimacion, setSolucionesAnimacion] = useState(false);
     const [serviciosAnimacion, setServiciosAnimacion] = useState(false);
@@ -79,6 +94,8 @@ const Index = () => {
     useScrollAnimation('.azteca-inicio-hero_content_third',solucionesAnimacion, setSolucionesAnimacion);
     useScrollAnimation('.azteca-inicio-soluciones_content_infomacion',serviciosAnimacion, setServiciosAnimacion);
     useScrollAnimation('.box4',experienciaAnimacion, setExperienciaAnimacion);
+
+    
 
     return (
         <>

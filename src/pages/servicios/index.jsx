@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Header from '../../components/header/Index';
 import Footer from '../../components/footer/Index';
 
-import unidad from '../../assets/img/servicios/unidad.jpg';
+import unidad1 from '../../assets/img/servicios/unidad.jpg';
+
+
 import aceite from '../../assets/img/servicios/aceite.png';
 import trailer from '../../assets/img/servicios/trailer.jpg';
 import liquido from '../../assets/img/servicios/liquido-derecho.png';
@@ -39,7 +41,21 @@ const useScrollAnimation = (selector,Setter, stateSetter) => {
     }, [selector, stateSetter]);
 };
 
+const cambiarFoto = (num) =>{
+    console.log(num)
+}
+
 const Index = () => {
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0
+        });
+    };
+
+    useEffect(() => {
+        scrollToTop();
+    }, []);
 
     const [monitoreoAnimacion, setMonitoreoAnimacion] = useState(false);
     const [lavadoAnimacion, setLavadoAnimacion] = useState(false);
@@ -155,22 +171,22 @@ const Index = () => {
                 </div>
                 <div className="row">
                     <div className={`col-xl-4 boton1 ${unidadesAnimacion ? 'texto-animacion' : ''}`}>
-                        <div className="unidad">
+                        <div className="unidad" onClick={() => cambiarFoto("1")}>
                             <h3 className='roboto_medium'>22 Toneladas</h3>
                             {/* <h4 className='raleway_bold'>Subitulo</h4>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, autem.</p> */}
                         </div>
                     </div>
                     <div className={`col-xl-4 boton2 ${unidadesAnimacion ? 'texto-animacion' : ''}`}>
-                        <div className="unidad azul">
-                            <h3 className='roboto_medium'>22 Toneladas</h3>
+                        <div className="unidad" onClick={() => cambiarFoto("2")}>
+                            <h3 className='roboto_medium'>29 Toneladas</h3>
                             {/* <h4 className='raleway_bold'>Subitulo</h4>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, autem.</p> */}
                         </div>
                     </div>
                     <div className={`col-xl-4 boton3 ${unidadesAnimacion ? 'texto-animacion' : ''}`}>
-                        <div className="unidad">
-                            <h3 className='roboto_medium'>22 Toneladas</h3>
+                        <div className="unidad" onClick={() => cambiarFoto("3")}>
+                            <h3 className='roboto_medium'>38 Toneladas</h3>
                             {/* <h4 className='raleway_bold'>Subitulo</h4>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, autem.</p> */}
                         </div>
@@ -178,7 +194,7 @@ const Index = () => {
                 </div>
                 <div className="row">
                     <div className={`col-xl-12 img ${unidadesAnimacion ? 'texto-animacion' : ''}`}>
-                        <img src={unidad} alt="Transportes Azteca" class="img-fluid"/>
+                        <img src={unidad1} alt="Transportes Azteca" class="img-fluid"/>
                     </div>
                     <div className="ponit-servicios"></div>
                 </div>

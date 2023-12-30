@@ -45,6 +45,16 @@ const useScrollAnimation = (selector,Setter, stateSetter) => {
 
 const Index = () => {
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0
+        });
+    };
+
+    useEffect(() => {
+        scrollToTop();
+    }, []);
+
     const [nosotrosAnimacion, setNosotrosAnimacion] = useState(false);
     const [misionAnimacion, setMisionAnimacion] = useState(false);
     const [visionAnimacion, setVisionAnimacion] = useState(false);

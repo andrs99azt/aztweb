@@ -8,6 +8,13 @@ import icono2 from '../../assets/icons/icon-2.png';
 import icono3 from '../../assets/icons/icon-3.png';
 import './footer.scss';
 
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        // behavior: 'smooth', // Para un desplazamiento suave
+    });
+};
+
 const Footer = () => {
     return (
         <div>
@@ -59,7 +66,12 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="col-xl-2 offset-xl-1 col-lg-3 col-md-12 position-relative">
-                            <NavLink to="/" activeClassName="active" className='circle-top d-xl-block d-lg-block d-md-none d-xs-none d-none'></NavLink>
+                            {/* <NavLink to="/" activeClassName="active" className='circle-top d-xl-block d-lg-block d-md-none d-xs-none d-none'></NavLink> */}
+
+                            <div className="circle-top d-xl-block d-lg-block d-md-none d-xs-none d-none" onClick={scrollToTop}>
+
+                            </div>
+
                             <ul className='social'>
                                 <li>
                                     <NavLink to="https://facebook.com">
