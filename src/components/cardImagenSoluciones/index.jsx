@@ -3,7 +3,7 @@ import './cardImagenSoluciones.scss'
 
 
 
-import solucionesImgTrailer from '../../assets/img/soluciones-img-trailer.png'
+import solucionesImgTrailer from '../../assets/img/inicio/inicio-soluciones-1.png';
 
 
 

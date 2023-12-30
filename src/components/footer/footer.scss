@@ -24,7 +24,7 @@ footer {
     }
 
     p {
-        font-size: 1em;
+        font-size: 20px;
         line-height: 1.3em;
         color:#2E4054;
         margin-bottom: 2.3em;
@@ -108,6 +108,7 @@ footer {
     .icon {
         margin:1.5em 0;
         position:relative;
+        z-index: 400;
 
         img {
             position: relative;
@@ -145,7 +146,7 @@ footer {
                 margin:0.7em 0;
 
                 a {
-                    font-family: 'Roboto';
+                    
                     color:white;
                     text-transform: uppercase;
                     text-decoration: none;

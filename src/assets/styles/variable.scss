@@ -19,6 +19,7 @@ $white:#ffffff;
 //Roboto
 .roboto {
     font-family: 'Roboto-Regular';
+    &_regular { font-family: 'Roboto'; }
     &_medium { font-family: 'Roboto-Medium'; }
     &_bold { font-family: 'Roboto-Bold'; }
 }

@@ -12,7 +12,7 @@ const Footer = () => {
     return (
         <div>
             <footer>
-                <NavLink to="/inicio" activeClassName="active" className='circle-top d-xl-none d-lg-none d-md-block'></NavLink>
+                <NavLink to="/" activeClassName="active" className='circle-top d-xl-none d-lg-none d-md-block'></NavLink>
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-4 col-lg-5 col-md-12">
@@ -41,7 +41,7 @@ const Footer = () => {
                                         <img src={icono3} alt="Correo" className='img-fluid'/>
                                     </div>
                                     <div className="col-xl-9 col-md-9 col-sm-9">
-                                        <h3 className='roboto_bold'>ventas@azteca.com.mx<br/>omaly.barron@tlazteca.com</h3>
+                                        <h3 className='roboto_bold'>ventas@azteca.com.mx</h3>
                                     </div>
                                 </div>
                             </div>
@@ -50,16 +50,16 @@ const Footer = () => {
                             <div className="links">
                                 <h2 className='roboto_bold'>Links Rapidos</h2>
                                 <ul>
-                                    <li><NavLink to="/" activeClassName="active" href="/inicio">Inicio</NavLink></li>
-                                    <li><NavLink to="/nosotros" activeClassName="active">Nosotros</NavLink></li>
-                                    <li><NavLink to="/servicios" activeClassName="active">Servicios</NavLink></li>
-                                    <li><NavLink to="/capital-humano" activeClassName="active">Capital humano</NavLink></li>
-                                    <li><NavLink to="/contacto" activeClassName="active">Contacto</NavLink></li>
+                                    <li><NavLink to="/" activeClassName="active" href="/">Inicio</NavLink></li>
+                                    <li><NavLink to="/nosotros" activeClassName="active roboto_regular">Nosotros</NavLink></li>
+                                    <li><NavLink to="/servicios" activeClassName="active roboto_regular">Servicios</NavLink></li>
+                                    <li><NavLink to="/capital-humano" activeClassName="active roboto_regular">Capital humano</NavLink></li>
+                                    <li><NavLink to="/contacto" activeClassName="active roboto_regular">Contacto</NavLink></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col-xl-2 offset-xl-1 col-lg-3 col-md-12 position-relative">
-                            <NavLink to="/inicio" activeClassName="active" className='circle-top d-xl-block d-lg-block d-md-none d-xs-none d-none'></NavLink>
+                            <NavLink to="/" activeClassName="active" className='circle-top d-xl-block d-lg-block d-md-none d-xs-none d-none'></NavLink>
                             <ul className='social'>
                                 <li>
                                     <NavLink to="https://facebook.com">

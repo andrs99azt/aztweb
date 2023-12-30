@@ -1,12 +1,553 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import './capital-humano.scss';
 
 import Header from '../../components/header/Index';
+import Footer from '../../components/footer/Index';
+
+import capitalHumanoHero from '../../assets/img/capital-humano/capital-humano-hero-1.png'
+
+import capitalHumanoConocenos1 from '../../assets/img/capital-humano/capital-humano-conocenos-1.png'
+import capitalHumanoConocenos2 from '../../assets/img/capital-humano/capital-humano-conocenos-2.png'
+import capitalHumanoConocenos3 from '../../assets/img/capital-humano/capital-humano-conocenos-3.png'
+import capitalHumanoConocenos4 from '../../assets/img/capital-humano/capital-humano-conocenos-4.png'
+import capitalHumanoConocenos5 from '../../assets/img/capital-humano/capital-humano-conocenos-5.png'
+import capitalHumanoConocenos6 from '../../assets/img/capital-humano/capital-humano-conocenos-6.png'
+import capitalHumanoConocenos7 from '../../assets/img/capital-humano/capital-humano-conocenos-7.png'
+
+import capitalHumanoPrestaciones1 from '../../assets/img/capital-humano/capital-humano-prestaciones-1.png'
+import capitalHumanoPrestaciones2 from '../../assets/img/capital-humano/capital-humano-prestaciones-2.png'
+import capitalHumanoPrestaciones3 from '../../assets/img/capital-humano/capital-humano-prestaciones-3.png'
+import capitalHumanoPrestaciones4 from '../../assets/img/capital-humano/capital-humano-prestaciones-4.png'
+import capitalHumanoPrestaciones5 from '../../assets/img/capital-humano/capital-humano-prestaciones-5.png'
+import capitalHumanoPrestaciones6 from '../../assets/img/capital-humano/capital-humano-prestaciones-6.png'
+import capitalHumanoPrestaciones7 from '../../assets/img/capital-humano/capital-humano-prestaciones-7.png'
+import capitalHumanoPrestaciones8 from '../../assets/img/capital-humano/capital-humano-prestaciones-8.png'
+
+import capitalHumanoTestimonios1 from '../../assets/img/capital-humano/capital-humano-testimonios-1.jpeg'
+
+import clip from '../../assets/img/capital-humano/capital-humano-vacantes-position.png'
+
+
+const useCallAnimation = (selector, Setter, stateSetter, animacion) => {
+    useEffect(() => {
+      const handleScroll = () => {
+        const containerPanel = document.querySelector(selector);
+        const posicionContainerPanel = containerPanel.getBoundingClientRect().top;
+        const puntoEspecifico = 100;
+            
+        if (posicionContainerPanel < puntoEspecifico) {
+            const cardElements = document.getElementsByClassName(animacion);
+              for (let i = 0; i < cardElements.length; i++) {
+                cardElements[i].classList.add('capital-humano-animaciones');
+            }
+        }
+        
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+  
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, [selector, stateSetter, Setter, animacion]);
+};
+
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        // behavior: 'smooth', // Para un desplazamiento suave
+    });
+};
+
 
 const Index = () => {
+
+    const [openFormulario, setOpenFormulario] = useState(false);
+    const formulario = (tipo) => {
+        setOpenFormulario(true)
+        console.log('Parámetro recibido:', tipo);
+    };
+    
+    scrollToTop();
+
+    const [animation, setAnimation] = useState(false);
+    
+    useCallAnimation('.iniciar-conocenos',animation,setAnimation, 'animaciones-conocenos')
+
+    useCallAnimation('.iniciar-talento',animation,setAnimation, 'animaciones-talento')
+
+    useCallAnimation('.iniciar-prestaciones',animation,setAnimation, 'animaciones-prestaciones')
+
+    useCallAnimation('.iniciar-testimonios',animation,setAnimation, 'animaciones-testimonios')
+
+    useCallAnimation('.iniciar-vacantes',animation,setAnimation, 'animaciones-vacantes')
+
+
 
     return (
         <div>
             <Header/>
+
+            <div className="azteca-capital-humano-hero">
+                <div className="azteca-capital-humano-hero_content">
+                    <div className="azteca-capital-humano-hero_content_img capital-humano-animaciones">
+                        <img src={capitalHumanoHero} alt="" /> 
+                    </div>
+                    <div className="azteca-capital-humano-hero_content_text capital-humano-animaciones">
+                        <h1 className='square_bold'>CAPITAL HUMANO</h1>
+                        <h3 className='raleway_medium'>Los servicios que ofrece</h3>
+                        <p className='raleway_light'>
+                            El capital humano es el corazon de nuestra empresa.
+                            Nuestra dedicada y talentoza fuerza laboral es la clave de 
+                            nuesto exito. Fomentando un ambiente colaborativo que 
+                            petencia sus habilidades y creatividad. invertir en nuestro 
+                            equipo garantiza un servicio excepcional a nuestros
+                            clientes y un futuro solido para nuestra organizacion.
+                        </p>
+                        <label className='raleway_medium'>Te interesa trabajar con nosotros?</label>
+                        <br />
+                        <br />
+                        <a className="boton" href="#vacantes">Ver vacantes</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div className="azteca-capital-humano-conocenos">
+                <div className="iniciar-conocenos"></div>
+                <div className="azteca-capital-humano-conocenos_content animaciones-conocenos">
+                    <div className="azteca-capital-humano-conocenos_content_header">
+                        <h3 className='raleway_medium'>Conoce a la familia</h3>
+                        <h1 className='square_bold'>AZTECA</h1>
+                        <p className='raleway_light'>
+                            Los empreados desempenian un papel en todas las etapas del
+                            proceso. Desde la manipulacion y tranporte seguro de los 
+                            productos hasta el mantenimiento de los estanader de 
+                            calidad y seguridad alimentaria.
+                        </p>
+                    </div>
+                    <div className="azteca-capital-humano-conocenos_content_panel">
+                        <div className="azteca-capital-humano-conocenos_content_panel_section">
+                            <div className="azteca-capital-humano-conocenos_content_panel_section_img elemento1 animaciones-conocenos">
+                                <img src={capitalHumanoConocenos1} alt="" /> 
+                            </div>
+                            <div className="azteca-capital-humano-conocenos_content_panel_section_img elemento2 animaciones-conocenos">
+                                <img src={capitalHumanoConocenos2} alt="" /> 
+                            </div>
+                            <div className="azteca-capital-humano-conocenos_content_panel_section_img elemento3 animaciones-conocenos">
+                                <img src={capitalHumanoConocenos3} alt="" /> 
+                            </div>
+                            <div className="azteca-capital-humano-conocenos_content_panel_section_img elemento4 animaciones-conocenos">
+                                <img src={capitalHumanoConocenos4} alt="" /> 
+                            </div>
+                            <div className="azteca-capital-humano-conocenos_content_panel_section_img elemento5 animaciones-conocenos">
+                                <img src={capitalHumanoConocenos5} alt="" /> 
+                            </div>
+                            <div className="iniciar-talento"></div>
+                            <div className="azteca-capital-humano-conocenos_content_panel_section_img elemento6 animaciones-conocenos">
+                                <img src={capitalHumanoConocenos6} alt="" /> 
+                            </div>
+                            <div className="azteca-capital-humano-conocenos_content_panel_section_img elemento7 animaciones-conocenos">
+                                <img src={capitalHumanoConocenos7} alt="" /> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="azteca-capital-humano-talento">
+                <div className="azteca-capital-humano-talento_content animaciones-talento">
+                    <h1 className='raleway_light animaciones-talento'>¡Buscamos tu talento!</h1>
+                    <br />
+                    <h3 className='raleway_light animaciones-talento'>¡Unete a Azteca!</h3>
+                    <br />
+                    <a className="boton animaciones-talento" href="#vacantes">Ver vacantes</a>
+                </div>
+            </div>
+
+            <div className="azteca-capital-humano-prestaciones">
+                <div className="iniciar-prestaciones"></div>
+                <div className="azteca-capital-humano-prestaciones_content animaciones-prestaciones">
+                    <div className="azteca-capital-humano-prestaciones_content_header">
+                        <h2 className='text-center square_bold animaciones-prestaciones'>PRESTACIONES</h2>
+                    </div>
+                    <div className="azteca-capital-humano-prestaciones_content_panel">
+                        <div className="azteca-capital-humano-prestaciones_content_panel_section">
+
+                            <div className="azteca-capital-humano-prestaciones_content_panel_section_card elemento1 animaciones-prestaciones">
+                                <div className="azteca-capital-humano-prestaciones_content_panel_section_card_header">
+                                    <img src={capitalHumanoPrestaciones1} alt="" /> 
+                                </div>
+                                <div className="azteca-capital-humano-prestaciones_content_panel_section_card_texto">
+                                    Nuestras prestaciones van más allá de los requisitos legales, ofreciendo 
+                                    beneficios excepcionales que valoran y cuidan a nuestros empleados.
+                                </div>
+                            </div>
+                            <div className="azteca-capital-humano-prestaciones_content_panel_section_card elemento2 animaciones-prestaciones">
+                                <div className="azteca-capital-humano-prestaciones_content_panel_section_card_header">
+                                    <img src={capitalHumanoPrestaciones2} alt="" /> 
+                                </div>
+                                <div className="azteca-capital-humano-prestaciones_content_panel_section_card_texto">
+                                    Nuestra caja de ahorro brinda a nuestros empleados la oportunidad de planificar 
+                                    un futuro financiero sólido.
+                                </div>
+                            </div>
+                            <div className="azteca-capital-humano-prestaciones_content_panel_section_card elemento3 animaciones-prestaciones">
+                                <div className="azteca-capital-humano-prestaciones_content_panel_section_card_header">
+                                    <img src={capitalHumanoPrestaciones3} alt="" /> 
+                                </div>
+                                <div className="azteca-capital-humano-prestaciones_content_panel_section_card_texto">
+                                    Ofrecemos uniformes gratuitos para garantizar la comodidad y profesionalismo 
+                                    de nuestro personal en todo momento.
+                                </div>
+                            </div>
+                            <div className="azteca-capital-humano-prestaciones_content_panel_section_card elemento4 animaciones-prestaciones">
+                                <div className="azteca-capital-humano-prestaciones_content_panel_section_card_header">
+                                    <img src={capitalHumanoPrestaciones4} alt="" /> 
+                                </div>
+                                <div className="azteca-capital-humano-prestaciones_content_panel_section_card_texto">
+                                    Brindamos una despensa mensual como un beneficio adicional para apoyar el 
+                                    bienestar de nuestros empleados.
+                                </div>
+                            </div>
+                            <div className="azteca-capital-humano-prestaciones_content_panel_section_card elemento5 animaciones-prestaciones">
+                                <div className="azteca-capital-humano-prestaciones_content_panel_section_card_header">
+                                    <img src={capitalHumanoPrestaciones5} alt="" /> 
+                                </div>
+                                <div className="azteca-capital-humano-prestaciones_content_panel_section_card_texto">
+                                    La despensa navideña es nuestro regalo para compartir la alegría de la 
+                                    temporada festiva con nuestros colaboradores.
+                                </div>
+                            </div>
+                            <div className="azteca-capital-humano-prestaciones_content_panel_section_card elemento6 animaciones-prestaciones">
+                                <div className="azteca-capital-humano-prestaciones_content_panel_section_card_header">
+                                    <img src={capitalHumanoPrestaciones6} alt="" /> 
+                                </div>
+                                <div className="azteca-capital-humano-prestaciones_content_panel_section_card_texto">
+                                    Seguro de Vida por $300,000 y $600,000
+                                </div>
+                            </div>
+                            <div className="iniciar-testimonios"></div>
+                            <div className="azteca-capital-humano-prestaciones_content_panel_section_card elemento7 animaciones-prestaciones">
+                                <div className="azteca-capital-humano-prestaciones_content_panel_section_card_header">
+                                    <img src={capitalHumanoPrestaciones7} alt="" /> 
+                                </div>
+                                <div className="azteca-capital-humano-prestaciones_content_panel_section_card_texto">
+                                    Apoyo en gastos funerarios: Estamos aquí en los momentos que más importan.
+                                </div>
+                            </div>
+                            <div className="azteca-capital-humano-prestaciones_content_panel_section_card elemento8 animaciones-prestaciones">
+                                <div className="azteca-capital-humano-prestaciones_content_panel_section_card_header">
+                                    <img src={capitalHumanoPrestaciones8} alt="" /> 
+                                </div>
+                                <div className="azteca-capital-humano-prestaciones_content_panel_section_card_texto">
+                                    30 días de aguinaldo: Un beneficio que refleja nuestro compromiso con el 
+                                    bienestar financiero de nuestros empleados.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="azteca-capital-humano-testimonios">
+                <div className="azteca-capital-humano-testimonios_content animaciones-testimonios">
+                    <div className="azteca-capital-humano-testimonios_content_card card1 animaciones-testimonios">
+                        <div className="azteca-capital-humano-testimonios_content_card_usuario">
+                            <div className="azteca-capital-humano-testimonios_content_card_usuario_img">
+                                <img src={capitalHumanoTestimonios1} alt="" /> 
+                            </div>
+                            <div className="azteca-capital-humano-testimonios_content_card_usuario_descripcion">
+                                <h5 className='raleway_bold'>Braulio Miramontes</h5>
+                                <span className='raleway_light'>Desarrollador</span>
+                            </div>
+                        </div>
+                        <p className='raleway_bold'>
+                            "Cada proyecto es una oportunidad para crecer y aprender, y estoy 
+                            emocionado de ser parte de un equipo que valora el progreso y la 
+                            excelencia en cada línea de código."
+                        </p>
+                    </div>
+
+                    <div className="azteca-capital-humano-testimonios_content_card card2 animaciones-testimonios">
+                        <div className="azteca-capital-humano-testimonios_content_card_usuario">
+                            <div className="azteca-capital-humano-testimonios_content_card_usuario_img">
+                                <img src={capitalHumanoTestimonios1} alt="" /> 
+                            </div>
+                            <div className="azteca-capital-humano-testimonios_content_card_usuario_descripcion">
+                                <h5 className='raleway_bold'>Sánchez Martínez Miriam Lizeth</h5>
+                                <span className='raleway_light'>Auxiliar de Facturación</span>
+                            </div>
+                        </div>
+                        <p className='raleway_bold'>
+                            "En mi tiempo en la empresa, he experimentado una cultura de sana 
+                            convivencia y colaboración. Aportar a la eficiencia y la armonía 
+                            en cada proceso, es una prioridad compartida por todo el equipo."
+
+                        </p>
+                    </div>
+
+                    <div className="azteca-capital-humano-testimonios_content_card card3 animaciones-testimonios">
+                        <div className="azteca-capital-humano-testimonios_content_card_usuario">
+                            <div className="azteca-capital-humano-testimonios_content_card_usuario_img">
+                                <img src={capitalHumanoTestimonios1} alt="" /> 
+                            </div>
+                            <div className="azteca-capital-humano-testimonios_content_card_usuario_descripcion">
+                                <h5 className='raleway_bold'>Moreno Marín Gabriel</h5>
+                                <span className='raleway_light'>Operador de trailer</span>
+                            </div>
+                        </div>
+                        <p className='raleway_bold'>
+                            "Cada entrega es un desafío emocionante y me enorgullece ser parte 
+                            de un equipo que valora la responsabilidad y la entrega puntual 
+                            de la carga."
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="azteca-capital-humano-vacantes">
+            <div className="iniciar-vacantes"></div>
+                <div className="azteca-capital-humano-vacantes_content">
+                    <div className="azteca-capital-humano-vacantes_content_header">
+                        <h2 className='text-center square_bold animaciones-vacantes'>VACANTES</h2>
+                    </div>
+
+                    <div className="azteca-capital-humano-vacantes_content_panel">
+
+                        <div className="azteca-capital-humano-vacantes_content_panel_header animaciones-vacantes">
+                            <div className="azteca-capital-humano-vacantes_content_panel_header_icon">
+                                <img src={clip} alt="" /> 
+                            </div>
+                            <div className="azteca-capital-humano-vacantes_content_panel_header_text">
+                                <h4 className='raleway_light'>Zapopan, Jalisco, México</h4>
+                            </div>
+                        </div>
+
+                        <div className="azteca-capital-humano-vacantes_content_panel_section section1 animaciones-vacantes">
+                            <div className="azteca-capital-humano-vacantes_content_panel_section_content">
+                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_puesto">
+                                    <h2>Gerente de logística</h2>
+                                </div>
+                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion">
+                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_icon">
+                                        <img src={clip} alt="" /> 
+                                    </div>
+                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_texto">
+                                        La venta del Astillero, Zapopan, Jalisco, MX
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="azteca-capital-humano-vacantes_content_panel_section_boton" onClick={() => formulario('gerente de logística')}> 
+                                <di className="boton">Aplica</di>
+                            </div>
+                        </div>
+
+                        <div className="azteca-capital-humano-vacantes_content_panel_section section2 animaciones-vacantes">
+                            <div className="azteca-capital-humano-vacantes_content_panel_section_content">
+                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_puesto">
+                                    <h2>Auxiliar de logística</h2>
+                                </div>
+                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion">
+                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_icon">
+                                        <img src={clip} alt="" /> 
+                                    </div>
+                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_texto">
+                                        La venta del Astillero, Zapopan, Jalisco, MX
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="azteca-capital-humano-vacantes_content_panel_section_boton" onClick={() => formulario('auxiliar de logística')}>
+                                <a className="boton" href="#vacantes">Aplica</a>
+                            </div>
+                        </div>
+
+                        <div className="azteca-capital-humano-vacantes_content_panel_section section3 animaciones-vacantes">
+                            <div className="azteca-capital-humano-vacantes_content_panel_section_content">
+                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_puesto">
+                                    <h2>Operador de trailer</h2>
+                                </div>
+                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion">
+                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_icon">
+                                        <img src={clip} alt="" /> 
+                                    </div>
+                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_texto">
+                                        La venta del Astillero, Zapopan, Jalisco, MX
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="azteca-capital-humano-vacantes_content_panel_section_boton" onClick={() => formulario('operador de trailer')}>
+                                <a className="boton" href="#vacantes">Aplica</a>
+                            </div>
+                        </div>
+
+                        <div className="azteca-capital-humano-vacantes_content_panel_header animaciones-vacantes">
+                            <div className="azteca-capital-humano-vacantes_content_panel_header_icon">
+                                <img src={clip} alt="" /> 
+                            </div>
+                            <div className="azteca-capital-humano-vacantes_content_panel_header_text">
+                                <h4 className='raleway_light'>Chinameca, Veracruz, México</h4>
+                            </div>
+                        </div>
+
+                        <div className="azteca-capital-humano-vacantes_content_panel_section section4 animaciones-vacantes">
+                            <div className="azteca-capital-humano-vacantes_content_panel_section_content">
+                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_puesto">
+                                    <h2>Prevensionista</h2>
+                                </div>
+                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion">
+                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_icon">
+                                        <img src={clip} alt="" /> 
+                                    </div>
+                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_texto">
+                                        Chinameca, Veracruz, MX
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="azteca-capital-humano-vacantes_content_panel_section_boton" onClick={() => formulario('prevensionista')}>
+                                <a className="boton" href="#vacantes">Aplica</a>
+                            </div>
+                        </div>
+
+                        <div className="azteca-capital-humano-vacantes_content_panel_section section5 animaciones-vacantes">
+                            <div className="azteca-capital-humano-vacantes_content_panel_section_content">
+                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_puesto">
+                                    <h2>Monitorista</h2>
+                                </div>
+                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion">
+                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_icon">
+                                        <img src={clip} alt="" /> 
+                                    </div>
+                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_texto">
+                                        La venta del Astillero, Zapopan, Jalisco, MX
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="azteca-capital-humano-vacantes_content_panel_section_boton" onClick={() => formulario('monitorista')}>
+                                <a className="boton" href="#vacantes">Aplica</a>
+                            </div>
+                        </div>
+
+                        <div className="azteca-capital-humano-vacantes_content_panel_header animaciones-vacantes">
+                            <div className="azteca-capital-humano-vacantes_content_panel_header_icon">
+                                <img src={clip} alt="" /> 
+                            </div>
+                            <div className="azteca-capital-humano-vacantes_content_panel_header_text">
+                                <h4 className='raleway_light'>Gómez Palacio, Durango, México</h4>
+                            </div>
+                        </div>
+
+                        <div className="azteca-capital-humano-vacantes_content_panel_section section6 animaciones-vacantes">
+                            <div className="azteca-capital-humano-vacantes_content_panel_section_content">
+                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_puesto">
+                                    <h2>Prevensionista</h2>
+                                </div>
+                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion">
+                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_icon">
+                                        <img src={clip} alt="" /> 
+                                    </div>
+                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_texto">
+                                        Gómez Palacio, Durango, MX
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="azteca-capital-humano-vacantes_content_panel_section_boton" onClick={() => formulario('Prevensionista')}>
+                                <a className="boton" href="#vacantes">Aplica</a>
+                            </div>
+                        </div>
+
+                        <div className="azteca-capital-humano-vacantes_content_panel_section section7 animaciones-vacantes">
+                            <div className="azteca-capital-humano-vacantes_content_panel_section_content">
+                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_puesto">
+                                    <h2>Monitorista</h2>
+                                </div>
+                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion">
+                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_icon">
+                                        <img src={clip} alt="" /> 
+                                    </div>
+                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_texto">
+                                        Gómez Palacio, Durango, MX
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="azteca-capital-humano-vacantes_content_panel_section_boton">
+                                <a className="boton" href="#vacantes" onClick={() => formulario('monitorista')}>Aplica</a>
+                            </div>
+                        </div>
+
+                        
+
+                        
+
+                        
+                    </div>
+
+                    
+
+                    
+                </div>
+            </div>
+
+            
+
+            <Footer/>
+
+            {openFormulario && (
+            <div className="azteca-capital-humano-formulario" onClick={() => setOpenFormulario(false)}>
+                <div className="azteca-capital-humano-formulario_panel" onClick={(e) => e.stopPropagation()}>
+                    <div className="azteca-capital-humano-formulario_panel_header square_bold">
+                        ¡TRABAJA CON NOSOTROS!
+                    </div>
+                    <div className="azteca-capital-humano-formulario_panel_content">
+                        <div className="col-xl-12">
+
+                            <form action="#">
+
+                                <div className="form-group">
+                                    <input type="text" className='form-control' placeholder='Nombre completo'/>
+                                </div>
+
+                                <div className="form-group">
+                                    <input type="text" className='form-control' placeholder='Email'/>
+                                </div>
+
+                                <div className="form-group">
+                                    <input type="email" className='form-control' placeholder='N° de teléfono'/>
+                                </div>
+
+                                <div className="form-group">
+                                    <input type="email" className='form-control' placeholder='Último trabajo relevante'/>
+                                </div>
+
+                                <div className="form-group">
+                                    <input type="email" className='form-control' placeholder='Horario en el que te podemos contactar'/>
+                                </div>
+
+                                <div className="row">
+                                    <div className="col-xl-6 col-lg-6 col-md-6">
+                                        <div className="form-group">
+                                            <button type="file" className='btn btn-contacto-cv'>Subir CV</button>
+                                            {/* <input type="file" className='btn btn-contacto-cv' placeholder='Subir CV'/> */}
+                                        </div>
+                                    </div>
+                                    <div className="col-xl-6 col-lg-6 col-md-6">
+                                        <div className="form-group">
+                                            <button type="submit" className='btn btn-contacto-aplicar'>Aplica</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            )}
+
         </div>
     );
 }

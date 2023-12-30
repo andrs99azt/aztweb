@@ -1,4 +1,4 @@
-.azteca-hero {
+.azteca-inicio-hero {
     position: relative;
     height: 832px;
     display: flex;
@@ -6,271 +6,392 @@
     align-items: center;
     background-color: rgb(40, 48, 77);
     overflow: hidden;
-}
+    z-index: 1;
 
-.azteca-hero_pts {
-    position: absolute;
-    left: 0px;
+    height: 500px;
 
-    bottom: 0px;
-    margin-left: 700px;
-    zoom: .6;
-
-    transition: all ease-out 1s;
-    transform: translateY(250px);
-    opacity: 0;
-    animation: ptn 1s forwards;
-
-}
-
-.azteca-hero_img {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // z-index: 2;
-    width: 1100px;
-    object-fit: cover;
-    position: absolute;
-    left: 0px;
-
-    top: 0px;
-    // margin-left: 10%;
-
-    transition: all ease-out 1s;
-    transform: translateY(-200px);
-    opacity: 1;
-    animation: img 1s forwards;
-}
-
-.azteca-hero-content {
-    position: relative;
-    height: 100%;
-    width: auto;
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 10%;
-    color: white;
-    // background-color: rgb(0, 0, 0);
-
-    
-
-    label {
-        transition: all ease-out 1s;
-        transform: translateX(200px);
-        opacity: 0;
-    }
-
-    .azteca-hero-content_first {
-        font-size: 22px;
-        animation: slideIn 1s forwards;
-    }
-
-    .azteca-hero-content_second {
-        font-size: 56px;
-        font-weight: bold;
-        animation: slideIn 1s forwards;
-        animation-delay: 0.3s;
-    }
-
-    .azteca-hero-content_third {
-        font-size: 22px;
-        animation: slideIn 1s forwards;
-        animation-delay: 0.6s;
-    }
-
-    .azteca-hero-content_button{
+    &_points {
         position: absolute;
-        bottom: 150px;
-        right: 0px; 
- 
-        background-color: rgb(204, 39, 77);
-        padding: 15px 30px;
-        font-size: 18px;
-        font-weight: bold;
-
-        text-decoration: none; 
-        color: inherit; 
-        cursor: pointer; 
-        border-radius: 20px;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateX(200px);
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes ptn {
-    from {
+        width: 400px;
+        left: 0px;
+        bottom: 0px;
+        margin-left: 450px;
+        zoom: .6;
+        transition: all ease-out 1s;
         transform: translateY(250px);
+        opacity: 0;
+        animation: points 1s forwards;
     }
-    to {
-        transform: translateY(0);
-        opacity: 1;
+
+    @keyframes points {
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
-}
 
-
-@keyframes img {
-    from {
+    &_img {
+        width: 1300px;
+        object-fit: cover;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        transition: all ease-out 1s;
         transform: translateY(-200px);
-    }
-    to {
-        transform: translateY(0);
         opacity: 1;
+        animation: img 1s forwards;
+
+        width:720px;
     }
-}
 
+    @keyframes img {
+        from {
+            transform: translateY(-200px);
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 
-.azteca-soluciones{
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #E5EAEE;
+    &_content {
+        position: relative;
+        height: 100%;
+        width: auto;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        padding: 100px 400px;
+        color: white;
 
-    &_content{
-        // background-color: blue;
-        width: 80%;
+        padding: 30px 30px;
 
-        &_header{
-            // background-color: rgb(231, 220, 220);
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            >img{
-                width: 400px !important;
-                margin: 20px 0px;
-                max-width: 100%; /* Establece un tamaño máximo para la imagen */
-                overflow: hidden; /* Oculta cualquier parte de la imagen que se extienda más allá del tamaño máximo */
+        
+
+        label {
+            transition: all ease-out 1s;
+            opacity: 0;
+        }
+    
+        &_first, &_second, &_third {
+            font-size: 14px;
+            animation: text 1s forwards;
+            opacity: 0; // Inicia con opacidad cero para la animación de entrada
+
+        }
+        
+        &_second {
+            font-size: 38px;
+            font-weight: bold;
+            animation-delay: 0.2s;
+        }
+        
+        &_third {
+            font-size: 18px;
+            margin-top: 15px;
+            animation-delay: 0.5s;
+        }
+        
+        @keyframes text {
+            from {
+                transform: translateX(50px); // Ajusta la posición inicial para que no empiecen desde fuera de la pantalla
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
             }
         }
-        &_title{
-            text-align: center;
-            color: #091727;
-            padding: 40px;
-            font-size: 18px;
+
+
+    }
+}
+
+// @media only screen and (max-width: 768px) {
+
+// }
+
+// @media only screen and (max-width: 480px) {
+
+// }
+
+.azteca-inicio-soluciones{
+    background-color: #E5EAEE;
+    width: 100%;
+    height: auto;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+
+    &_content{
+        width: 100%;
+        max-width: 1000px;
+        height: 100%;
+        text-align: center;
+
+        &_header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(-200px);
+            
+        
+
+            >img{
+                width: 30%;
+            }
         }
+
+        .header-animacion {
+            transition: all ease-out 1s;
+            opacity: 1;
+            animation: header_animacion 1s forwards;
+        }
+    
+        @keyframes header_animacion {
+            from {
+                transform: translateY(-200px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        &_texto{
+            margin: 10px 0px 30px 0px;
+            font-size: 16px;
+            transform: translateY(-400px);
+        }
+
+        .texto-animacion {
+            transition: all ease-out 1.5s;
+            opacity: 1;
+            animation: texto_animacion 1.5s forwards;
+        }
+
+        @keyframes texto_animacion {
+            from {
+                transform: translateY(-400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
         &_panel{
+            width: 100%;
+            height: 100%;
             display: flex;
             justify-content: center;
-            align-items: center;
-            width: 100%;
+            flex-wrap: wrap;
+            padding: 30px;
 
-            gap: 40px;
-
-            &-item{
-                width: 350px;
-                height: 400px;
-                overflow: hidden;
+            &_card{
+                background-color: #FFFFFF;
+                width: 100%;
+                max-width: 350px;
+                height: 350px;
+                flex: 1;
+                min-width: 150px;
+                margin: 10px;
+                text-align: center;
+                box-shadow: 0px 0px 20px -3px rgba(0,0,0,0.1);
                 border-radius: 5px;
+                overflow: hidden;
+                opacity: 0;
 
-                &-img{
-                    background-size: cover;
-                    width: 100%;
+       
+
+                &_text{
+                    background-color: rgba(0, 0, 0, 0.479);
                     height: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: relative;
-                }
-
-                &-box{
-                    position: absolute;
+                    width: 100%;
                     transform: translateX(100%);
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(0, 0, 0, 0.8);
-                    color: white;
+                    transition: transform 0.3s;
                     display: flex;
                     flex-direction: column;
                     text-align: center;
-                    transition: transform 0.3s;
-                    
 
-                    &_title{
-                        // background-color: rgb(87, 35, 35);
-                        // margin: 10px;
-                        font-size: 22px;
-                        font-weight: bold;
+                 
+
+                    &_content{
+                        background-color: #091727;
+                        height: 100%;
                         padding: 20px;
+                        color: #FFFF;
+                        text-align: center;
+
+                        >p{
+                            margin-top: 30px;
+                            font-size: 12px;
+                        }
                     }
 
-                    &_text{
-                        // background-color: yellow;
-                        font-size: 18px;
-                        padding: 0px 20px 20px 20px;
-                        // margin: 0px 10px 10px 10px;
-                    }
+                    &_footer{
+                        background-color: #F2F2F2;
+                        height: auto;
+                        padding: 10px;
+                        display: flex;
+                        align-items: center;
 
-                    
+                    }
                 }
             }
 
-            &-item:hover .azteca-soluciones_content_panel-item-box {
+            .card1{
+                transform: translateY(300px);
+            }
+
+            .card2{
+                transform: translateY(600px);
+            }
+
+            .card3{
+                transform: translateY(900px);
+            }
+
+            .card-animacion1 {
+                transition: all ease-out 1s;
+                opacity: 1;
+                animation: card_animacion1 1s forwards;
+            }
+
+            .card-animacion2 {
+                transition: all ease-out 1s;
+                opacity: 1;
+                animation: card_animacion2 1s forwards;
+            }
+
+            .card-animacion3 {
+                transition: all ease-out 1s;
+                opacity: 1;
+                animation: card_animacion3 1s forwards;
+            }
+    
+            @keyframes card_animacion1 {
+                from {
+                    transform: translateY(300px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes card_animacion2 {
+                from {
+                    transform: translateY(600px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes card_animacion3 {
+                from {
+                    transform: translateY(900px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+            
+
+            &_card:hover .azteca-inicio-soluciones_content_panel_card_text {
                 transform: translateX(0%); // El texto se desplaza de derecha a izquierda en hover
             }
         }
-        
-    }
 
-    &_score {
-        margin: 50px 0px;
-        display: flex;
-        // justify-content: space-between; /* Espacio entre elementos */
-        align-items: center; /* Centrado verticalmente */
-        justify-content: center;
-        gap: 30px;
-        width: 90%;
+        &_infomacion{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0;
 
-        &_box{
-            width: 300px;
-            // height: 150px;
-            background-color: white;
-            border-radius: 10px;
-            border-radius: 10px;
-            padding: 20px;
+            
 
-            &_infomacion{
-                display: flex;
-                height: 80px;
-                margin-bottom: 15px;
+            &_card{
+                background-color: #FFFFFF;
+                width: 100%;
+                max-width: 350px;
+                height: 120px;
+                flex: 1;
+                min-width: 100px;
+                margin: 10px;
+                box-shadow: 0px 0px 20px -3px rgba(0,0,0,0.1);
+                border-radius: 5px;
+                transition: transform 0.3s;
+                overflow: hidden;
+                display: grid;
+                grid-template-columns: repeat(10, auto);
+                grid-template-rows: repeat(10, auto);
 
-                &_cantidad{
-                    width: 70%;
-                    justify-content: center;
-                    align-items: center;
+                .elemento1{
+                    color: #CC274C;
+                    grid-column: 1/7;
+                    grid-row: 1/8;
                     display: flex;
-                    font-size: 48px;
-                    font-weight: bold;
-                    color: rgb(204, 62, 62);
-
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 42px;
                 }
 
+                .elemento2{
+                    grid-column: 7/11;
+                    grid-row: 1/8;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
 
+                    >img{
+                        width: 50px
+
+                    }
+                }
+
+                .elemento3{
+                    grid-column: 1/11;
+                    grid-row: 8/11;
+                    color: #00286E;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 16px;
+                }
             }
 
-            &_texto{
-                display: flex;
-                // background-color: yellow;
-                justify-content: center;
-         
-                font-weight: bold;
-                color: #091727;
+            &_card:hover{
+                transform: translateY(-10px); // El texto se desplaza de derecha a izquierda en hover
             }
+        }
 
+        .infomacion-animacion {
+            transition: all ease-out 1s;
+            animation: infomacion_animacion 2s forwards;
+        }
+
+        @keyframes infomacion_animacion {
+            from {
+                transform: translateX(-500px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
         }
     }
 }
-
 
 .azteca-servicios{
     height: auto;
@@ -278,240 +399,604 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    // background-color: #2D3F53;
+    background-color: #F9FBFC;
+
+    
 
     &_content{
-        width: 60%;
-        margin-bottom: 40px;
+        width: 100%;
+        max-width: 1000px;
+        height: 100%;
+
         &_header{
             display: flex;
-            text-align: center;
             justify-content: center;
+            align-items: center;
+
             >img{
-                width: 400px !important;
-                margin: 50px 0px 100px 0px;
-                max-width: 100%; 
-                overflow: hidden; 
+                width: 30%;
             }
         }
 
-        &_panel {
-            background-color: #2E4054;
+        &_elements{
+            margin: 50px 0px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 1px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 1px;            
 
-
-            &_item {
-                height: 200px;
-                min-width: 300px;
-                background-color: white;
-
+            &_box{
+                background-color: #F9FBFC;
+                padding: 10px 10px;
                 display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: translateY(-300px);
+                opacity: 0;
 
-                &_box-icon{
+                &_panel-icon{
+                    width: 80px;
                     height: 100%;
-                    width: 25%;
-
                     display: flex;
                     justify-content: center;
-                    
-                    
+                    align-items: start;
 
                     >img{
-                        height: 30%;
-                        margin-top: 10%;
+                        width: 60px;
                     }
+
                 }
-
-                &_box-content{
-                    // background-color: rgb(33, 87, 187);
+                &_panel-content{
+                    width: 100%;
                     height: 100%;
-                    width: 75%;
-
-                    display: flex;
-                    flex-direction: column;
-
-              
+                    padding-bottom: 10px;
 
                     &_text{
-                        // background-color: rgb(131, 88, 88);
-             
-                        // padding: 10px;
-                        height: 70%;
+                        height: calc(100% - 40px);
+                        padding-left: 10px;
 
-                        white-space: pre-line; /* Permite saltos de línea */
-                        text-overflow: ellipsis; /* Muestra puntos suspensivos (...) al final del texto truncado */
-                        overflow: hidden; /* Oculta el texto que desborda la altura del contenedor */
-                        padding-top: 10px;
-
-                        &_title{
-                            font-weight: bold;
-                            margin-top: 10px;
+                        >label{
+                            font-size: 12px;
                         }
-
-                        &_infomacion{
-                            font-size: 14px;
-                            color: rgba(0, 0, 0, 0.4);
+                        
+                        >p{
+                            color: rgba(0, 0, 0, 0.555);
+                            font-size: 12px;
                         }
                     }
 
-                    &_mas{
-                        flex-grow: 1; 
-                        // height: 100px;
+                    &_enlace{
+                        height: 30px;
                         display: flex;
-                        // padding: 10px;
-                        gap: 5px;
-                        // justify-content: center;
-                        // align-items: center;
-                        
+                        align-items: center;
 
-                        &_icon{
+                        &_img{
                             background-color: #2E4054;
+                            height: 20px;
+                            width: 20px;
                             border-radius: 100px;
-                            width: 30px;
-                            height: 30px;
+                            margin: 0px 5px;
+                            
+                            display: flex;
                             justify-content: center;
                             align-items: center;
-                            display: flex;
 
                             >img{
-                                width: 60%;
+                                width: 80%;
                             }
+
                         }
-                        &_text{
-                            // background-color: red;
-                            justify-content: center;
-                            align-items: center;
-                            height: 30px;
-                            display: flex;
-                            font-size: 14px;
+
+                        >span{
+                            cursor: pointer;
+                            font-size: 12px;
                         }
+
+                      
                     }
-
+                    
                 }
-                
-              }
-        }    
-    }
+            }
+
+            // _______________________  ANIMACIONES BOX
+
+            .box-animacion{
+                transition: all ease-out 1s;
+                animation: box-animacion 1s forwards;
+            }
+
+            @keyframes box-animacion {
+                from {
+                    transform: translateY(-300px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            .box1{
+               
+                animation-delay: 0s;
+            }
+            .box2{
+                animation-delay: .5s;
+            }
+
+            .box3{
+                animation-delay: 1s;
+            }
+
+            .box4{
+               
+                animation-delay: 1.5s;
+            }
+            .box5{
+                animation-delay: 2s;
+            }
+
+            .box6{
+                animation-delay: 2.5s;
+            }
+
+        }
+
+        // _______________________  ANIMACIONES PANEL
+
+        .elements-animacion{
+            transition: all ease-out 1s;
+            animation: elements-animacion 1s forwards;
+        }
+
+        .elements{
+            animation-delay: 3.5s;
+        }
+
+        @keyframes elements-animacion {
+            from {
+                background-color: #FFFF;
+            }
+            to {
+                background-color: #707070;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            &_elements{
+                grid-template-columns: 1fr 1fr; 
+            } 
+        }
+
+        @media only screen and (max-width: 480px) {
+            &_elements{
+                grid-template-columns: 1fr; 
+            } 
+        }
 
 
-    
+    } 
 }
 
-.azteca-experiencia{
-    background-color: #2E4054;
+
+.azteca-inicio-experiencia{
     height: auto;
-    padding: 50px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: #2E4054;
+    padding: 20px;
 
-    &_content{
-        // background-color: blue;
-        min-width: 60%;
-        max-width: 60%;
-        height: 500px;
-
+    &_content-top{
+        width: 100%;
+        max-width: 1000px;
+        height: 100%;
         display: flex;
-      
+        justify-content: center;
+        flex-wrap: wrap;
 
-        > iframe{
-            height: 100%;
-            flex-grow: 1; 
-            border-radius: 10px;
+        &_media{
+            width: 100%;
+            height: auto;
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+            text-align: center;
             overflow: hidden;
-
-        }
-
-        &_texto{
-            width: 30%;
-            max-width: 30%;
-            padding: 0px 20px;
-            height: 100%;
-            color: white;
-            display: flex;
-            flex-direction: column;
-
-        }
-
-
-
-        
-    }
-
-    &_mensaje{
-        // background-color: red;
-        max-width: 60%;
-        width: 60%;
-        height: auto;
-        display: inline-block;
-        margin: 30px;
-
-        >label{
-            background-color: white;
-            padding: 10px 15px;
-            justify-content: center;
-            align-items: center;
-            display: block;
-            width: 340px;
+            height: 300px;
             border-radius: 5px;
-            font-size: 28px;
-            font-weight: bold;
+
+            transform: translateX(-300px);
+            opacity: 0;
             
-          
+
         }
+
+        // _______________________  ANIMACIONES PANEL
+
+        .media-animacion{
+            transition: all ease-out 1s;
+            animation: media-animacion 1s forwards;
+        }
+
+        @keyframes media-animacion {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        &_text{
+            width: 100%;
+            max-width: 430px;
+            height: auto;
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+            overflow: hidden;
+            text-align: start;
+            color: #FFFF;
+            transform: translateY(-200px);
+            opacity: 0;
+        }
+
+        .text-animacion{
+            transition: all ease-out 1s;
+            animation: media-animacion 1s forwards;
+        }
+        
+        @keyframes media-animacion {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
     }
 
-    &_cards{
-        min-width: 60%;
-        max-width: 60%;
+    &_content-medium{
+        width: 100%;
+        max-width: 1000px;
+        height: 100%;
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
 
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-        gap: 40px;
-        border-radius: 10px;
+        &_panel{
+            background-color: #FFFF;
+            padding: 10px;
+            border-radius: 5px;
+            margin-left: 10px;
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        .panel-animacion{
+            transition: all ease-out 1s;
+            animation: panel-animacion 1s forwards;
+        }
+        
+        @keyframes panel-animacion {
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+    }
+
+    &_content-button{
+        width: 100%;
+        max-width: 1000px;
+        height: 100%;
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
 
         &_card{
-            background-color: #3a6f94;
+            background-color: #FFFFFF;
             width: 100%;
-            height: 250px;
-            border-radius: 5px;
-
+            height: 150px;
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 20px -3px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
             display: flex;
-            align-items: center;
-     
 
-            &_imagen{
+            opacity: 0;
+
+            &_img{
                 // background-color: red;
-                height: 100%;
                 width: 50%;
-                // background-color: red;
-
                 display: flex;
-                justify-content: center;
                 align-items: center;
-
+                justify-content: center;
+                
                 >img{
-                    // background-color: gray;
                     width: 100%;
+                    
                 }
             }
 
-            &_texto{
-                // background-color: #BED2E0;
-                max-width: 50%;
-                height: 100%;
-                flex-grow: 1; 
+            &_text{
+                width: 40%;
                 display: flex;
                 align-items: center;
-                font-size: 24px;
-                letter-spacing: 3px;
-                line-height: 1.5;
-                padding: 0px 30px;
+                justify-content: center;
+                text-align: start;
+                margin-left: 10px;
+            }
+        }
+
+        .card1-animacion{
+            transition: all ease-out 1s;
+            animation: card1-animacion 1s forwards;
+        }
+
+        .card1{
+            transform: translateX(-300px);
+            animation-delay: .5s;
+        }
+
+        @keyframes card1-animacion {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .card2-animacion{
+            transition: all ease-out 1s;
+            animation: card2-animacion 1s forwards;
+        }
+
+        .card2{
+            transform: translateX(300px);
+            animation-delay: .5s;
+        }
+
+        @keyframes card2-animacion {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        
+
+        
+        
+        
+    }
+}
+
+.azteca-proyectos {
+    // padding:5.5em 1em;
+    padding: 0px 1em 50px 1em;
+    background-color: #F9FBFC;
+    
+    .container{
+        
+
+        &_header{
+            // background-color: red;
+            height: 200px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &_img{
+                position: absolute;
+                left: 50%; /* Se coloca en el centro horizontal */
+                transform: translateX(-50%); /* Centra horizontalmente con respecto al padre */
+                margin-top: 10px;
           
+
+                >img{
+                    width: 400px
+                }
+            }
+
+         
+        }
+
+  
+
+        .row{
+            background-color: #087fbb00;
+            box-shadow: none;
+
+            .col-xl-12{
+                background-color: #087fbb00;
+                box-shadow: none;
+
+                .splide{
+                    background-color: #087fbb00;
+                    box-shadow: none;
+
+                    // .pop{
+                    //     background-color: #087fbb00;
+                
+                    // }
+                }
+            }
+        }
+
+        .item-slidd {
+            border: 0.2em solid #5e5e5e;
+            background-color: #F4F2EC;
+            // padding: 3em;
+            border-radius: 0.5em;
+            z-index: 2;
+            position: relative;
+            overflow: hidden;
+
+            .img{
+                height: 350px;
+
+                >img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .texto{
+                // background-color: red;
+                padding: 10px;
+            }
+
+            .footer{
+                // background-color: yellow;
+                display: flex;
+            
+
+                &_fecha{
+                    // background-color: gray;
+                    flex: 1;
+                    padding: 10px;
+
+                }
+
+                &_img{
+                    // background-color: white;
+                    height: 50px;
+                    width: 90px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0px 10px;
+
+                    >img{
+                        width: 100%;
+                    }
+
+                }
+            }
+    
+    
+        }
+    }
+
+    
+}
+
+
+.azteca-cabecera-contacto {
+    padding:8em 1em;
+    background-image: url('../../assets/img/contacto/header-contacto.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    
+
+    h1 {
+        color:white;
+        font-size: 3.5em;
+        font-style: italic;
+        line-height: 1.2em;
+
+        span {
+            display: block;
+        }
+    }
+}
+
+.azteca-formulario-contacto {
+    padding:6em 1em;
+
+    .informacion {
+        top:50%;
+        transform: translate(0,-50%);
+        position: relative;
+
+        p {
+            font-size: 1.1em;
+        }
+
+        ul {
+            margin:2em 0;
+            padding: 0;
+    
+            li {
+                font-size: 1.1em;
+                list-style-type: none;
+            }
+        }
+    
+        .logo {
+            width: 45%;
+            display: block;
+        }
+    }
+
+    .form-control {
+        border:0.15em solid #707070;
+        padding:1em;
+        margin-bottom: 1.4em;
+        color:#828588;
+    }
+
+    .btn-contacto {
+        background-color: #CC274C;
+        width: 100%;
+        color:white;
+        font-size: 1.2em;
+        padding:0.6em;
+
+        &:hover {
+            background-color: #b31537;
+        }
+    }
+}
+
+
+
+@media (max-width: 992px) {
+
+    .azteca-cabecera-contacto {
+
+        .informacion {
+            text-align: center;
+            padding:2em 0;
+
+            .logo {
+                margin:0 auto;
             }
         }
     }
+
+    .azteca-formulario-contacto {
+        .informacion {
+            .logo {
+                margin:0 auto;
+                margin-bottom: 5em;
+            }
+        }
+    }
+
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1200px) {
+    
+    .azteca-cabecera-contacto {
+        padding:5em 1em;
+
+        h1 {
+            text-align: center;
+            font-size: 2.7em;
+            line-height: 1em;
+        }
+    }
+}
+
+.azteca-mapa{
+    height: 600px;
 }

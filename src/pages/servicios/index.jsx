@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../../components/header/Index';
 import Footer from '../../components/footer/Index';
 
@@ -13,10 +13,51 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/core';
 import '@splidejs/react-splide/css';
 
+// import serviciosLogistica1 from '../../assets/img/servicios/servicios-logistica-1.jpg';
+
 //Styles
 import './servicios.scss';
 
+const useScrollAnimation = (selector,Setter, stateSetter) => {
+    useEffect(() => {
+      const handleScroll = () => {
+        const containerPanel = document.querySelector(selector);
+        const posicionContainerPanel = containerPanel.getBoundingClientRect().top;
+        const puntoEspecifico = 100;
+
+        if(!Setter){
+            console.log("tambien")
+            stateSetter(posicionContainerPanel < puntoEspecifico);
+        }
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+  
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, [selector, stateSetter]);
+};
+
 const Index = () => {
+
+    const [monitoreoAnimacion, setMonitoreoAnimacion] = useState(false);
+    const [lavadoAnimacion, setLavadoAnimacion] = useState(false);
+    const [unidadesAnimacion, setUnidadesAnimacion] = useState(false);
+    const [serviciosAnimacion, setServiciosAnimacion] = useState(false);
+    const [contactoAnimacion, setContactoAnimacion] = useState(false);
+    const [alcanceAnimacion, setAlcanceAnimacion] = useState(false);
+
+    useScrollAnimation('.ponit-monitoreo',monitoreoAnimacion, setMonitoreoAnimacion);
+    useScrollAnimation('.ponit-lavado',lavadoAnimacion, setLavadoAnimacion);
+    useScrollAnimation('.ponit-unidades',unidadesAnimacion, setUnidadesAnimacion);
+    useScrollAnimation('.ponit-servicios',serviciosAnimacion, setServiciosAnimacion);
+    useScrollAnimation('.ponit-contacto',contactoAnimacion, setContactoAnimacion);
+    useScrollAnimation('.ponit-alcance',alcanceAnimacion, setAlcanceAnimacion);
+
+  
+
+    
 
     return (
         <div>
@@ -24,7 +65,7 @@ const Index = () => {
             <div className="container-fluid azteca-cabecera-servicios">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12">
+                        <div className="col-12 hero-text">
                             <h3 className='raleway_medium'>Los servicios que ofrece</h3>
                             <h1 className='square_bold'>Azteca</h1>
                             <p className='raleway_light'>Nuestro servicio de <strong className='raleway_bold'>transporte de líquidos en pipas</strong> es líder en la industria. Contamos con una flota especializada y tecnología de vanguardia para garantizar la seguridad y la eficiencia en cada carga. Nuestros conductores altamente capacitados y nuestro compromiso con las mejores prácticas hacen que confiar en nosotros sea la elección óptima para el transporte de líquidos en pipas.</p>
@@ -33,17 +74,14 @@ const Index = () => {
                 </div>
             </div>
             <div className="container azteca-logistica-servicios">
-                <div className="row">
+                <div className="row hero-panel">
                     <div className="col-xl-4">
                         <Splide options={{ type: 'loop', perPage: 1, rewind: true , width: '100%' }}>
                             <SplideSlide>
-                                <div className="item-slide"></div>
+                                <div className="item-slide img1"></div>
                             </SplideSlide>
                             <SplideSlide>
-                                <div className="item-slide"></div>
-                            </SplideSlide>
-                            <SplideSlide>
-                                <div className="item-slide"></div>
+                                <div className="item-slide img2"></div>
                             </SplideSlide>
                         </Splide>
                     </div>
@@ -51,31 +89,33 @@ const Index = () => {
                         <div className="informacion">
                             <h2 className='raleway_bold'>Soluciones logísticas</h2>
                             <h3>Adecuado a tus necesidades</h3>
+                            <div className="ponit-monitoreo"></div>
                             <p>Nuestra logística es el corazón de nuestro éxito. Con una planificación meticulosa, una red de distribución eficiente y un control y monitoreo constante, ofrecemos soluciones logísticas a la medida que optimizan costos y tiempos de entrega. Nuestro compromiso con la excelencia en la logística garantiza que sus necesidades sean atendidas de manera efectiva y confiable.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="container-fluid azteca-monitoreo-servicios">
-                <div className="container">
+                <div className={`container monitoreo ${monitoreoAnimacion ? 'monitoreo-animacion' : ''}`}>
                     <div className="row">
                         <div className="col-xl-7">
                             <div className="informacion">
                                 <h2 className='raleway_bold'>Monitoreo 24/7</h2>
                                 <h3>Cuidamos tu producto</h3>
+                                <div className="ponit-lavado"></div>
                                 <p>Nuestro servicio de monitoreo es una parte esencial de nuestra oferta. Con tecnología avanzada y un equipo dedicado, proporcionamos un monitoreo constante y en tiempo real de sus activos, envíos y operaciones. Esto brinda una visibilidad completa y le permite tomar decisiones informadas de manera oportuna, lo que hace que nuestra solución de monitoreo sea inigualable en su eficiencia y confiabilidad.</p>
                             </div>
                         </div>
                         <div className="col-xl-4">
                             <Splide options={{ type: 'loop', perPage: 1, rewind: true , width: '100%' }}>
                                 <SplideSlide>
-                                    <div className="item-slide"></div>
+                                    <div className="item-slide img1"></div>
                                 </SplideSlide>
                                 <SplideSlide>
-                                    <div className="item-slide"></div>
+                                    <div className="item-slide img2"></div>
                                 </SplideSlide>
                                 <SplideSlide>
-                                    <div className="item-slide"></div>
+                                    <div className="item-slide img3"></div>
                                 </SplideSlide>
                             </Splide>
                         </div>
@@ -83,17 +123,17 @@ const Index = () => {
                 </div>
             </div>
             <div className="container azteca-lavado-servicios">
-                <div className="row">
+                <div className={`row lavado ${lavadoAnimacion ? 'lavado-animacion' : ''}`}>
                     <div className="col-xl-4">
                         <Splide options={{ type: 'loop', perPage: 1, rewind: true , width: '100%' }}>
                                 <SplideSlide>
-                                    <div className="item-slide"></div>
+                                    <div className="item-slide img1"></div>
                                 </SplideSlide>
                                 <SplideSlide>
-                                    <div className="item-slide"></div>
+                                    <div className="item-slide img2"></div>
                                 </SplideSlide>
                                 <SplideSlide>
-                                    <div className="item-slide"></div>
+                                    <div className="item-slide img3"></div>
                                 </SplideSlide>
                             </Splide>
                     </div>
@@ -101,56 +141,58 @@ const Index = () => {
                         <div className="informacion">
                             <h2 className='raleway_bold'>Servicio de Lavado</h2>
                             <h3>Calidad e inocuidad</h3>
+                            <div className="ponit-unidades"></div>
                             <p>Implementamos rigurosos controles y estándares para garantizar que nuestros productos y servicios cumplan con los más altos niveles de calidad y seguridad alimentaria. La calidad e inocuidad son pilares fundamentales de nuestra operación, y trabajamos incansablemente para mantener la confianza de nuestros clientes y la integridad de nuestros productos en todo momento.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="container azteca-unidades-servicios">
-                <div className="row">
+                <div className={`row texto ${unidadesAnimacion ? 'texto-animacion' : ''}`}>
                     <div className="col-12">
                         <h2 className='text-center square_bold'>Nuestras unidades</h2>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-xl-4">
+                    <div className={`col-xl-4 boton1 ${unidadesAnimacion ? 'texto-animacion' : ''}`}>
                         <div className="unidad">
-                            <h3 className='raleway_semib'>22 Toneladas</h3>
-                            <h4 className='raleway_bold'>Subitulo</h4>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, autem.</p>
+                            <h3 className='roboto_medium'>22 Toneladas</h3>
+                            {/* <h4 className='raleway_bold'>Subitulo</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, autem.</p> */}
                         </div>
                     </div>
-                    <div className="col-xl-4">
+                    <div className={`col-xl-4 boton2 ${unidadesAnimacion ? 'texto-animacion' : ''}`}>
                         <div className="unidad azul">
-                            <h3 className='raleway_semib'>22 Toneladas</h3>
-                            <h4 className='raleway_bold'>Subitulo</h4>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, autem.</p>
+                            <h3 className='roboto_medium'>22 Toneladas</h3>
+                            {/* <h4 className='raleway_bold'>Subitulo</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, autem.</p> */}
                         </div>
                     </div>
-                    <div className="col-xl-4">
+                    <div className={`col-xl-4 boton3 ${unidadesAnimacion ? 'texto-animacion' : ''}`}>
                         <div className="unidad">
-                            <h3 className='raleway_semib'>22 Toneladas</h3>
-                            <h4 className='raleway_bold'>Subitulo</h4>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, autem.</p>
+                            <h3 className='roboto_medium'>22 Toneladas</h3>
+                            {/* <h4 className='raleway_bold'>Subitulo</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, autem.</p> */}
                         </div>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-xl-12">
+                    <div className={`col-xl-12 img ${unidadesAnimacion ? 'texto-animacion' : ''}`}>
                         <img src={unidad} alt="Transportes Azteca" class="img-fluid"/>
                     </div>
+                    <div className="ponit-servicios"></div>
                 </div>
             </div>
             <div className="container-fluid azteca-transportamos-servicios">
-                <img src={aceite} alt="Acite" className='img-fluid aceite-fondo' />
+                <img src={aceite} alt="Acite" className={`img-fluid aceite-fondo ${serviciosAnimacion ? 'servicios-animacion' : ''}`} />
                 <div className="container">
                     <div className="row">
-                        <div className="col-12">
-                            <h2 className='text-center square_bold'>Lo que <span>transportamos</span></h2>
+                        <div className={`col-12 texto ${serviciosAnimacion ? 'servicios-animacion' : ''}`}>
+                            <h2 className='text-center square_bold'>Lo que transportamos</h2>
                         </div>
                     </div>
                     <div className="row cards">
-                        <div className="col-xl-3">
+                        <div className={`col-xl-3 card1 ${serviciosAnimacion ? 'servicios-animacion' : ''}`}>
                             <div className="transporte">
                                 <div className="img img-1"></div>
                                 <div className="contenido">
@@ -159,7 +201,7 @@ const Index = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-3">
+                        <div className={`col-xl-3 card2 ${serviciosAnimacion ? 'servicios-animacion' : ''}`}>
                             <div className="transporte">
                                 <div className="img img-2"></div>
                                 <div className="contenido">
@@ -168,7 +210,7 @@ const Index = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-3">
+                        <div className={`col-xl-3 card3 ${serviciosAnimacion ? 'servicios-animacion' : ''}`}>
                             <div className="transporte">
                                 <div className="img img-3"></div>
                                 <div className="contenido">
@@ -177,7 +219,7 @@ const Index = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-3">
+                        <div className={`col-xl-3 card4 ${serviciosAnimacion ? 'servicios-animacion' : ''}`}>
                             <div className="transporte">
                                 <div className="img img-4"></div>
                                 <div className="contenido">
@@ -187,7 +229,7 @@ const Index = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row cards">
+                    <div className={`row cards cards-button ${serviciosAnimacion ? 'servicios-animacion' : ''}`}>
                         <div className="col-xl-3">
                             <div className="transporte">
                                 <div className="img img-5"></div>
@@ -226,71 +268,85 @@ const Index = () => {
                         </div>
                     </div>
                 </div>
+                <div className="ponit-contacto"></div>
             </div>
             <div className="container-fluid azteca-conecta-clientes-servicios">
-                <img src={maguey} alt="Maguey" className='maguey img-fluid'/>
-                <img src={liquido} alt="Liquido" className='liquido-derecho img-fluid'/>
+                <img src={maguey} alt="Maguey" className={`maguey img-fluid ${contactoAnimacion ? 'maguey-animacion' : ''}`}/>
+                <img src={liquido} alt="Liquido" className={`liquido-derecho img-fluid ${contactoAnimacion ? 'maguey-animacion' : ''}`}/>
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-6">
-                            <img src={trailer} alt="Trailer de Azteca" className='trailer img-fluid'/>
+                            <img src={trailer} alt="Trailer de Azteca" className={`trailer img-fluid ${contactoAnimacion ? 'trailer-animacion' : ''}`}/>
                         </div>
                         <div className="col-xl-5 offset-xl-1 position-relative">
-                            <div className="contenido">
+                            <div className={`contenido ${contactoAnimacion ? 'contenido-animacion' : ''}`}>
                                 <h2 className='raleway_bold'>Conecta a tus clientes <span>con nuestro servicios</span></h2>
                                 <p className='raleway_light'>Colaborar con nosotros significa contar con un socio confiable que garantiza soluciones logísticas de calidad, puntualidad y eficiencia en cada envío.</p>
                                 <button className='btn btn-contacto'>Contacto</button>
+                                <div className="ponit-alcance"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="container-fluid azteca-alcance-y-sedes">
+                <div className={`row square_bold titulo ${alcanceAnimacion ? 'alcance-animacion' : ''}`}>
+                    ALCANCE Y REDES
+                </div>
                 <div className="row">
                     <div className="col-xl-5">
-                        <div className="mundo"></div>
+                        <div className={`mundo ${alcanceAnimacion ? 'alcance-animacion' : ''}`}></div>
                     </div>
                     <div className="col-xl-6 position-relative">
                         <div className="row vertical-align">
-                            <div className="col-xl-12">
-                                <div className="info normal active">
-                                    <h3 className='raleway_bold'>La venta del astillero, Jalisco México</h3>
-                                    <span className='raleway_light'>Francisco Montejano Palacios 25-A Col, 45221 La Venta del Astillero</span>
-                                    <p>Nuestra sede principal en la Venta del Astillero, Jalisco, México, es un centro neurálgico de operaciones estratégicamente ubicado. Aquí, contamos con cuatro amplios patios especialmente diseñados para el almacenamiento seguro y eficiente de nuestras pipas y tractocamiones. Desde esta sede, impulsamos nuestra misión de brindar soluciones de transporte de líquidos confiables y eficaces a nuestros clientes, apoyados por una infraestructura de clase mundial.</p>
-                                </div>
-                            </div>
-                            <div className="row pr-0">
-                                <div className="col-xl-6">
-                                    <div className="info">
-                                        <h3 className='raleway_bold'>Durango</h3>
+                            <div className={`cede ${alcanceAnimacion ? 'alcance-animacion' : ''}`}>
+                                <div className="col-xl-12">
+                                    <div className="info normal active">
+                                        <h3 className='raleway_bold'>La venta del astillero, Jalisco México</h3>
                                         <span className='raleway_light'>Francisco Montejano Palacios 25-A Col, 45221 La Venta del Astillero</span>
-                                        <p>Nuestro compromiso con la eficiencia y la atención al detalle se refleja en cada aspecto de esta sede, garantizando que podamos cumplir con las necesidades de nuestros clientes en Durango y sus alrededores de manera confiable.</p>
-                                    </div>
-                                </div>
-                                <div className="col-xl-6">
-                                    <div className="info">
-                                        <h3 className='raleway_bold'>Monterrey</h3>
-                                        <span className='raleway_light'>Francisco Montejano Palacios 25-A Col, 45221 La Venta del Astillero</span>
-                                        <p>Esta sede en Monterrey nos permite atender las necesidades logísticas locales y regionales de manera eficiente. A pesar de su tamaño más reducido, mantenemos los mismos estándares de calidad y atención al detalle que en nuestras sedes más grandes.</p>
+                                        <p>Nuestra sede principal en la Venta del Astillero, Jalisco, México, es un centro neurálgico de operaciones estratégicamente ubicado. Aquí, contamos con cuatro amplios patios especialmente diseñados para el almacenamiento seguro y eficiente de nuestras pipas y tractocamiones. Desde esta sede, impulsamos nuestra misión de brindar soluciones de transporte de líquidos confiables y eficaces a nuestros clientes, apoyados por una infraestructura de clase mundial.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div className="row pr-0">
-                                <div className="col-xl-6">
-                                    <div className="info">
-                                        <h3 className='raleway_bold'>Chinameca, Veracruz</h3>
-                                        <span className='raleway_light'>Francisco Montejano Palacios 25-A Col, 45221 La Venta del Astillero</span>
-                                        <p>Nuestra sede en Chinameca, Veracruz, es una instalación de mayor envergadura y una parte integral de nuestra presencia en la región. Además de ofrecer un amplio espacio de almacenamiento y patio de maniobras.</p>
+
+                            <div className={`cards1 ${alcanceAnimacion ? 'alcance-animacion' : ''}`}>
+                                <div className="row pr-0">
+                                    <div className="col-xl-6">
+                                        <div className="info">
+                                            <h3 className='raleway_bold'>Durango</h3>
+                                            <span className='raleway_light'>Francisco Montejano Palacios 25-A Col, 45221 La Venta del Astillero</span>
+                                            <p>Nuestro compromiso con la eficiencia y la atención al detalle se refleja en cada aspecto de esta sede, garantizando que podamos cumplir con las necesidades de nuestros clientes en Durango y sus alrededores de manera confiable.</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="col-xl-6">
-                                    <div className="info">
-                                        <h3 className='raleway_bold'>Estados Unidos</h3>
-                                        <span className='raleway_light'>Francisco Montejano Palacios 25-A Col, 45221 La Venta del Astillero</span>
-                                        <p>Trabajamos en estrecha colaboración con nuestros clientes para asegurarnos de que sus envíos lleguen a su destino en los Estados Unidos de manera puntual y segura. Ya sea que se trate de productos químicos, alimentos líquidos, u otros líquidos.</p>
+                                    <div className="col-xl-6">
+                                        <div className="info">
+                                            <h3 className='raleway_bold'>Monterrey</h3>
+                                            <span className='raleway_light'>Francisco Montejano Palacios 25-A Col, 45221 La Venta del Astillero</span>
+                                            <p>Esta sede en Monterrey nos permite atender las necesidades logísticas locales y regionales de manera eficiente. A pesar de su tamaño más reducido, mantenemos los mismos estándares de calidad y atención al detalle que en nuestras sedes más grandes.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <div className={`cards2 ${alcanceAnimacion ? 'alcance-animacion' : ''}`}>
+                                <div className="row pr-0">
+                                    <div className="col-xl-6">
+                                        <div className="info">
+                                            <h3 className='raleway_bold'>Chinameca, Veracruz</h3>
+                                            <span className='raleway_light'>Francisco Montejano Palacios 25-A Col, 45221 La Venta del Astillero</span>
+                                            <p>Nuestra sede en Chinameca, Veracruz, es una instalación de mayor envergadura y una parte integral de nuestra presencia en la región. Además de ofrecer un amplio espacio de almacenamiento y patio de maniobras.</p>
+                                        </div>
+                                    </div>
+                                    <div className="col-xl-6">
+                                        <div className="info">
+                                            <h3 className='raleway_bold'>Estados Unidos</h3>
+                                            <span className='raleway_light'>Francisco Montejano Palacios 25-A Col, 45221 La Venta del Astillero</span>
+                                            <p>Trabajamos en estrecha colaboración con nuestros clientes para asegurarnos de que sus envíos lleguen a su destino en los Estados Unidos de manera puntual y segura. Ya sea que se trate de productos químicos, alimentos líquidos, u otros líquidos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

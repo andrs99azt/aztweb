@@ -18,6 +18,19 @@
         color:white;
     }
 
+    .text-hero{
+        transform: translateY(-250px);
+        opacity: 0;
+        animation: text-animacion 1s forwards;
+    }
+
+    @keyframes text-animacion {
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
     .top {
         margin-bottom: 1em;
     }
@@ -26,6 +39,24 @@
 .azteca-hacemos-nosotros {
     padding:6em 1em 0 1em;
 
+    .texto{
+        transform: translateX(-400px);
+        opacity: 0;
+        z-index: 100;
+    }
+
+    .texto-animacion{
+        transition: all ease-out 1s;
+        animation: texto-animacion 1.5s forwards;
+    }
+
+    @keyframes texto-animacion {
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
     .frase {
         position: absolute;
         background-color: #BED2E0;
@@ -33,6 +64,10 @@
         width:24em;
         margin-top: 1.2em;
         border-radius: 0.9em;
+
+        transform: translateY(400px);
+        opacity: 0;
+        z-index: 1000;
 
         p {
             font-size: 1.4em;
@@ -48,6 +83,18 @@
         }
     }
 
+    .frase-animacion{
+        transition: all ease-out 1s;
+        animation: frase-animacion 1.5s forwards;
+    }
+
+    @keyframes frase-animacion {
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
     .img {
         height: 25em;
         background-color: #ececec;
@@ -58,6 +105,21 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+
+        &.img1-animacion{
+            transition: all ease-out 1s;
+            animation: img1-animacion 1.5s forwards;
+            transform: translateY(0);
+        }
+    
+        @keyframes img1-animacion {
+            to {
+                opacity: 1;
+            }
         }
     
         &.img2 {
@@ -66,6 +128,21 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+
+            transform: translateX(100px);
+            opacity: 0;
+        }
+
+        &.img2-animacion{
+            transition: all ease-out 1s;
+            animation: img2-animacion 1.5s forwards;
+            transform: translateY(0);
+        }
+    
+        @keyframes img2-animacion {
+            to {
+                opacity: 1;
+            }
         }
     }
 
@@ -114,6 +191,7 @@
         color:#2E4054;
         font-size: 1.1em;
     }
+    
 }
 
 .azteca-nosotros-testimonios {
@@ -174,14 +252,22 @@
         z-index: 2;
         position: relative;
 
-        .img {
+        .img{
+            background-color: red;
             width:4em;
             height:4em;
-            background-image: url('../../assets/img/nosotros/testi-avatar.png');
-            background-repeat: no-repeat;
-            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 50%;
+            overflow: hidden;
+
+            >img{
+                width: 100%;
+            }
         }
+
+
 
         h3 {
             font-size: 1.5em;
@@ -224,7 +310,7 @@
 
 .azteca-nosotros-vacantes {
     padding:10em 1em;
-    background-image: url('../../assets/img/nosotros/familia.jpg');
+    background-image: url('../../assets/img/nosotros/nosotros-vacantes-1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -320,8 +406,30 @@
     }
 }
 
+.line1{
+
+    transform: translateY(100px);
+    opacity: 0;
+    
+}
+
+.mision-animacion{
+    transition: all ease-out 1s;
+    animation: mision-animacion 1.5s forwards;
+}
+
+@keyframes mision-animacion {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .azteca-nosotros-mision {
     padding:3.5em 0;
+
+    transform: translateY(200px);
+    opacity: 0;
 
     h2 {
         color:#2E4054;
@@ -332,16 +440,49 @@
     }
 
     .img-1 {
-        background-image: url('../../assets/img/nosotros/mision-1.jpg');
+        background-image: url('../../assets/img/nosotros/nosotros-mision-1.jpg');
         background-size: cover;
         background-repeat: no-repeat;
+        transform: translateX(-300px);
+        opacity: 1;
+    }
+
+
+
+    .img1-animacion{
+        transition: all ease-out 1s;
+        animation: mision-Img1-animacion 1s forwards;
+    }
+
+    @keyframes mision-Img1-animacion {
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
 
     .img-2 {
-        background-image: url('../../assets/img/nosotros/mision-2.jpg');
+        background-image: url('../../assets/img/nosotros/nosotros-mision-2.jpg');
         background-size: cover;
         background-repeat: no-repeat;
+        transform: translateX(300px);
+        opacity: 1;
     }
+
+    .img2-animacion{
+        transition: all ease-out 1s;
+        animation: mision-Img2-animacion 1s forwards;
+    }
+
+    @keyframes mision-Img2-animacion {
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    
+    
 
     .img-horizontal {
         background-image: url('../../assets/img/nosotros/mision-3.jpg');
@@ -370,6 +511,38 @@
     }
 }
 
+.mision-animacion{
+    transition: all ease-out 1s;
+    animation: mision-animacion 1.5s forwards;
+}
+
+@keyframes mision-animacion {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.line2{
+    transform: translateY(-100px);
+    opacity: 0;
+}
+
+.vision-line{
+    transition: all ease-out 1s;
+    animation: vision-animacion 1.5s forwards;
+}
+
+@keyframes vision-animacion {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
 .azteca-nosotros-vision {
     padding:3.5em 0;
 
@@ -385,12 +558,40 @@
         background-image: url('../../assets/img/nosotros/vision-1.jpg');
         background-size: cover;
         background-repeat: no-repeat;
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+
+    .vision-img1-animacion{
+        transition: all ease-out 1s;
+        animation: vision-img1-animacion 1.5s forwards;
+    }
+    
+    @keyframes vision-img1-animacion {
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
 
     .img-2 {
         background-image: url('../../assets/img/nosotros/vision-2.jpg');
         background-size: cover;
         background-repeat: no-repeat;
+        transform: translateX(300px);
+        opacity: 0;
+    }
+
+    .vision-img2-animacion{
+        transition: all ease-out 1s;
+        animation: vision-img2-animacion 1.5s forwards;
+    }
+    
+    @keyframes vision-img2-animacion {
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
 
     .img-horizontal {
@@ -398,6 +599,21 @@
         background-size: cover;
         background-repeat: no-repeat;
         margin-bottom:0;
+
+        transform: translateY(300px);
+        opacity: 0;
+    }
+
+    .vision-img3-animacion{
+        transition: all ease-out 1s;
+        animation: vision-img3-animacion 1.5s forwards;
+    }
+    
+    @keyframes vision-img3-animacion {
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
 
     .img {
@@ -418,10 +634,44 @@
         position:relative;
         transform:translate(0,-50%);
     }
+
+    .text{
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+
+    .vision-text-animacion{
+        transition: all ease-out 1s;
+        animation: vision-text-animacion 1.5s forwards;
+    }
+    
+    @keyframes vision-text-animacion {
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
 }
 
 .azteca-nosotros-certificaciones {
     padding:4em 0;
+
+    .certificaciones-header{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+    .certificaciones-header-animacion{
+        transition: all ease-out 1s;
+        animation: certificaciones-header-animacion 1.5s forwards;
+    }
+
+    @keyframes certificaciones-header-animacion {
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 
     h2 {
         text-transform: uppercase;
@@ -441,38 +691,64 @@
         box-shadow: 0 0 10px rgba(1,1,1,0.8);
         margin-bottom:1.4em;
 
+        transform: translateY(-100px);
+        opacity: 0;
+
+        &.card-animacion{
+            transition: all ease-out 1s;
+            animation: card-animacion 1s forwards;
+        }
+
+        @keyframes card-animacion {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
         &.carti-1 {
             background-image: url('../../assets/img/nosotros/iso.jpg');
+            animation-delay: 0s;
         }
         &.carti-2 {
             background-image: url('../../assets/img/nosotros/14001.jpg');
+            animation-delay: .2s;
         }
         &.carti-3 {
             background-image: url('../../assets/img/nosotros/2018.jpg');
+            animation-delay: .4s;
         }
         &.carti-4 {
             background-image: url('../../assets/img/nosotros/37001.jpg');
+            animation-delay: .6s;
         }
         &.carti-5 {
             background-image: url('../../assets/img/nosotros/2013.jpg');
+            animation-delay: .8s;
         }
         &.carti-6 {
             background-image: url('../../assets/img/nosotros/45-2018.jpg');
+            animation-delay: 1s;
         }
         &.carti-7 {
             background-image: url('../../assets/img/nosotros/transporte.jpg');
+            animation-delay: 1.2s;
         }
         &.carti-8 {
             background-image: url('../../assets/img/nosotros/canacar.jpg');
+            animation-delay: 1.4s;
         }
         &.carti-9 {
             background-image: url('../../assets/img/nosotros/u.jpg');
+            animation-delay: 1.6s;
         }
         &.carti-10 {
             background-image: url('../../assets/img/nosotros/ctpat.jpg');
+            animation-delay: 1.8s;
         }
         &.carti-11 {
             background-image: url('../../assets/img/nosotros/juice.jpg');
+            animation-delay: 2s;
         }
     }
 }
@@ -480,4 +756,62 @@
 .azteca-nosotros-testimonios {
     background-color:#e5eaee;
     padding:5em 0;
+
+    .header-testimonios{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    .header-testimonios-animacion{
+        transition: all ease-out 1s;
+        animation: testimonios-animacion 1s forwards;
+    }
+
+    @keyframes testimonios-animacion {
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .split-animacion{
+        transform: translateX(300px);
+        opacity: 0;
+    }
+
+    .splide{
+        box-shadow: none;
+    }
+}
+
+.azteca-nosotros-vacantes{
+    .titulo{
+        transform: translateY(-100px);
+        opacity: 0;
+        animation-delay: 0s;
+    }
+
+    .vacantes-animacion{
+        transition: all ease-out 1s;
+        animation: vacantes-animacion 1s forwards;
+    }
+
+    .subtitulo{
+        transform: translateY(-100px);
+        opacity: 0;
+        animation-delay: .2s;
+    }
+
+    .boton{
+        transform: translateY(-100px);
+        opacity: 0;
+        animation-delay: .4s;
+    }
+
+    @keyframes vacantes-animacion {
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 }
