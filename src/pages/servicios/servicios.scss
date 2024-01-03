@@ -332,12 +332,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
-
-        // &.azul {
-        //     background-color: #142140;
-        //     color:white;
-        // }
     
         h4 {
             color:#CC274C;
@@ -702,7 +696,8 @@
         box-shadow: 0 0 10px rgba(1,1,1,0.3);
         width: 100%;
         border: 0.3em solid transparent;
-        height: 15em;
+        height: 18em;
+        
 
         &.normal {
             height: inherit;

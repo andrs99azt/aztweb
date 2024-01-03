@@ -15,8 +15,6 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/core';
 import '@splidejs/react-splide/css';
 
-// import serviciosLogistica1 from '../../assets/img/servicios/servicios-logistica-1.jpg';
-
 //Styles
 import './servicios.scss';
 
@@ -47,6 +45,9 @@ const cambiarFoto = (num) =>{
 
 const Index = () => {
 
+
+    // Funnsiones Generales
+
     const scrollToTop = () => {
         window.scrollTo({
             top: 0
@@ -57,6 +58,8 @@ const Index = () => {
         scrollToTop();
     }, []);
 
+    // Variables
+
     const [monitoreoAnimacion, setMonitoreoAnimacion] = useState(false);
     const [lavadoAnimacion, setLavadoAnimacion] = useState(false);
     const [unidadesAnimacion, setUnidadesAnimacion] = useState(false);
@@ -64,16 +67,14 @@ const Index = () => {
     const [contactoAnimacion, setContactoAnimacion] = useState(false);
     const [alcanceAnimacion, setAlcanceAnimacion] = useState(false);
 
+    // Puntos de inicio de animacion
+
     useScrollAnimation('.ponit-monitoreo',monitoreoAnimacion, setMonitoreoAnimacion);
     useScrollAnimation('.ponit-lavado',lavadoAnimacion, setLavadoAnimacion);
     useScrollAnimation('.ponit-unidades',unidadesAnimacion, setUnidadesAnimacion);
     useScrollAnimation('.ponit-servicios',serviciosAnimacion, setServiciosAnimacion);
     useScrollAnimation('.ponit-contacto',contactoAnimacion, setContactoAnimacion);
     useScrollAnimation('.ponit-alcance',alcanceAnimacion, setAlcanceAnimacion);
-
-  
-
-    
 
     return (
         <div>
@@ -315,6 +316,7 @@ const Index = () => {
                     </div>
                     <div className="col-xl-6 position-relative">
                         <div className="row vertical-align">
+
                             <div className={`cede ${alcanceAnimacion ? 'alcance-animacion' : ''}`}>
                                 <div className="col-xl-12">
                                     <div className="info normal active">

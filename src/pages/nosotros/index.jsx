@@ -6,11 +6,8 @@ import '@splidejs/react-splide/css/core';
 import '@splidejs/react-splide/css';
 
 import logoAzteca from '../../assets/icons/logo-azteca.png';
-
 import Header from '../../components/header/Index';
 import Footer from '../../components/footer/Index';
-
-
 
 import nosotrosTestimonios1 from '../../assets/img/nosotros/nosotros-testimonios-1.jpg';
 import nosotrosTestimonios2 from '../../assets/img/nosotros/nosotros-testimonios-2.jpg';
@@ -45,6 +42,8 @@ const useScrollAnimation = (selector,Setter, stateSetter) => {
 
 const Index = () => {
 
+    // Funnsiones Generales
+
     const scrollToTop = () => {
         window.scrollTo({
             top: 0
@@ -55,6 +54,8 @@ const Index = () => {
         scrollToTop();
     }, []);
 
+    // Variables
+
     const [nosotrosAnimacion, setNosotrosAnimacion] = useState(false);
     const [misionAnimacion, setMisionAnimacion] = useState(false);
     const [visionAnimacion, setVisionAnimacion] = useState(false);
@@ -62,6 +63,7 @@ const Index = () => {
     const [testimoniosAnimacion, setTestimoniosAnimacion] = useState(false);
     const [vacantesAnimacion, setVacantesAnimacion] = useState(false);
 
+    // Puntos de inicio de animacion
 
     useScrollAnimation('.text-hero',nosotrosAnimacion, setNosotrosAnimacion);
     useScrollAnimation('.ponit-mision',misionAnimacion, setMisionAnimacion);
@@ -206,7 +208,6 @@ const Index = () => {
                     </div>
                 </div>
             </div>
-
             <div className="container-fluid azteca-nosotros-testimonios">
                 <div className="row">
                     <div className="col-xl-12">
@@ -353,7 +354,6 @@ const Index = () => {
                     </div>
                 </div>
             </div>
-
             <div className="container-fluid azteca-nosotros-vacantes">
                 <div className="container">
                     <div className="row">
@@ -370,11 +370,8 @@ const Index = () => {
                 </div>
             </div>
             <Footer/>
-
         </div>
     );
-
-
 }
 
 export default Index;

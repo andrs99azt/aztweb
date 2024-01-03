@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './capital-humano.scss';
 
 import Header from '../../components/header/Index';
@@ -13,7 +14,6 @@ import capitalHumanoConocenos4 from '../../assets/img/capital-humano/capital-hum
 import capitalHumanoConocenos5 from '../../assets/img/capital-humano/capital-humano-conocenos-5.png'
 import capitalHumanoConocenos6 from '../../assets/img/capital-humano/capital-humano-conocenos-6.png'
 import capitalHumanoConocenos7 from '../../assets/img/capital-humano/capital-humano-conocenos-7.png'
-
 import capitalHumanoPrestaciones1 from '../../assets/img/capital-humano/capital-humano-prestaciones-1.png'
 import capitalHumanoPrestaciones2 from '../../assets/img/capital-humano/capital-humano-prestaciones-2.png'
 import capitalHumanoPrestaciones3 from '../../assets/img/capital-humano/capital-humano-prestaciones-3.png'
@@ -22,11 +22,8 @@ import capitalHumanoPrestaciones5 from '../../assets/img/capital-humano/capital-
 import capitalHumanoPrestaciones6 from '../../assets/img/capital-humano/capital-humano-prestaciones-6.png'
 import capitalHumanoPrestaciones7 from '../../assets/img/capital-humano/capital-humano-prestaciones-7.png'
 import capitalHumanoPrestaciones8 from '../../assets/img/capital-humano/capital-humano-prestaciones-8.png'
-
 import capitalHumanoTestimonios1 from '../../assets/img/capital-humano/capital-humano-testimonios-1.jpeg'
-
 import clip from '../../assets/img/capital-humano/capital-humano-vacantes-position.png'
-
 
 const useCallAnimation = (selector, Setter, stateSetter, animacion) => {
     useEffect(() => {
@@ -55,12 +52,19 @@ const useCallAnimation = (selector, Setter, stateSetter, animacion) => {
 const scrollToTop = () => {
     window.scrollTo({
         top: 0,
-        // behavior: 'smooth', // Para un desplazamiento suave
     });
 };
 
-
 const Index = () => {
+
+    // Variables
+
+    const [nombre, setNombre] = useState('');
+    const [email, setEmail] = useState('');
+    const [telefono, setTelefono] = useState('');
+    const [ultimoTrabajo, setUltimoTrabajo] = useState('');
+    const [horario, setHorario] = useState('');
+    const [archivo, setArchivo] = useState(null);
 
     const [openFormulario, setOpenFormulario] = useState(false);
     const formulario = (tipo) => {
@@ -70,19 +74,48 @@ const Index = () => {
     
     scrollToTop();
 
+   
+
+    const enviarPostulacion = async () => {
+        try {
+          const formData = new FormData();
+          formData.append('nombreCompleto', nombre);
+          formData.append('email', email);
+          formData.append('telefono', telefono);
+          formData.append('ultimoTrabajo', ultimoTrabajo);
+          formData.append('horarioContacto', horario);
+          formData.append('archivo', archivo);
+      
+          const response = await axios.post('http://192.168.25.24:8089/azteca/ventas/contacto', formData, {
+            headers: {
+              'Content-Type': 'multipart/form-data',
+            },
+          });
+      
+          // Manejar la respuesta de la petición
+          console.log('Respuesta del servidor:', response.data);
+      
+          // Puedes realizar acciones adicionales aquí después de recibir la respuesta
+        } catch (error) {
+          // Manejar errores de la petición
+          console.error('Error en la petición:', error.message);
+        }
+      };
+
+    const handleFileChange = (event) => {
+        // Acceder al archivo seleccionado por el usuario
+        const nuevoArchivo = event.target.files[0];
+        setArchivo(nuevoArchivo);
+    };
+
+    // Puntos de inicio de animacion
+
     const [animation, setAnimation] = useState(false);
-    
     useCallAnimation('.iniciar-conocenos',animation,setAnimation, 'animaciones-conocenos')
-
     useCallAnimation('.iniciar-talento',animation,setAnimation, 'animaciones-talento')
-
     useCallAnimation('.iniciar-prestaciones',animation,setAnimation, 'animaciones-prestaciones')
-
     useCallAnimation('.iniciar-testimonios',animation,setAnimation, 'animaciones-testimonios')
-
     useCallAnimation('.iniciar-vacantes',animation,setAnimation, 'animaciones-vacantes')
-
-
 
     return (
         <div>
@@ -112,7 +145,6 @@ const Index = () => {
                 </div>
             </div>
 
-            
             <div className="azteca-capital-humano-conocenos">
                 <div className="iniciar-conocenos"></div>
                 <div className="azteca-capital-humano-conocenos_content animaciones-conocenos">
@@ -341,7 +373,7 @@ const Index = () => {
                                 </div>
                             </div>
                             <div className="azteca-capital-humano-vacantes_content_panel_section_boton" onClick={() => formulario('gerente de logística')}> 
-                                <di className="boton">Aplica</di>
+                                <div className="boton">Aplica</div>
                             </div>
                         </div>
 
@@ -490,7 +522,6 @@ const Index = () => {
                 </div>
             </div>
 
-
             <Footer/>
 
             {openFormulario && (
@@ -502,43 +533,83 @@ const Index = () => {
                     <div className="azteca-capital-humano-formulario_panel_content">
                         <div className="col-xl-12">
 
-                            <form action="#">
+                            {/* <form action="#"> */}
 
                                 <div className="form-group">
-                                    <input type="text" className='form-control' placeholder='Nombre completo'/>
+                                    <input type="text" 
+                                           className='form-control' 
+                                           placeholder='Nombre completo'
+                                           value={nombre}
+                                           onChange={(event) => {
+                                            setNombre(event.target.value);
+                                          }}
+                                    />
                                 </div>
 
                                 <div className="form-group">
-                                    <input type="text" className='form-control' placeholder='Email'/>
+                                    <input type="text" 
+                                           className='form-control' 
+                                           placeholder='Email'
+                                           value={email}
+                                           onChange={(event) => {
+                                            setEmail(event.target.value);
+                                          }}
+                                    />
                                 </div>
 
                                 <div className="form-group">
-                                    <input type="email" className='form-control' placeholder='N° de teléfono'/>
+                                    <input type="text" 
+                                           className='form-control' 
+                                           placeholder='N° de teléfono'
+                                           value={telefono}
+                                           onChange={(event) => {
+                                            setTelefono(event.target.value);
+                                          }}
+                                    />
                                 </div>
 
                                 <div className="form-group">
-                                    <input type="email" className='form-control' placeholder='Último trabajo relevante'/>
+                                    <input type="text" 
+                                           className='form-control' 
+                                           placeholder='Último trabajo relevante'
+                                           value={ultimoTrabajo}
+                                           onChange={(event) => {
+                                            setUltimoTrabajo(event.target.value);
+                                          }}
+                                    />
                                 </div>
 
                                 <div className="form-group">
-                                    <input type="email" className='form-control' placeholder='Horario en el que te podemos contactar'/>
+                                    <input type="horario" 
+                                           className='form-control' 
+                                           placeholder='Horario en el que te podemos contactar'
+                                           value={horario}
+                                           onChange={(event) => {
+                                            setHorario(event.target.value);
+                                          }}
+                                    />
                                 </div>
 
                                 <div className="row">
                                     <div className="col-xl-6 col-lg-6 col-md-6">
-                                        <div className="form-group">
-                                            <button type="file" className='btn btn-contacto-cv'>Subir CV</button>
-                                            {/* <input type="file" className='btn btn-contacto-cv' placeholder='Subir CV'/> */}
-                                        </div>
+                                        {/* <div className="form-group">
+                                            <input type="file" className='btn btn-contacto-cv'>Subir CV</input>
+                                        </div> */}
+
+                                        <input
+                                            type="file"
+                                            accept=".doc, .docx, .pdf"
+                                            onChange={handleFileChange}
+                                        />
                                     </div>
                                     <div className="col-xl-6 col-lg-6 col-md-6">
                                         <div className="form-group">
-                                            <button type="submit" className='btn btn-contacto-aplicar'>Aplica</button>
+                                            <button className='btn btn-contacto-aplicar' onClick={enviarPostulacion}>Aplica</button>
                                         </div>
                                     </div>
                                 </div>
 
-                            </form>
+                            {/* </form> */}
 
                         </div>
                     </div>
@@ -546,7 +617,7 @@ const Index = () => {
                 </div>
             </div>
             )}
-
+            
         </div>
     );
 }
