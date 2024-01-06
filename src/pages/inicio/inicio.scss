@@ -1,202 +1,196 @@
-.azteca-inicio-hero {
-    position: relative;
-    height: 832px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+// ------------------------ ESTILOS HERO ------------------------------
+
+.azteca-inicio-hero{
     background-color: rgb(40, 48, 77);
-    overflow: hidden;
-    z-index: 1;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    height: 500px;
-
-    &_points {
-        position: absolute;
-        width: 400px;
-        left: 0px;
-        bottom: 0px;
-        margin-left: 450px;
-        zoom: .6;
-        transition: all ease-out 1s;
-        transform: translateY(250px);
-        opacity: 0;
-        animation: points 1s forwards;
-    }
-
-    @keyframes points {
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
-    &_img {
-        width: 1300px;
-        object-fit: cover;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        transition: all ease-out 1s;
-        transform: translateY(-200px);
-        opacity: 1;
-        animation: img 1s forwards;
-
-        width:720px;
-    }
-
-    @keyframes img {
-        from {
-            transform: translateY(-200px);
-        }
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
-    &_content {
-        position: relative;
+    &_box{
         height: 100%;
-        width: auto;
-        text-align: right;
-        display: flex;
-        flex-direction: column;
-        padding: 100px 400px;
-        color: white;
+        width: 1200px;
+        position: relative;
 
-        padding: 30px 30px;
 
-        
-
-        label {
+        img:nth-child(1) {
+            width: 1100px;
+            object-fit: cover;
+            position: absolute;
             transition: all ease-out 1s;
-            opacity: 0;
+            opacity: 1;
+            animation: img 1s forwards;
+            width:600px;
+            z-index: 1;
+            transform: translateY(-150px);
+            animation: inicio_animaciones 1.5s forwards;
         }
-    
-        &_first, &_second, &_third {
+
+        img:nth-child(2) {
+            position: absolute;
+            width: 200px;
+            bottom: 0px;
+            margin-left: 230px;
+            transform: translateY(150px);
+            animation: inicio_animaciones 1.5s forwards;
+        }
+
+        img:nth-child(3) {
+            width: 1100px;
+            object-fit: cover;
+            position: absolute;
+            // transition: all ease-out 1s;
+            opacity: 1;
+            // animation: img 1s forwards;
+            width:300px;
+            z-index: 1;
+            // background-color: red;
+            top: 0px;
+            // transform: translateY(-150px);
+            // animation: inicio_animaciones 1.5s forwards;
+
+            display: none;
+        }
+    }
+
+    &_container{
+        height: 100%;
+        width: 100%;
+        min-width: 400px;
+        padding: 30px;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        z-index: 2;
+        
+
+        &_text{
+            color: #FFFF;
+            text-align: end;
+            width: auto;
+            max-width: 500px;
+
             font-size: 14px;
-            animation: text 1s forwards;
-            opacity: 0; // Inicia con opacidad cero para la animación de entrada
 
-        }
-        
-        &_second {
-            font-size: 38px;
-            font-weight: bold;
-            animation-delay: 0.2s;
-        }
-        
-        &_third {
-            font-size: 18px;
-            margin-top: 15px;
-            animation-delay: 0.5s;
-        }
-        
-        @keyframes text {
-            from {
-                transform: translateX(50px); // Ajusta la posición inicial para que no empiecen desde fuera de la pantalla
+            label:nth-child(1) {
+                font-size: 1.2em;
+                transform: translateX(300px);
                 opacity: 0;
+                animation: inicio_animaciones 1s forwards;
             }
-            to {
-                transform: translateX(0);
-                opacity: 1;
+
+            label:nth-child(3) {
+                font-size: 3.2em;
+                line-height: 1.1;
+                transition-delay: 2s;
+                transform: translateX(300px);
+                opacity: 0;
+                animation: inicio_animaciones 1s forwards;
+                animation-delay: .5s;
+            }
+
+            >p{
+                margin-top: 20px;
+                font-size: 1.2em;
+                transform: translateX(300px);
+                opacity: 0;
+                animation: inicio_animaciones 1s forwards;
+                animation-delay: 1s;
             }
         }
-
-
     }
 }
 
-// @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
+    .azteca-inicio-hero{
+        height: 500px;
+        &_box{
 
-// }
+            img:nth-child(1) {
+                display: none;
+            }
 
-// @media only screen and (max-width: 480px) {
+            img:nth-child(2) {
+                display: none;
+            }
 
-// }
+            img:nth-child(3) {
+                display: block;
+            }
+        }
+
+        &_container{
+            padding: 0;
+            &_text{
+                padding: 10px;
+
+                label:nth-child(1) {
+                    font-size: 1.1em;
+                }
+    
+                label:nth-child(3) {
+                    font-size: 3.1em;
+                    line-height: 1;
+                }
+    
+                >p{
+                    margin-top: 20px;
+                    font-size: 1em;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+// ------------------------ ESTILOS SOLUCIONES ------------------------
+
 
 .azteca-inicio-soluciones{
-    background-color: #E5EAEE;
     width: 100%;
     height: auto;
-    padding: 20px 0px;
+    background-color: #E5EAEE;
     display: flex;
     justify-content: center;
 
     &_content{
         width: 100%;
         max-width: 1000px;
-        height: 100%;
-        text-align: center;
 
         &_header{
             display: flex;
             align-items: center;
             justify-content: center;
-            transform: translateY(-200px);
-            
-        
+            transform: translateY(-50px);
+            opacity: 0;
 
             >img{
                 width: 30%;
             }
         }
 
-        .header-animacion {
-            transition: all ease-out 1s;
-            opacity: 1;
-            animation: header_animacion 1s forwards;
-        }
-    
-        @keyframes header_animacion {
-            from {
-                transform: translateY(-200px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0px);
-                opacity: 1;
-            }
-        }
-
         &_texto{
-            margin: 10px 0px 30px 0px;
+            margin: 10px 20px 30px 20px;
             font-size: 16px;
-            transform: translateY(-400px);
-        }
-
-        .texto-animacion {
-            transition: all ease-out 1.5s;
-            opacity: 1;
-            animation: texto_animacion 1.5s forwards;
-        }
-
-        @keyframes texto_animacion {
-            from {
-                transform: translateY(-400px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0px);
-                opacity: 1;
-            }
+            text-align: center;
+            transform: translateY(-200px);
+            opacity: 0;
         }
 
         &_panel{
             width: 100%;
-            height: 100%;
+            height: auto;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            padding: 30px;
 
             &_card{
                 background-color: #FFFFFF;
                 width: 100%;
-                max-width: 350px;
+                max-width: 280px;
+                min-width: 280px;
                 height: 350px;
                 flex: 1;
-                min-width: 150px;
                 margin: 10px;
                 text-align: center;
                 box-shadow: 0px 0px 20px -3px rgba(0,0,0,0.1);
@@ -204,7 +198,6 @@
                 overflow: hidden;
                 opacity: 0;
 
-       
 
                 &_text{
                     background-color: rgba(0, 0, 0, 0.479);
@@ -215,8 +208,6 @@
                     display: flex;
                     flex-direction: column;
                     text-align: center;
-
-                 
 
                     &_content{
                         background-color: #091727;
@@ -240,92 +231,47 @@
 
                     }
                 }
+
+          
             }
 
-            .card1{
-                transform: translateY(300px);
+            &_card:nth-child(1) {
+                transform: translateY(50px);
             }
-
-            .card2{
-                transform: translateY(600px);
-            }
-
-            .card3{
-                transform: translateY(900px);
-            }
-
-            .card-animacion1 {
-                transition: all ease-out 1s;
-                opacity: 1;
-                animation: card_animacion1 1s forwards;
-            }
-
-            .card-animacion2 {
-                transition: all ease-out 1s;
-                opacity: 1;
-                animation: card_animacion2 1s forwards;
-            }
-
-            .card-animacion3 {
-                transition: all ease-out 1s;
-                opacity: 1;
-                animation: card_animacion3 1s forwards;
-            }
-    
-            @keyframes card_animacion1 {
-                from {
-                    transform: translateY(300px);
-                    opacity: 0;
-                }
-                to {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-            }
-
-            @keyframes card_animacion2 {
-                from {
-                    transform: translateY(600px);
-                    opacity: 0;
-                }
-                to {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-            }
-
-            @keyframes card_animacion3 {
-                from {
-                    transform: translateY(900px);
-                    opacity: 0;
-                }
-                to {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-            }
+            &_card:nth-child(2) {
+                transform: translateY(100px);
             
-
-            &_card:hover .azteca-inicio-soluciones_content_panel_card_text {
-                transform: translateX(0%); // El texto se desplaza de derecha a izquierda en hover
             }
+            &_card:nth-child(3) {
+                transform: translateY(150px);
+            
+            }
+
+            &_card:hover &_card_text {
+                transform: translateX(0%);
+            }
+
+
+            
         }
 
-        &_infomacion{
+        &_informacion{
+            height: auto;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            opacity: 0;
+            padding: 20px 0px;
 
-            
+            transform: translateX(-400px);
+            opacity: 0;
 
             &_card{
                 background-color: #FFFFFF;
                 width: 100%;
-                max-width: 350px;
                 height: 120px;
                 flex: 1;
-                min-width: 100px;
+                max-width: 200px;
+                min-width: 200px;
                 margin: 10px;
                 box-shadow: 0px 0px 20px -3px rgba(0,0,0,0.1);
                 border-radius: 5px;
@@ -334,6 +280,7 @@
                 display: grid;
                 grid-template-columns: repeat(10, auto);
                 grid-template-rows: repeat(10, auto);
+                
 
                 .elemento1{
                     color: #CC274C;
@@ -343,6 +290,8 @@
                     align-items: center;
                     justify-content: center;
                     font-size: 42px;
+
+                    
                 }
 
                 .elemento2{
@@ -369,29 +318,53 @@
                     font-size: 16px;
                 }
             }
-
-            &_card:hover{
-                transform: translateY(-10px); // El texto se desplaza de derecha a izquierda en hover
-            }
         }
+    }
+}
 
-        .infomacion-animacion {
-            transition: all ease-out 1s;
-            animation: infomacion_animacion 2s forwards;
-        }
-
-        @keyframes infomacion_animacion {
-            from {
-                transform: translateX(-500px);
-                opacity: 0;
+@media only screen and (max-width: 1000px) {
+    .azteca-inicio-soluciones{
+        &_content{
+            &_header{
+                >img{
+                    width: 70%;
+                }
             }
-            to {
-                transform: translateY(0px);
-                opacity: 1;
+
+            &_informacion{
+                &_card{
+                    height: 100px;
+                    max-width: 170px;
+                    min-width: 170px;
+                    margin: 5px;
+
+                    .elemento1{
+                        font-size: 32px;
+                    }
+    
+                    .elemento2{
+                        grid-column: 7/11;
+                        grid-row: 1/8;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        
+                        >img{
+                            width: 50px
+    
+                        }
+                    }
+    
+                    .elemento3{
+                        font-size: 12px;
+                    }
+                }
             }
         }
     }
 }
+
+// ------------------------ ESTILOS SERVICIOS ------------------------
 
 .azteca-servicios{
     height: auto;
@@ -400,8 +373,6 @@
     justify-content: center;
     flex-direction: column;
     background-color: #F9FBFC;
-
-    
 
     &_content{
         width: 100%;
@@ -423,7 +394,8 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: auto auto;
-            gap: 1px;            
+            gap: 1px;   
+            animation-delay: 3s;
 
             &_box{
                 background-color: #F9FBFC;
@@ -431,7 +403,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                transform: translateY(-300px);
+
+                transform: translateY(-200px);
                 opacity: 0;
 
                 &_panel-icon{
@@ -498,65 +471,30 @@
                 }
             }
 
-            // _______________________  ANIMACIONES BOX
-
-            .box-animacion{
-                transition: all ease-out 1s;
-                animation: box-animacion 1s forwards;
-            }
-
-            @keyframes box-animacion {
-                from {
-                    transform: translateY(-300px);
-                    opacity: 0;
-                }
-                to {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-            }
-
-            .box1{
-               
-                animation-delay: 0s;
-            }
-            .box2{
+            &_box:nth-child(2) {
                 animation-delay: .5s;
             }
-
-            .box3{
+            &_box:nth-child(3) {
                 animation-delay: 1s;
             }
-
-            .box4{
-               
+            &_box:nth-child(4) {
                 animation-delay: 1.5s;
             }
-            .box5{
+            &_box:nth-child(5) {
                 animation-delay: 2s;
             }
-
-            .box6{
+            &_box:nth-child(6) {
                 animation-delay: 2.5s;
             }
 
         }
-
-        // _______________________  ANIMACIONES PANEL
-
-        .elements-animacion{
-            transition: all ease-out 1s;
-            animation: elements-animacion 1s forwards;
-        }
-
-        .elements{
+        >.inicio-animaciones {
+            transition: all ease-in-out 1s;
+            animation: capital-humano-animaciones-panel 2s forwards;
             animation-delay: 3.5s;
         }
 
-        @keyframes elements-animacion {
-            from {
-                background-color: #FFFF;
-            }
+        @keyframes capital-humano-animaciones-panel {
             to {
                 background-color: #707070;
             }
@@ -573,10 +511,60 @@
                 grid-template-columns: 1fr; 
             } 
         }
-
-
     } 
 }
+
+@media only screen and (max-width: 1000px) {
+    .azteca-servicios{
+        &_content{
+            &_header{
+                >img{
+                    width: 70%;
+                }
+            }
+
+            &_elements{
+                &_box{
+                    &_panel-icon{
+                        >img{
+                            width: 40px;
+                        }
+                    }
+
+                    &_panel-content{
+                        &_text{
+                            >p{
+                                font-size: 11px;
+                            }
+                        }
+    
+                        &_enlace{
+
+    
+                            &_img{
+                                >img{
+                                    width: 70%;
+                                }
+    
+                            }
+    
+                            >span{
+                                font-size: 11px;
+                            }
+    
+                          
+                        }
+                        
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+// ------------------------ ESTILOS EXPERIENCIA ------------------------
 
 
 .azteca-inicio-experiencia{
@@ -606,26 +594,10 @@
             overflow: hidden;
             height: 300px;
             border-radius: 5px;
-
             transform: translateX(-300px);
             opacity: 0;
-            
-
         }
 
-        // _______________________  ANIMACIONES PANEL
-
-        .media-animacion{
-            transition: all ease-out 1s;
-            animation: media-animacion 1s forwards;
-        }
-
-        @keyframes media-animacion {
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
 
         &_text{
             width: 100%;
@@ -640,19 +612,6 @@
             transform: translateY(-200px);
             opacity: 0;
         }
-
-        .text-animacion{
-            transition: all ease-out 1s;
-            animation: media-animacion 1s forwards;
-        }
-        
-        @keyframes media-animacion {
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
     }
 
     &_content-medium{
@@ -671,19 +630,6 @@
             transform: scale(0);
             opacity: 0;
         }
-
-        .panel-animacion{
-            transition: all ease-out 1s;
-            animation: panel-animacion 1s forwards;
-        }
-        
-        @keyframes panel-animacion {
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
     }
 
     &_content-button{
@@ -706,9 +652,8 @@
             border-radius: 10px;
             overflow: hidden;
             display: flex;
-
             opacity: 0;
-
+            
             &_img{
                 // background-color: red;
                 width: 50%;
@@ -732,47 +677,27 @@
             }
         }
 
-        .card1-animacion{
-            transition: all ease-out 1s;
-            animation: card1-animacion 1s forwards;
+        &_card:nth-child(1) {
+            transform: translateX(-400px);
+            background-color: #BED2E0;
+            animation-delay: 1.5s;
         }
 
-        .card1{
-            transform: translateX(-300px);
-            animation-delay: .5s;
+        &_card:nth-child(2) {
+            transform: translateX(400px);
+            background-color: #7A8D9E;
+            animation-delay: 1.5s;
         }
-
-        @keyframes card1-animacion {
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        .card2-animacion{
-            transition: all ease-out 1s;
-            animation: card2-animacion 1s forwards;
-        }
-
-        .card2{
-            transform: translateX(300px);
-            animation-delay: .5s;
-        }
-
-        @keyframes card2-animacion {
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        
-
-        
-        
-        
     }
 }
+
+
+
+
+
+
+
+
 
 .azteca-proyectos {
     // padding:5.5em 1em;
@@ -998,3 +923,21 @@
 .azteca-mapa{
     height: 600px;
 }
+
+
+.inicio-animaciones{
+    transition: all ease-in-out 1s;
+    animation: inicio_animaciones 1s forwards;
+}
+
+
+@keyframes inicio_animaciones {
+    to {
+        transform: translate(0,0);
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
