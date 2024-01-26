@@ -1,14 +1,54 @@
-.azteca-cabecera-servicios {
-    padding:7em 1em 14em 1em;
-    background-image: url('../../assets/img/servicios/cabecera-servicios.jpg');
-    text-align: center;
-    position:relative;
+// ------------------------ ESTILOS POPUP ---------------------------------
+
+.popUp {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.445);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // overflow: hidden;
+
+    &_panel {
+        background-color: white;
+        padding: 30px 20px;
+        width: 100%;
+        max-width: 300px;
+        height: 250px;
+        border-radius: 10px;
+        text-align: center;
+        color: #2E4054;
+
+        p {
+            margin-top: 40px;
+            color: #8D9092;
+        }
+    }
+}
+
+// ------------------------ ESTILOS HERO ----------------------------------
+
+.azteca-servicios-hero {
+    position: relative;
+    height: 500px;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    // overflow: hidden;
+    z-index: 1;
 
     &::before {
-        content:'';
-        position:absolute;
-        top:0;
-        left:0;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         z-index: 1;
@@ -19,774 +59,1693 @@
         background-repeat: no-repeat;
     }
 
-    h3 {
-        position: relative;
-        z-index: 2;
-        color:white;
-        font-size: 1.1em;
-    }
 
-    h1 {
-        position: relative;
+    &_content {
+        width: 100%;
+        max-width: 1000px;
+        margin: 80px 20px 200px 20px;
+        text-align: center;
+        color: #FFFF;
         z-index: 2;
-        color:white;
-        text-transform: uppercase;
-        font-size: 2.8em;
-    }
-
-    p {
-        position: relative;
-        z-index: 2;
-        max-width: 60%;
-        color:white;
-        display: block;
-        margin:0 auto;
-    }
-
-    .hero-text{
-        animation: servicios-hero 1s forwards;
         transform: translateY(100px);
         opacity: 0;
-        z-index: 2;
-    }
 
-    @keyframes servicios-hero {
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
-}
-
-.splide {
-    box-shadow: 0 0 10px rgba(1,1,1,0.4);
-
-    .item-slide {
-        height: 25em;
-        border:0.4em solid #2E4054;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-}
-
-.splide__pagination {
-    bottom: -2.4em;
-
-    .splide__pagination__page {
-        width: 0.9em;
-        height: 0.9em;
-        margin:0.3em;
-        background-color: white;
-        border:3px solid #CC274C;
-
-        &.is-active {
-            background:#CC274C;
-            opacity: 1;
-            width: 0.65em;
-            height: 0.65em;
-        }
-    }
-}
-
-.azteca-logistica-servicios {
-    margin-top: -12em;
-    position:relative;
-    z-index: 2;
-    margin-bottom: 5em;
-
-    .splide {
-        // .item-slide {
-        //     background-image: url('../../assets/img/servicios/santiago.jpg');
-        // }
-
-        .img1{
-            background-image: url('../../assets/img/servicios/servicios-logistica-1.jpg');
+        >h1 {
+            font-size: 4em;
         }
 
-        .img2{
-            background-image: url('../../assets/img/servicios/servicios-logistica-2.jpg');
-        }
-    }
-
-
-    .informacion {
-        padding-left: 3em;
-
-        h2 {
-            margin-top: 2.3em;
-            color:#E5EAEE;
-            font-size: 2.7em;
-            margin-bottom: 0;
-        }
-    
-        h3 {
-            font-size: 1.4em;
-            color:#E5EAEE;
-            text-transform: uppercase;
-            margin-bottom: 1em;
-            letter-spacing: 0.03em;
+        >h3 {
+            font-size: 1.5em;
         }
 
-        p {
-            color:#2E4054;
-            padding-right: 5em;
-            line-height: 1.4em;
-            font-size: 1.1em;
-        }
-    }
 
-    .hero-panel{
-        animation: servicios-hero 1s forwards;
-        transform: translateX(300px);
-        opacity: 0;
-    }
-
-
-
-    @keyframes servicios-hero {
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-}
-
-.azteca-monitoreo-servicios {
-    padding:1em 1em;
-    position:relative;
-    z-index: 2;
-    margin-bottom: 5em;
-
-    .splide {
-        // .item-slide {
-        //     background-image: url('../../assets/img/servicios/monitoreo.jpg');
-        // }
-
-        .img1{
-            background-image: url('../../assets/img/servicios/servicios-monitoreo-1.jpg');
-        }
-
-        .img2{
-            background-image: url('../../assets/img/servicios/servicios-monitoreo-2.jpg');
-        }
-
-        .img3{
-            background-image: url('../../assets/img/servicios/servicios-monitoreo-3.jpg');
-        }
-    }
-
-    &::before {
-        content:'';
-        background-color: #2E4054;
-        position:absolute;
-        margin-top: 12em;
-        top:0;
-        left:0;
-        width: 100%;
-        height: 30em;
-        z-index: -1;
-    }
-
-    .img {
-        height: 24em;
-        background-color: #ececec;
-    }
-
-    .informacion {
-        padding-left: 3em;
-
-        h2 {
-            margin-top: 1.8em;
-            color:#2E4054;
-            font-size: 2.7em;
-            margin-bottom: 0;
-        }
-    
-        h3 {
-            font-size: 1.4em;
-            color:#2E4054;
-            text-transform: uppercase;
-            margin-bottom: 2em;
-            letter-spacing: 0.03em;
-        }
-
-        p {
-            color:white;
-            font-size: 1.1em;
-            padding-right: 5em;
-            line-height: 1.5em;
-        }
-    }
-
-    .monitoreo{
-        transform: translateX(500px);
-        opacity: 0;
-    }
-
-
-    .monitoreo-animacion{
-        transition: all ease-out 1s;
-        animation: monitoreo-animacion 1s forwards;
-    }
-
-    @keyframes monitoreo-animacion {
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
-    
-}
-
-.azteca-lavado-servicios {
-    position:relative;
-    z-index: 2;
-    margin-bottom: 6em;
-
-    .splide {
-        // .item-slide {
-        //     background-image: url('../../assets/img/servicios/lavado.jpg');
-        // }
-
-        .img1{
-            background-image: url('../../assets/img/servicios/servicios-lavado-1.jpg');
-        }
-
-        .img2{
-            background-image: url('../../assets/img/servicios/servicios-lavado-2.jpg');
-        }
-
-        .img3{
-            background-image: url('../../assets/img/servicios/servicios-lavado-3.jpg');
-        }
-    }
-
-    .img {
-        height: 24em;
-        background-color: #ececec;
-    }
-
-    .informacion {
-        padding-left: 3em;
-
-        h2 {
-            margin-top: 1.6em;
-            color:#E5EAEE;
-            font-size: 2.7em;
-            margin-bottom: 0;
-        }
-    
-        h3 {
-            font-size: 1.4em;
-            color:#E5EAEE;
-            text-transform: uppercase;
-            margin-bottom: 1.2em;
-        }
-
-        p {
-            color:#2E4054;
-            font-size: 1.1em;
-            padding-right: 5em;
-            line-height: 1.4em;
-        }
-    }
-
-    .lavado{
-        transform: translateX(-500px);
-        opacity: 0;
-    }
-
-
-    .lavado-animacion{
-        transition: all ease-out 1s;
-        animation: lavado-animacion 1s forwards;
-    }
-
-    @keyframes lavado-animacion {
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-}
-
-.azteca-unidades-servicios {
-
-    h2 {
-        text-transform: uppercase;
-        color: #2E4054;
-        margin-bottom: 1.2em;
-        font-size: 2.3em;
-    }
-
-    .unidad {
-        border:2px solid #142140;
-        padding:1.5em 2em;
-        border-radius: 0.6em;
-        margin-bottom: 2em;
-        
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
-        h4 {
-            color:#CC274C;
+        >p {
             font-size: 1.3em;
         }
-
-        p {
-            margin-bottom: 0;
-        }
     }
 
-    .unidad:hover{
-        background-color: #142140;
-        color:white;
-        cursor: pointer;
-    }
-
-    img {
-        border-radius: 1em;
-        margin-bottom: 4em;
-    }
-
-    .texto{
-        transform: translateY(-200px);
-        opacity: 0;
-    }
-
-    .texto-animacion{
-        transition: all ease-out 1s;
-        animation: lavado-animacion 1s forwards;
-    }
-
-    
-
-    .boton1{
-      
-        transform: translateY(100px);
-        opacity: 0;
-        animation-delay: 0s;
-    }
-
-    .boton2{
-        transform: translateY(100px);
-        opacity: 0;
-        animation-delay: .2s;
-    }
-
-    .boton3{
-        transform: translateY(100px);
-        opacity: 0;
-        animation-delay: .4s;
-    }
-
-    .img{
-        transform: translateY(100px);
-        opacity: 0;
-    }
-
-    @keyframes lavado-animacion {
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
 }
 
-.azteca-transportamos-servicios {
-    padding:4em 1em;
-    background-color: #E5EAEE;
+// ------------------------ ESTILOS SOLUCIONES ----------------------------
+
+.azteca-servicios-soluciones {
     position: relative;
-    z-index: 100;
-
-    .servicios-animacion{
-        transition: all ease-out 1s;
-        animation: servicios-animacion 1s forwards;
-    }
-
-    .aceite-fondo {
-        position:absolute;
-        top:-0em;
-        left:20em;
-        width: 50em;
-        z-index:1;
-        transform: translateX(-400px);
-        opacity: 0;
-    }
-
-    @keyframes servicios-animacion {
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-
-    .texto{
-        transform: translateY(100px);
-        opacity: 0;
-        z-index: 1;
-    }
-
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    padding-bottom: 100px;
+    // overflow-x: hidden;
+    // overflow-y: visible;
+    z-index: 3;
     
 
-    .cards {
-        margin-bottom: 2em;
-        position:relative;
-        z-index:10;
+    &_content {
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-175px);
         
-        .card1{
-            transform: translateY(-200px);
+
+        &_galeria {
+            position: relative;
+            max-width: 350px;
+            height: 350px;
             opacity: 0;
-            animation-delay: 0s;
+            transform: translateX(200px);
+
+
+            &_split {
+                min-width: 350px;
+                min-height: 350px;
+                height: 100%;
+                overflow: hidden;
+                -webkit-box-shadow: 0px 0px 0px 4px #2E4054;
+                ;
+                -moz-box-shadow: 0px 0px 0px 4px #2E4054;
+                ;
+                box-shadow: 0px 0px 0px 4px #2E4054;
+                ;
+
+                &_img {
+                    background-size: cover;
+                    background-position: center top;
+                    background-repeat: no-repeat;
+                    width: 350px;
+                    height: 350px;
+                }
+            }
         }
 
-        .card2{
-            transform: translateY(-200px);
+        &_texto {
+            height: 100%;
+            width: 100%;
+            padding: 0px 20px;
             opacity: 0;
-            animation-delay: 0.1s;
-        }
+            transform: translateX(200px);
 
-        .card3{
-            transform: translateY(-200px);
-            opacity: 0;
-            animation-delay: 0.2s;
-        }
 
-        .card4{
-            transform: translateY(-200px);
-            opacity: 0;
-            animation-delay: 0.3s;
-        }
+            &_header {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding: 20px 0px;
+                color: #FFFF;
 
-    }
+                &_titulo {
+                    font-size: 2.5em;
+                }
 
-    .cards-button{
-        transform: translateY(-800px);
-        opacity: 0;
-    }
+                &_subtitulo {
+                    font-size: 1.5em;
 
-   
-
-    h2 {
-        text-transform: uppercase;
-        color: #2E4054;
-        margin-bottom: 1.2em;
-        font-size: 2.3em;
-
-        span {
-            display: block;
-        }
-    }
-
-    .transporte {
-        .img {
-            height: 18em;
-            border-radius: 0.8em;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            box-shadow: 0 0 1em rgba(1,1,1,0.3);
-
-            &.img-1 {
-                background-image: url('../../assets/img/servicios/transporte-1.png');
-            }
-            &.img-2 {
-                background-image: url('../../assets/img/servicios/transporte-2.png');
-            }
-            &.img-3 {
-                background-image: url('../../assets/img/servicios/transporte-3.png');
-            }
-            &.img-4 {
-                background-image: url('../../assets/img/servicios/transporte-4.png');
-            }
-            &.img-5 {
-                background-image: url('../../assets/img/servicios/transporte-5.png');
-            }
-            &.img-6 {
-                background-image: url('../../assets/img/servicios/transporte-6.png');
-            }
-            &.img-7 {
-                background-image: url('../../assets/img/servicios/transporte-7.png');
-            }
-            &.img-8 {
-                background-image: url('../../assets/img/servicios/transporte-8.png');
-            }
-        }
-        .contenido {
-            max-width: 87%;
-            display: block;
-            margin:0 auto;
-            background-color: white;
-            border-radius: 0.8em;
-            padding:2em 1.1em;
-            box-shadow: 0 0 1em rgba(1,1,1,0.2);
-            margin-top: -7em;
-
-            h3 {
-                font-size: 1.4em;
-                text-align: center;
-                margin-bottom: 0.5em;
+                }
             }
 
             p {
-                color: #8D9092;
-                font-size: 1.1em;
-                text-align: center;
-                line-height: 1.2em;
-                margin-bottom: 0;
-                height: 7em;
+                width: 100%;
+                height: 50%;
+                padding: 20px 0px;
+                font-size: 1.2em;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
             }
         }
     }
 }
 
-.azteca-conecta-clientes-servicios {
+@media (max-width: 900px) {
+    .azteca-servicios-soluciones {
+        &_content {
+            flex-direction: column-reverse;
+            transform: translateY(0px);
+            // padding-top: 20px;
+
+
+            &_texto {
+                text-align: left;
+                color: #394A5D;
+                margin-bottom: 20px;
+
+                &_header {
+                    color: #394A5D;
+                }
+            }
+        }
+    }
+}
+
+// ------------------------ ESTILOS MONITOREO ----------------------------
+
+.azteca-servicios-monitoreo {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    z-index: 1;
+    padding-bottom: 100px;
+    // overflow: hidden;
     background-color: #2E4054;
-    position: relative;
 
-    .trailer {
-        position: relative;
-        z-index: 2;
-        transform: translateX(-300px);
-        opacity: 0;
-    }
-
-    .trailer-animacion{
-        transition: all ease-out 1s;
-        animation: clientes-animacion 1s forwards;
-    }
-
-    .maguey-animacion{
-        transition: all ease-out 2s;
-        animation: maguey-animacion 2s forwards;
-        
-    }
-
-    .maguey {
-        position: absolute;
-        bottom:0;
-        left:0;
-        opacity: 0;
-        z-index: 1;
-
-        animation-delay: 1s;
-        transform: rotate(-10deg) translate(-100px, 100px);
-        
- 
-    }
-
-    
-
-    @keyframes maguey-animacion {
-        to {
-            transform: rotate(0deg) translate(0px, 0px);
-            opacity: 1;
-        }
-    }
-
-    .liquido-derecho-animacion{
-        transform: rotate(0deg) translate(0, 0);
-    }
-
-    .liquido-derecho {
-        position: absolute;
-        width: 18em;
-        top:1em;
-        right:0;
-
-        opacity: 0;
-        animation-delay: 1s;
-        transform: rotate(-10deg) translate(100px, -100px);
-    }
-
-    @keyframes liquido-derecho-animacion {
-        to {
-            transform: rotate(0deg) translate(0px, 0px);
-            opacity: 1;
-        }
-    }
-
-    .contenido {
-        top:50%;
-        position: relative;
-        transform: translate(300px,-50%);
-        opacity: 0;
-
-        h2 {
-            color:white;
-            font-size: 2.7em;
-            line-height: 1em;
-
-            span {
-                display: block;
-            }
-        }
-
-        p {
-            color:white;
-            margin:1.4em 0;
-            font-size: 1.1em;
-        }
-
-        .btn-contacto {
-            background-color: #CC274C;
-            color: white;
-            border-radius: 0.7m;
-            padding:0.5em 1.2em;
-
-            &:hover {
-                background-color: #a01130;
-            }
-        }
-    }
-
-    .contenido-animacion{
-        transition: all ease-out 1s;
-        animation: contenido-animacion 1s forwards;
-    }
-
-    @keyframes contenido-animacion {
-        to {
-            transform: translate(0,-50%);
-            opacity: 1;
-        }
-    }
-}
-
-@keyframes clientes-animacion {
-    to {
-        transform: translate(0,0);
-        opacity: 1;
-    }
-}
-
-.azteca-alcance-y-sedes {
-    position: relative;
-    padding:5em 1em;
-    background-color: #456282;
-    
-    .mundo {
-        background-image: url('../../assets/img/servicios/planeta.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        box-shadow: 0 0 10px rgba(1,1,1,0.5);
-        border-radius: 50%;
-        height: 50em;
-
-        transform: translateX(-400px);
-        opacity: 0;
-        animation-delay: 1s;
-    }
-
-    .pr-0 {
-        padding-right: 0;
-    }
-
-    .info {
-        background-color: white;
-        padding: 1em;
-        margin-bottom: 1.5em;
-        border-radius: 1em;
-        box-shadow: 0 0 10px rgba(1,1,1,0.3);
+    &_content {
         width: 100%;
-        border: 0.3em solid transparent;
-        height: 18em;
-        
-
-        &.normal {
-            height: inherit;
-            padding-bottom: 1.5em;
-        }
-
-        &.active {
-            border: 0.3em solid #C22F51;
-        }
-
-        h3 {
-            text-align: center;
-            font-size: 1.5em;
-            color: #2E4054;
-        }
-
-        span {
-            font-size: 0.8em;
-            text-align: center;
-            display: block;
-            margin-bottom: 1em;
-            color:#2E4054;
-        }
-
-        p {
-            font-size: 1em;
-            text-align: center;
-            margin-bottom: 0;
-            line-height: 1.3em;
-            color:#2E4054;
-            position:relative;
-            top:0.5em;
-        }
-    }
-
-    .vertical-align {
-        top:50%;
-        position:relative;
-        transform: translate(0,-50%);
-    }
-
-    .titulo{
-        // background-color: red;
+        max-width: 1000px;
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 40px;
-        color: #FFFF;
-        padding-bottom: 50px;
-        transform: translateY(-50px);
-        opacity: 0;
+        transform: translateY(-175px);
+        z-index: 1;
+
+        &_galeria {
+            max-width: 350px;
+            height: 350px;
+            opacity: 0;
+            transform: translateX(-200px);
+
+
+
+
+            &_split {
+                min-width: 350px;
+                min-height: 350px;
+                height: 100%;
+                overflow: hidden;
+                -webkit-box-shadow: 0px 0px 0px 4px #2E4054;
+                ;
+                -moz-box-shadow: 0px 0px 0px 4px #2E4054;
+                ;
+                box-shadow: 0px 0px 0px 4px #2E4054;
+                ;
+
+                &_img {
+                    background-size: cover;
+                    background-position: center top;
+                    background-repeat: no-repeat;
+                    width: 350px;
+                    height: 350px;
+                }
+            }
+        }
+
+        &_texto {
+            height: 100%;
+            width: 100%;
+            padding: 0px 20px;
+            opacity: 0;
+            transform: translateX(-200px);
+
+
+
+            &_header {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding: 20px 0px;
+                color: #2E4054;
+
+                &_titulo {
+                    font-size: 2.5em;
+                }
+
+                &_subtitulo {
+                    font-size: 1.5em;
+
+                }
+            }
+
+            p {
+                color: #FFFF;
+                width: 100%;
+                height: 50%;
+                padding: 20px 0px;
+                font-size: 1.2em;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .azteca-servicios-monitoreo {
+        &_content {
+            flex-direction: column;
+            transform: translateY(0px);
+            // padding-top: 20px;
+
+
+            &_texto {
+                text-align: left;
+                margin-bottom: 20px;
+
+                &_header {
+                    color: #FFFF;
+                }
+            }
+        }
+    }
+}
+
+// ------------------------ ESTILOS SERVICIOS ----------------------------
+
+.azteca-servicios-servicios {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    z-index: 1;
+    // overflow: hidden;
+
+    &_content {
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-175px);
+        z-index: 1;
+
+
+        &_galeria {
+            max-width: 350px;
+            height: 350px;
+            opacity: 0;
+            transform: translateX(200px);
+
+            &_split {
+                min-width: 350px;
+                min-height: 350px;
+                height: 100%;
+                overflow: hidden;
+                -webkit-box-shadow: 0px 0px 0px 4px #2E4054;
+                ;
+                -moz-box-shadow: 0px 0px 0px 4px #2E4054;
+                ;
+                box-shadow: 0px 0px 0px 4px #2E4054;
+                ;
+
+                &_img {
+                    background-size: cover;
+                    background-position: center top;
+                    background-repeat: no-repeat;
+                    width: 350px;
+                    height: 350px;
+                }
+            }
+        }
+
+        &_texto {
+            height: 100%;
+            width: 100%;
+            padding: 0px 20px;
+            opacity: 0;
+            transform: translateX(200px);
+
+
+            &_header {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding: 20px 0px;
+                color: #FFFF;
+
+                &_titulo {
+                    font-size: 2.5em;
+                }
+
+                &_subtitulo {
+                    font-size: 1.5em;
+
+                }
+            }
+
+            p {
+                width: 100%;
+                height: 50%;
+                padding: 20px 0px;
+                font-size: 1.2em;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .azteca-servicios-servicios {
+        &_content {
+            flex-direction: column-reverse;
+            transform: translateY(0px);
+            // padding-top: 20px;
+
+
+            &_texto {
+                text-align: left;
+                color: #394A5D;
+                margin-bottom: 20px;
+
+                &_header {
+                    color: #394A5D;
+                }
+            }
+        }
+    }
+}
+
+// ------------------------ ESTILOS UNIDADES ------------------------------
+
+.azteca-servicios-unidades {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    // overflow: hidden;
+
+    &_content {
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0px;
+        flex-direction: column;
+
+        &_header {
+            padding: 0px 20px;
+            color: #2E4054;
+            text-align: center;
+            // transform: translateY(-100px);
+            // opacity: 0;
+        }
+
+        &_botones {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px 20px;
+
+            &_boton {
+                width: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 20px;
+                border-radius: 5px;
+                border: solid 4px #2E4054;
+                font-size: 1.4em;
+                transition: transform .5s;
+                cursor: pointer;
+                user-select: none;
+
+                // transform: translateY(100px);
+                // opacity: 0;
+            }
+
+            &_boton:nth-child(1) {
+                animation-delay: 0s;
+            }
+
+            &_boton:nth-child(2) {
+                animation-delay: .3s;
+            }
+
+            &_boton:nth-child(3) {
+                animation-delay: .6s;
+            }
+
+            .active {
+                background-color: #131F3D;
+                color: #FFFF;
+            }
+        }
+
+        &_img {
+            height: 350px;
+            width: 100%;
+            padding: 0px 20px;
+
+            // transform: translateY(100px);
+            // opacity: 0;
+
+            >img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+            }
+
+        }
+
+
+    }
+}
+
+@media (max-width: 900px) {
+    .azteca-servicios-unidades {
+        &_content {
+            &_botones {
+                &_boton {
+                    font-size: 1em;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+}
+
+// ------------------------ ESTILOS PRODUCTOS -----------------------------
+
+.azteca-nosotros-productos {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    // overflow: hidden;
+
+    &_content {
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0px;
+        flex-direction: column;
+
+        &_header {
+
+            padding: 0px 20px;
+            color: #2E4054;
+            text-align: center;
+            // transform: translateY(-100px);
+            // opacity: 0;
+        }
+
+        &_cards {
+            width: 100%;
+            max-width: 1000px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            &_card {
+                position: relative;
+                max-width: 200px;
+                min-width: 230px;
+                max-height: 200px;
+                min-height: 230px;
+                flex: 1;
+                margin: 10px;
+                text-align: center;
+                box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+                border: solid 4px #2E4054;
+                margin-bottom: 100px;
+                animation-delay: 2s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                img:nth-child(3) {
+                    display: none;
+                }
+
+                &_panel {
+                    position: absolute;
+                    background-color: #FFFF;
+                    border-radius: 10px;
+                    width: 80%;
+                    height: 70%;
+                    margin: 10px;
+                    top: 60%;
+                    padding: 10px;
+                    box-shadow: 0 0 1em rgba(1, 1, 1, 0.3);
+
+                    color: #2E4054;
+
+                    p {
+                        color: #8D9092;
+                    }
+                }
+
+                // &_img-ver{
+                //     display: hidden;
+                // }
+            }
+
+
+
+            div:nth-child(2) {
+                animation-delay: .3s;
+            }
+
+            div:nth-child(3) {
+                animation-delay: .6s;
+            }
+
+            div:nth-child(4) {
+                animation-delay: .9s;
+            }
+
+            div:nth-child(5) {
+                animation-delay: 1.2s;
+            }
+
+            div:nth-child(6) {
+                animation-delay: 1.5s;
+            }
+
+            div:nth-child(7) {
+                animation-delay: 1.8s;
+            }
+
+            div:nth-child(8) {
+                animation-delay: 2.1s;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .azteca-nosotros-productos {
+        &_content {
+
+            &_cards {
+                &_card {
+                    max-width: 190px;
+                    min-width: 190px;
+                    max-height: 190px;
+                    min-height: 190px;
+                    margin-bottom: 0px;
+                    cursor: pointer;
+
+                    &_panel {
+                        display: none;
+                    }
+
+                    img {
+                        display: none;
+                    }
+
+                    img:nth-child(3) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ------------------------ ESTILOS CONECTA -----------------------------
+
+.azteca-nosotros-conecta {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    background-color: #2E4054;
+    z-index: 2;
+    overflow: hidden;
+    
+
+    >img:nth-child(1) {
+        bottom: -100px;
+        left: -30px;
+        zoom: .6;
+        position: absolute;
+        transform: translate(-100px, 100px) rotate(20deg);
     }
 
-    .cede{
-        transform: translateX(400px);
-        opacity: 0;
-        animation-delay: 1s;
+    >img:nth-child(2) {
+        top: -10px;
+        right: -10px;
+        zoom: .6;
+
+        position: absolute;
+
+        transform: translate(200px, 100px) rotate(-20deg);
     }
 
-    .cards1{
-        transform: translateX(400px);
-        opacity: 0;
-        animation-delay: 1.1s;
-    }
+    &_content {
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
 
-    .cards2{
-        transform: translateX(400px);
-        opacity: 0;
-        animation-delay: 1.2s;
+
+        &_media {
+            height: 300px;
+            min-width: 300px;
+            width: 100%;
+            overflow: hidden;
+            margin: 20px 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.521);
+
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &_texto {
+            padding: 20px 30px;
+            width: 100%;
+            height: auto;
+            color: #FFFF;
+
+            p {
+                max-width: 300px;
+            }
+
+            &_button {
+                background-color: #CC274C;
+                width: fit-content;
+                color: #FFFF;
+                border: none;
+                padding: 7px 20px;
+                border-radius: 5px;
+                border: solid 2px #CC274C;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .azteca-nosotros-conecta {
+
+        >img:nth-child(1) {
+
+            zoom: .2;
+        }
+
+        &_content {
+
+            flex-direction: column;
+
+            &_media {
+                margin: 0;
+                border-radius: 0px;
+            }
+
+
+        }
     }
 }
 
 
-.card{
-    background-color: red;
+// ------------------------ ESTILOS SUCURSALES -----------------------------
+
+.azteca-servicios-sucursales {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    background-color: #456282;
+    // overflow: hidden;
+
+    &_media {
+        position: absolute;
+        top: -300px;
+        display: none;
+    }
+
+    &_content {
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0px;
+        flex-direction: column;
+        color: #ffff;
+        font-size: 14px;
+        margin: 20px 20px;
+        z-index: 2;
+
+        &_header {
+            padding: 0px 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        &_panel {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+
+            &_media {
+                max-width: 400px;
+                max-height: 400px;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &_section {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-rows: repeat(9, 1fr);
+                grid-template-columns: repeat(10, 1fr);
+                gap: 10px;
+
+                div {
+                    background-color: #ffff;
+                    border-radius: 10px;
+                    padding: 10px 10px;
+                    text-align: center;
+                    box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.1);
+                    color: #2e4054;
+
+                    header {
+                        h3 {
+                            font-size: 1.4em;
+                        }
+
+                        span {
+                            font-size: 0.8em;
+                        }
+                    }
+
+                    p {
+                        font-size: 1em;
+                    }
+                }
+
+                div:nth-child(1) {
+                    grid-row: 1/4;
+                    grid-column: 1/11;
+                }
+
+                div:nth-child(2) {
+                    grid-row: 4/7;
+                    grid-column: 1/6;
+                }
+
+                div:nth-child(3) {
+                    grid-row: 4/7;
+                    grid-column: 6/11;
+                }
+
+                div:nth-child(4) {
+                    grid-row: 7/11;
+                    grid-column: 6/11;
+                }
+
+                div:nth-child(5) {
+                    grid-row: 7/11;
+                    grid-column: 1/6;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1250px) {
+        &_media {
+            display: block;
+        }
+
+        &_content {
+            max-width: 1000px;
+
+            &_panel {
+                &_media {
+                    display: none;
+                }
+
+                &_section {
+                    p {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }
 
-.animation {
-    background-color: blue;
+
+// ------------------------ ESTILOS ANIMACIONES ---------------------------
+
+.servicios-animaciones {
+    transition: all ease-in-out 1.5s;
+    animation: servicios_animaciones 1.5s forwards;
 }
 
-.alcance-animacion{
-    transition: all ease-in-out 1s;
-    animation: alcance-animacion 1s forwards;
-}
-
-@keyframes alcance-animacion {
+@keyframes servicios_animaciones {
     to {
-        transform: translate(0,0);
+        transform: translate(0, 0);
+        transform: rotate(0deg);
         opacity: 1;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .azteca-cabecera-servicios {
+//     background-color: red;
+//     padding:7em 1em 14em 1em;
+//     // background-image: url('../../assets/img/servicios/cabecera-servicios.jpg');
+//     text-align: center;
+//     position:relative;
+
+//     &::before {
+//         content:'';
+//         position:absolute;
+//         top:0;
+//         left:0;
+//         width: 100%;
+//         height: 100%;
+//         z-index: 1;
+//         background-color: #2E4054;
+//         opacity: 0.8;
+//         background-position: center;
+//         background-size: cover;
+//         background-repeat: no-repeat;
+//     }
+
+//     h3 {
+//         position: relative;
+//         z-index: 2;
+//         color:white;
+//         font-size: 1.1em;
+//     }
+
+//     h1 {
+//         position: relative;
+//         z-index: 2;
+//         color:white;
+//         text-transform: uppercase;
+//         font-size: 2.8em;
+//     }
+
+//     p {
+//         position: relative;
+//         z-index: 2;
+//         max-width: 60%;
+//         color:white;
+//         display: block;
+//         margin:0 auto;
+//     }
+
+//     .hero-text{
+//         animation: servicios-hero 1s forwards;
+//         transform: translateY(100px);
+//         opacity: 0;
+//         z-index: 2;
+//     }
+
+//     @keyframes servicios-hero {
+//         to {
+//             transform: translateY(0);
+//             opacity: 1;
+//         }
+//     }
+
+// }
+
+// .splide {
+//     box-shadow: 0 0 10px rgba(1,1,1,0.4);
+
+//     .item-slide {
+//         height: 25em;
+//         border:0.4em solid #2E4054;
+//         background-size: cover;
+//         background-repeat: no-repeat;
+//         background-position: center;
+//     }
+// }
+
+// .splide__pagination {
+//     bottom: -2.4em;
+
+//     .splide__pagination__page {
+//         width: 0.9em;
+//         height: 0.9em;
+//         margin:0.3em;
+//         background-color: white;
+//         border:3px solid #CC274C;
+
+//         &.is-active {
+//             background:#CC274C;
+//             opacity: 1;
+//             width: 0.65em;
+//             height: 0.65em;
+//         }
+//     }
+// }
+
+// .azteca-logistica-servicios {
+//     margin-top: -12em;
+//     position:relative;
+//     z-index: 2;
+//     margin-bottom: 5em;
+
+//     .splide {
+//         // .item-slide {
+//         //     background-image: url('../../assets/img/servicios/santiago.jpg');
+//         // }
+
+//         .img1{
+//             background-image: url('../../assets/img/servicios/servicios-logistica-1.jpg');
+//         }
+
+//         .img2{
+//             background-image: url('../../assets/img/servicios/servicios-logistica-2.jpg');
+//         }
+//     }
+
+
+//     .informacion {
+//         padding-left: 3em;
+
+//         h2 {
+//             margin-top: 2.3em;
+//             color:#E5EAEE;
+//             font-size: 2.7em;
+//             margin-bottom: 0;
+//         }
+
+//         h3 {
+//             font-size: 1.4em;
+//             color:#E5EAEE;
+//             text-transform: uppercase;
+//             margin-bottom: 1em;
+//             letter-spacing: 0.03em;
+//         }
+
+//         p {
+//             color:#2E4054;
+//             padding-right: 5em;
+//             line-height: 1.4em;
+//             font-size: 1.1em;
+//         }
+//     }
+
+//     .hero-panel{
+//         animation: servicios-hero 1s forwards;
+//         transform: translateX(300px);
+//         opacity: 0;
+//     }
+
+
+
+//     @keyframes servicios-hero {
+//         to {
+//             transform: translateY(0);
+//             opacity: 1;
+//         }
+//     }
+// }
+
+// .azteca-monitoreo-servicios {
+//     padding:1em 1em;
+//     position:relative;
+//     z-index: 2;
+//     margin-bottom: 5em;
+
+//     .splide {
+//         // .item-slide {
+//         //     background-image: url('../../assets/img/servicios/monitoreo.jpg');
+//         // }
+
+//         .img1{
+//             background-image: url('../../assets/img/servicios/servicios-monitoreo-1.jpg');
+//         }
+
+//         .img2{
+//             background-image: url('../../assets/img/servicios/servicios-monitoreo-2.jpg');
+//         }
+
+//         .img3{
+//             background-image: url('../../assets/img/servicios/servicios-monitoreo-3.jpg');
+//         }
+//     }
+
+//     &::before {
+//         content:'';
+//         background-color: #2E4054;
+//         position:absolute;
+//         margin-top: 12em;
+//         top:0;
+//         left:0;
+//         width: 100%;
+//         height: 30em;
+//         z-index: -1;
+//     }
+
+//     .img {
+//         height: 24em;
+//         background-color: #ececec;
+//     }
+
+//     .informacion {
+//         padding-left: 3em;
+
+//         h2 {
+//             margin-top: 1.8em;
+//             color:#2E4054;
+//             font-size: 2.7em;
+//             margin-bottom: 0;
+//         }
+
+//         h3 {
+//             font-size: 1.4em;
+//             color:#2E4054;
+//             text-transform: uppercase;
+//             margin-bottom: 2em;
+//             letter-spacing: 0.03em;
+//         }
+
+//         p {
+//             color:white;
+//             font-size: 1.1em;
+//             padding-right: 5em;
+//             line-height: 1.5em;
+//         }
+//     }
+
+//     .monitoreo{
+//         transform: translateX(500px);
+//         opacity: 0;
+//     }
+
+
+//     .monitoreo-animacion{
+//         transition: all ease-out 1s;
+//         animation: monitoreo-animacion 1s forwards;
+//     }
+
+//     @keyframes monitoreo-animacion {
+//         to {
+//             transform: translateY(0);
+//             opacity: 1;
+//         }
+//     }
+
+
+// }
+
+// .azteca-lavado-servicios {
+//     position:relative;
+//     z-index: 2;
+//     margin-bottom: 6em;
+
+//     .splide {
+//         // .item-slide {
+//         //     background-image: url('../../assets/img/servicios/lavado.jpg');
+//         // }
+
+//         .img1{
+//             background-image: url('../../assets/img/servicios/servicios-lavado-1.jpg');
+//         }
+
+//         .img2{
+//             background-image: url('../../assets/img/servicios/servicios-lavado-2.jpg');
+//         }
+
+//         .img3{
+//             background-image: url('../../assets/img/servicios/servicios-lavado-3.jpg');
+//         }
+//     }
+
+//     .img {
+//         height: 24em;
+//         background-color: #ececec;
+//     }
+
+//     .informacion {
+//         padding-left: 3em;
+
+//         h2 {
+//             margin-top: 1.6em;
+//             color:#E5EAEE;
+//             font-size: 2.7em;
+//             margin-bottom: 0;
+//         }
+
+//         h3 {
+//             font-size: 1.4em;
+//             color:#E5EAEE;
+//             text-transform: uppercase;
+//             margin-bottom: 1.2em;
+//         }
+
+//         p {
+//             color:#2E4054;
+//             font-size: 1.1em;
+//             padding-right: 5em;
+//             line-height: 1.4em;
+//         }
+//     }
+
+//     .lavado{
+//         transform: translateX(-500px);
+//         opacity: 0;
+//     }
+
+
+//     .lavado-animacion{
+//         transition: all ease-out 1s;
+//         animation: lavado-animacion 1s forwards;
+//     }
+
+//     @keyframes lavado-animacion {
+//         to {
+//             transform: translateY(0);
+//             opacity: 1;
+//         }
+//     }
+// }
+
+// .azteca-unidades-servicios {
+
+//     h2 {
+//         text-transform: uppercase;
+//         color: #2E4054;
+//         margin-bottom: 1.2em;
+//         font-size: 2.3em;
+//     }
+
+//     .unidad {
+//         border:2px solid #142140;
+//         padding:1.5em 2em;
+//         border-radius: 0.6em;
+//         margin-bottom: 2em;
+
+
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+
+//         h4 {
+//             color:#CC274C;
+//             font-size: 1.3em;
+//         }
+
+//         p {
+//             margin-bottom: 0;
+//         }
+//     }
+
+//     .unidad:hover{
+//         background-color: #142140;
+//         color:white;
+//         cursor: pointer;
+//     }
+
+//     img {
+//         border-radius: 1em;
+//         margin-bottom: 4em;
+//     }
+
+//     .texto{
+//         transform: translateY(-200px);
+//         opacity: 0;
+//     }
+
+//     .texto-animacion{
+//         transition: all ease-out 1s;
+//         animation: lavado-animacion 1s forwards;
+//     }
+
+
+
+//     .boton1{
+
+//         transform: translateY(100px);
+//         opacity: 0;
+//         animation-delay: 0s;
+//     }
+
+//     .boton2{
+//         transform: translateY(100px);
+//         opacity: 0;
+//         animation-delay: .2s;
+//     }
+
+//     .boton3{
+//         transform: translateY(100px);
+//         opacity: 0;
+//         animation-delay: .4s;
+//     }
+
+//     .img{
+//         transform: translateY(100px);
+//         opacity: 0;
+//     }
+
+//     @keyframes lavado-animacion {
+//         to {
+//             transform: translateY(0);
+//             opacity: 1;
+//         }
+//     }
+// }
+
+// .azteca-transportamos-servicios {
+//     padding:4em 1em;
+//     background-color: #E5EAEE;
+//     position: relative;
+//     z-index: 100;
+
+//     .servicios-animacion{
+//         transition: all ease-out 1s;
+//         animation: servicios-animacion 1s forwards;
+//     }
+
+//     .aceite-fondo {
+//         position:absolute;
+//         top:-0em;
+//         left:20em;
+//         width: 50em;
+//         z-index:1;
+//         transform: translateX(-400px);
+//         opacity: 0;
+//     }
+
+//     @keyframes servicios-animacion {
+//         to {
+//             transform: translateX(0);
+//             opacity: 1;
+//         }
+//     }
+
+//     .texto{
+//         transform: translateY(100px);
+//         opacity: 0;
+//         z-index: 1;
+//     }
+
+
+
+//     .cards {
+//         margin-bottom: 2em;
+//         position:relative;
+//         z-index:10;
+
+//         .card1{
+//             transform: translateY(-200px);
+//             opacity: 0;
+//             animation-delay: 0s;
+//         }
+
+//         .card2{
+//             transform: translateY(-200px);
+//             opacity: 0;
+//             animation-delay: 0.1s;
+//         }
+
+//         .card3{
+//             transform: translateY(-200px);
+//             opacity: 0;
+//             animation-delay: 0.2s;
+//         }
+
+//         .card4{
+//             transform: translateY(-200px);
+//             opacity: 0;
+//             animation-delay: 0.3s;
+//         }
+
+//     }
+
+//     .cards-button{
+//         transform: translateY(-800px);
+//         opacity: 0;
+//     }
+
+
+
+//     h2 {
+//         text-transform: uppercase;
+//         color: #2E4054;
+//         margin-bottom: 1.2em;
+//         font-size: 2.3em;
+
+//         span {
+//             display: block;
+//         }
+//     }
+
+//     .transporte {
+//         .img {
+//             height: 18em;
+//             border-radius: 0.8em;
+//             background-size: cover;
+//             background-repeat: no-repeat;
+//             background-position: center;
+//             box-shadow: 0 0 1em rgba(1,1,1,0.3);
+
+//             &.img-1 {
+//                 background-image: url('../../assets/img/servicios/transporte-1.png');
+//             }
+//             &.img-2 {
+//                 background-image: url('../../assets/img/servicios/transporte-2.png');
+//             }
+//             &.img-3 {
+//                 background-image: url('../../assets/img/servicios/transporte-3.png');
+//             }
+//             &.img-4 {
+//                 background-image: url('../../assets/img/servicios/transporte-4.png');
+//             }
+//             &.img-5 {
+//                 background-image: url('../../assets/img/servicios/transporte-5.png');
+//             }
+//             &.img-6 {
+//                 background-image: url('../../assets/img/servicios/transporte-6.png');
+//             }
+//             &.img-7 {
+//                 background-image: url('../../assets/img/servicios/transporte-7.png');
+//             }
+//             &.img-8 {
+//                 background-image: url('../../assets/img/servicios/transporte-8.png');
+//             }
+//         }
+//         .contenido {
+//             max-width: 87%;
+//             display: block;
+//             margin:0 auto;
+//             background-color: white;
+//             border-radius: 0.8em;
+//             padding:2em 1.1em;
+//             box-shadow: 0 0 1em rgba(1,1,1,0.2);
+//             margin-top: -7em;
+
+//             h3 {
+//                 font-size: 1.4em;
+//                 text-align: center;
+//                 margin-bottom: 0.5em;
+//             }
+
+//             p {
+//                 color: #8D9092;
+//                 font-size: 1.1em;
+//                 text-align: center;
+//                 line-height: 1.2em;
+//                 margin-bottom: 0;
+//                 height: 7em;
+//             }
+//         }
+//     }
+// }
+
+// .azteca-conecta-clientes-servicios {
+//     background-color: #2E4054;
+//     position: relative;
+
+//     .trailer {
+//         position: relative;
+//         z-index: 2;
+//         transform: translateX(-300px);
+//         opacity: 0;
+//     }
+
+//     .trailer-animacion{
+//         transition: all ease-out 1s;
+//         animation: clientes-animacion 1s forwards;
+//     }
+
+//     .maguey-animacion{
+//         transition: all ease-out 2s;
+//         animation: maguey-animacion 2s forwards;
+
+//     }
+
+//     .maguey {
+//         position: absolute;
+//         bottom:0;
+//         left:0;
+//         opacity: 0;
+//         z-index: 1;
+
+//         animation-delay: 1s;
+//         transform: rotate(-10deg) translate(-100px, 100px);
+
+
+//     }
+
+
+
+//     @keyframes maguey-animacion {
+//         to {
+//             transform: rotate(0deg) translate(0px, 0px);
+//             opacity: 1;
+//         }
+//     }
+
+//     .liquido-derecho-animacion{
+//         transform: rotate(0deg) translate(0, 0);
+//     }
+
+//     .liquido-derecho {
+//         position: absolute;
+//         width: 18em;
+//         top:1em;
+//         right:0;
+
+//         opacity: 0;
+//         animation-delay: 1s;
+//         transform: rotate(-10deg) translate(100px, -100px);
+//     }
+
+//     @keyframes liquido-derecho-animacion {
+//         to {
+//             transform: rotate(0deg) translate(0px, 0px);
+//             opacity: 1;
+//         }
+//     }
+
+//     .contenido {
+//         top:50%;
+//         position: relative;
+//         transform: translate(300px,-50%);
+//         opacity: 0;
+
+//         h2 {
+//             color:white;
+//             font-size: 2.7em;
+//             line-height: 1em;
+
+//             span {
+//                 display: block;
+//             }
+//         }
+
+//         p {
+//             color:white;
+//             margin:1.4em 0;
+//             font-size: 1.1em;
+//         }
+
+//         .btn-contacto {
+//             background-color: #CC274C;
+//             color: white;
+//             border-radius: 0.7m;
+//             padding:0.5em 1.2em;
+
+//             &:hover {
+//                 background-color: #a01130;
+//             }
+//         }
+//     }
+
+//     .contenido-animacion{
+//         transition: all ease-out 1s;
+//         animation: contenido-animacion 1s forwards;
+//     }
+
+//     @keyframes contenido-animacion {
+//         to {
+//             transform: translate(0,-50%);
+//             opacity: 1;
+//         }
+//     }
+// }
+
+// @keyframes clientes-animacion {
+//     to {
+//         transform: translate(0,0);
+//         opacity: 1;
+//     }
+// }
+
+// .azteca-alcance-y-sedes {
+//     position: relative;
+//     padding:5em 1em;
+//     background-color: #456282;
+
+//     .mundo {
+//         background-image: url('../../assets/img/servicios/planeta.png');
+//         background-size: cover;
+//         background-position: center;
+//         background-repeat: no-repeat;
+//         box-shadow: 0 0 10px rgba(1,1,1,0.5);
+//         border-radius: 50%;
+//         height: 50em;
+
+//         transform: translateX(-400px);
+//         opacity: 0;
+//         animation-delay: 1s;
+//     }
+
+//     .pr-0 {
+//         padding-right: 0;
+//     }
+
+//     .info {
+//         background-color: white;
+//         padding: 1em;
+//         margin-bottom: 1.5em;
+//         border-radius: 1em;
+//         box-shadow: 0 0 10px rgba(1,1,1,0.3);
+//         width: 100%;
+//         border: 0.3em solid transparent;
+//         height: 18em;
+
+
+//         &.normal {
+//             height: inherit;
+//             padding-bottom: 1.5em;
+//         }
+
+//         &.active {
+//             border: 0.3em solid #C22F51;
+//         }
+
+//         h3 {
+//             text-align: center;
+//             font-size: 1.5em;
+//             color: #2E4054;
+//         }
+
+//         span {
+//             font-size: 0.8em;
+//             text-align: center;
+//             display: block;
+//             margin-bottom: 1em;
+//             color:#2E4054;
+//         }
+
+//         p {
+//             font-size: 1em;
+//             text-align: center;
+//             margin-bottom: 0;
+//             line-height: 1.3em;
+//             color:#2E4054;
+//             position:relative;
+//             top:0.5em;
+//         }
+//     }
+
+//     .vertical-align {
+//         top:50%;
+//         position:relative;
+//         transform: translate(0,-50%);
+//     }
+
+//     .titulo{
+//         // background-color: red;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         font-size: 40px;
+//         color: #FFFF;
+//         padding-bottom: 50px;
+//         transform: translateY(-50px);
+//         opacity: 0;
+//     }
+
+//     .cede{
+//         transform: translateX(400px);
+//         opacity: 0;
+//         animation-delay: 1s;
+//     }
+
+//     .cards1{
+//         transform: translateX(400px);
+//         opacity: 0;
+//         animation-delay: 1.1s;
+//     }
+
+//     .cards2{
+//         transform: translateX(400px);
+//         opacity: 0;
+//         animation-delay: 1.2s;
+//     }
+// }
+
+// .card{
+//     background-color: red;
+// }
+
+// .animation {
+//     background-color: blue;
+// }
+
+// .alcance-animacion{
+//     transition: all ease-in-out 1s;
+//     animation: alcance-animacion 1s forwards;
+// }
+
+// @keyframes alcance-animacion {
+//     to {
+//         transform: translate(0,0);
+//         opacity: 1;
+//     }
+// }

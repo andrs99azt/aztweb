@@ -19,6 +19,8 @@ const Index = () => {
     const enviarPostulacion = async (event) => {
         event.preventDefault();
         try {
+
+            
           const formData = new FormData();
           formData.append('nombre', nombre);
           formData.append('apellidos', apellidos);
@@ -32,8 +34,14 @@ const Index = () => {
                 'Content-Type': 'application/json',
             },
         });
-            console.log('Respuesta del servidor:', response.data);
-      
+            alert(response.data.message);
+            setNombre('')
+            setApellidos('')
+            setEmail('')
+            setEmpresa('')
+            setTelefono('')
+            setMensaje('')
+
         } catch (error) {
           console.error('Error en la petición:', error.message);
         }

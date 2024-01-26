@@ -6,6 +6,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 60px;
+
+    overflow: hidden;
 
     &_box{
         height: 100%;
@@ -104,6 +107,7 @@
 @media only screen and (max-width: 1000px) {
     .azteca-inicio-hero{
         height: 500px;
+        margin-top: 50px;
         &_box{
 
             img:nth-child(1) {
@@ -152,6 +156,8 @@
     background-color: #E5EAEE;
     display: flex;
     justify-content: center;
+
+    overflow: hidden;
 
     &_content{
         width: 100%;
@@ -374,6 +380,8 @@
     flex-direction: column;
     background-color: #F9FBFC;
 
+    overflow: hidden;
+
     &_content{
         width: 100%;
         max-width: 1000px;
@@ -576,6 +584,8 @@
     background-color: #2E4054;
     padding: 20px;
 
+    overflow: hidden;
+
     &_content-top{
         width: 100%;
         max-width: 1000px;
@@ -691,18 +701,11 @@
     }
 }
 
-
-
-
-
-
-
-
-
 .azteca-proyectos {
     // padding:5.5em 1em;
     padding: 0px 1em 50px 1em;
     background-color: #F9FBFC;
+    overflow: hidden;
     
     .container{
         
@@ -734,11 +737,10 @@
 
         .row{
             background-color: #087fbb00;
-            box-shadow: none;
+            // box-shadow: none;
 
             .col-xl-12{
                 background-color: #087fbb00;
-                box-shadow: none;
 
                 .splide{
                     background-color: #087fbb00;
@@ -760,6 +762,7 @@
             z-index: 2;
             position: relative;
             overflow: hidden;
+            min-height: 500px;
 
             .img{
                 height: 350px;
@@ -818,6 +821,8 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    overflow: hidden;
+
 
     
 
@@ -835,6 +840,7 @@
 
 .azteca-formulario-contacto {
     padding:6em 1em;
+    overflow: hidden;
 
     .informacion {
         top:50%;
@@ -922,6 +928,7 @@
 
 .azteca-mapa{
     height: 600px;
+    overflow: hidden;
 }
 
 

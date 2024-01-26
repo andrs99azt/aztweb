@@ -7,13 +7,14 @@ import Footer from '../../components/footer/Index';
 
 import capitalHumanoHero from '../../assets/img/capital-humano/capital-humano-hero-1.png'
 
-import capitalHumanoConocenos1 from '../../assets/img/capital-humano/capital-humano-conocenos-1.png'
+import capitalHumanoConocenos1 from '../../assets/img/capital-humano/transportes-azteca-capital-humano-conocenos-equipo.webp'
 import capitalHumanoConocenos2 from '../../assets/img/capital-humano/capital-humano-conocenos-2.png'
-import capitalHumanoConocenos3 from '../../assets/img/capital-humano/capital-humano-conocenos-3.png'
+import capitalHumanoConocenos3 from '../../assets/img/capital-humano/transportes-azteca-capital-humano-conocenos-premios.webp'
 import capitalHumanoConocenos4 from '../../assets/img/capital-humano/capital-humano-conocenos-4.png'
 import capitalHumanoConocenos5 from '../../assets/img/capital-humano/capital-humano-conocenos-5.png'
-import capitalHumanoConocenos6 from '../../assets/img/capital-humano/capital-humano-conocenos-6.png'
+import capitalHumanoConocenos6 from '../../assets/img/capital-humano/transportes-azteca-capital-humano-conocenos-reconocimientos.webp'
 import capitalHumanoConocenos7 from '../../assets/img/capital-humano/capital-humano-conocenos-7.png'
+
 import capitalHumanoPrestaciones1 from '../../assets/img/capital-humano/capital-humano-prestaciones-1.png'
 import capitalHumanoPrestaciones2 from '../../assets/img/capital-humano/capital-humano-prestaciones-2.png'
 import capitalHumanoPrestaciones3 from '../../assets/img/capital-humano/capital-humano-prestaciones-3.png'
@@ -49,15 +50,13 @@ const useCallAnimation = (selector, Setter, stateSetter, animacion) => {
     }, [selector, stateSetter, Setter, animacion]);
 };
 
-const scrollToTop = () => {
-    window.scrollTo({
-        top: 0,
-    });
-};
+
 
 const Index = () => {
 
     // Variables
+
+
 
     const [nombre, setNombre] = useState('');
     const [email, setEmail] = useState('');
@@ -65,48 +64,73 @@ const Index = () => {
     const [ultimoTrabajo, setUltimoTrabajo] = useState('');
     const [horario, setHorario] = useState('');
     const [archivo, setArchivo] = useState(null);
+    const [statusDoc, setStatusDoc] = useState("Subir CV");
+    
 
     const [openFormulario, setOpenFormulario] = useState(false);
     const formulario = (tipo) => {
         setOpenFormulario(true)
-        console.log('Parámetro recibido:', tipo);
+        if(openFormulario === false){
+            setNombre('')
+            setEmail('')
+            setTelefono('')
+            setUltimoTrabajo('')
+            setHorario('')
+            setArchivo(null)
+            setStatusDoc('Subir CV')
+        }
     };
     
-    scrollToTop();
 
    
 
     const enviarPostulacion = async () => {
         try {
           const formData = new FormData();
-          formData.append('nombreCompleto', nombre);
-          formData.append('email', email);
-          formData.append('telefono', telefono);
-          formData.append('ultimoTrabajo', ultimoTrabajo);
-          formData.append('horarioContacto', horario);
-          formData.append('archivo', archivo);
+          formData.append('NombreCompleto', nombre);
+          formData.append('Email', email);
+          formData.append('Telefono', telefono);
+          formData.append('UtimoTrabajo', ultimoTrabajo);
+          formData.append('HorarioContacto', horario);
+          formData.append('ArchivoCV', archivo);
       
-          const response = await axios.post('http://192.168.25.24:8089/azteca/ventas/contacto', formData, {
+          const response = await axios.post('http://192.168.25.24:8089/azteca/capitalhumano/candidatos', formData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
           });
       
-          // Manejar la respuesta de la petición
-          console.log('Respuesta del servidor:', response.data);
+            alert(response.data.message);
+            setNombre('')
+            setEmail('')
+            setTelefono('')
+            setUltimoTrabajo('')
+            setHorario('')
+            setArchivo(null)
+            setStatusDoc('Subir CV')
       
-          // Puedes realizar acciones adicionales aquí después de recibir la respuesta
         } catch (error) {
-          // Manejar errores de la petición
           console.error('Error en la petición:', error.message);
         }
       };
 
     const handleFileChange = (event) => {
+        
         // Acceder al archivo seleccionado por el usuario
         const nuevoArchivo = event.target.files[0];
         setArchivo(nuevoArchivo);
+        setStatusDoc('Cargado')
     };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0
+        });
+    };
+
+    useEffect(() => {
+        scrollToTop();
+    }, []);
 
     // Puntos de inicio de animacion
 
@@ -372,7 +396,7 @@ const Index = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="azteca-capital-humano-vacantes_content_panel_section_boton" onClick={() => formulario('gerente de logística')}> 
+                            <div className="azteca-capital-humano-vacantes_content_panel_section_boton" onClick={() => formulario('Gerente de logistica')}> 
                                 <div className="boton">Aplica</div>
                             </div>
                         </div>
@@ -508,16 +532,8 @@ const Index = () => {
                                 <a className="boton" href="#vacantes" onClick={() => formulario('monitorista')}>Aplica</a>
                             </div>
                         </div>
-
-                        
-
-                        
-
                         
                     </div>
-
-                    
-
                     
                 </div>
             </div>
@@ -582,7 +598,7 @@ const Index = () => {
                                 <div className="form-group">
                                     <input type="horario" 
                                            className='form-control' 
-                                           placeholder='Horario en el que te podemos contactar'
+                                           placeholder='Horario'
                                            value={horario}
                                            onChange={(event) => {
                                             setHorario(event.target.value);
@@ -592,15 +608,17 @@ const Index = () => {
 
                                 <div className="row">
                                     <div className="col-xl-6 col-lg-6 col-md-6">
-                                        {/* <div className="form-group">
-                                            <input type="file" className='btn btn-contacto-cv'>Subir CV</input>
-                                        </div> */}
 
-                                        <input
-                                            type="file"
-                                            accept=".doc, .docx, .pdf"
-                                            onChange={handleFileChange}
-                                        />
+                                        <div className="form-group">
+                                            <button className='contnerdor-btn-file'>
+                                                {statusDoc}
+                                                <input 
+                                                    type="file" 
+                                                    accept=".doc, .docx, .pdf"
+                                                    onChange={handleFileChange}
+                                                />
+                                            </button>
+                                        </div>
                                     </div>
                                     <div className="col-xl-6 col-lg-6 col-md-6">
                                         <div className="form-group">
@@ -617,6 +635,10 @@ const Index = () => {
                 </div>
             </div>
             )}
+
+
+
+    
             
         </div>
     );

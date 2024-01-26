@@ -3,6 +3,7 @@
     width: 100%;
     height: 832px;
     padding: 20px 0px;
+    margin-top: 60px;
 
     display: flex;
     align-items: center;
@@ -93,10 +94,11 @@
         }
     }
 }
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1000px) {
     .azteca-capital-humano-hero {
         height: auto;
         padding: 0px;
+        margin-top: 50px;
 
         &_content {
             width: 100%; 
@@ -150,12 +152,13 @@
 
             &_section{
                 display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: repeat(5, 200px);
                 gap: 20px;
                 width: 100%;
                 max-width: 1000px;
          
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-template-rows: repeat(5, 200px);
+                
              
                 &_img{
                     border-radius: 10px;
@@ -273,11 +276,28 @@
 }
 
 .azteca-capital-humano-talento{
+    position: relative;
     width: 100%;
     background-color: #d4d4d4;
     padding: 100px 0px;
     display: flex;
     justify-content: center;
+
+    background-image: url('../../assets/img/capital-humano/capital-humano-talento-1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &::before {
+        content:'';
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height: 100%;
+        background: rgb(0,0,0);
+        background: linear-gradient(6deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%);
+    }
 
     >img{
         position: absolute;
@@ -292,6 +312,7 @@
         align-items: center;
         flex-direction: column;
         opacity: 0;
+        color: white;
 
         >h1{
             font-weight: bold;
@@ -364,15 +385,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            
 
             &_section{
                 display: grid;
                 gap: 20px;
                 width: 100%;
                 max-width: 1000px;
+
+                
          
                 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-                grid-template-rows: repeat(3, 300px);
+                grid-template-rows: repeat(3, auto);
+                padding: 0px 20px;
 
                 &_card{
                     opacity: 0;
@@ -546,6 +571,7 @@
     padding: 80px 0px;
     display: flex;
     justify-content: center;
+    font-size: 14px;
 
     width: 100%;
     height: auto;
@@ -559,6 +585,8 @@
         max-width: 1000px;
         height: 100%;
         margin-bottom: 100px;
+
+        margin: 0px 20px;
 
         &_header{
             display: flex;
@@ -617,10 +645,13 @@
                 border-radius: 10px;
                 margin-bottom: 20px;
 
+
                 transition: all .2s;
 
                 &_content{
                     width: 100%;
+
+                    // background-color: red;
 
                     &_ubicacion{
 
@@ -666,7 +697,7 @@
                         background-color:  #CC274C;
                         border: solid #CC274C 2px;
                         padding: 5px 25px;
-                        font-size: 18px;
+                        font-size: 14px;
                         font-weight: bold;
                 
                         text-decoration: none; 
@@ -728,24 +759,30 @@
 
 .azteca-capital-humano-formulario {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.445);
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: #0000004f;
-    z-index: 2000;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 40px;
+    
 
     &_panel{
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 500px;
-        height: auto;
-        background-color: #FFFF;
-        z-index: 2001;
+        background-color: white;
+        padding: 30px 10px;
+        width: 100%;
+        max-width: 100%;
+        max-width: 500px;
         border-radius: 10px;
+        text-align: center;
+        color: #2E4054;
+        
+
+       
 
         &_header{
             text-align: center;
@@ -753,17 +790,13 @@
             font-size: 18px;
         }
         &_content{
-            // background-color: red;
             text-align: center;
             padding: 15px
-           
         }
     }
 }
 
 .azteca-capital-humano-formulario {
-    // padding:6em 1em;
-
     .informacion {
         top:50%;
         // transform: translate(0,-50%);
@@ -794,24 +827,58 @@
         padding:1em;
         margin-bottom: 1.4em;
         color:#828588;
+        
     }
 
-    .btn-contacto-cv {
-        background-color: #00286E;
-        width: 100%;
-        color:white;
-        font-size: 1.2em;
-        padding:0.6em;
+    // .btn-contacto-cv {
+    //     margin-top: 10px;
+    //     background-color: #00286E;
+    //     width: 100%;
+    //     color:white;
+    //     font-size: 1.2em;
+    //     padding:0.6em;
+    // }
+
+    // .btn-contacto-cv{
+    //     position: relative;
+    //     margin-top: 10px;
+    //     background-color: #00286E;
+    //     width: 50px;
+    //     height: 55px;
+    //     overflow: hidden;
+
+    //     >input{
+    //         position: fixed;
+    //         opacity: 1;
+    //         height: 100%;
+    //         opacity: 1;
+    //         z-index: 3000px;
+    //     }
+
+    //     >label{
+    //         position: absolute;
+    //         top: 0px;
+    //         left: 0px;
+    //         width: 100%;
+    //         height: 100%;
+    //         background-color: red;
+    //     }
+    // }
 
 
-    }
+
+    
+
+
 
     .btn-contacto-aplicar {
+        margin-top: 10px;
         background-color: #CC274C;
         width: 100%;
         color:white;
         font-size: 1.2em;
         padding:0.6em;
+        
 
 
     }
@@ -827,5 +894,29 @@
         transform: translate(0,0);
         opacity: 1;
     }
+}
+
+.contnerdor-btn-file input[type="file"]{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: red;
+    height: 100%;
+    cursor: pointer;
+}
+
+.contnerdor-btn-file{
+    display: inline-block;
+    position: relative;
+    background-color: #00286E;
+    color: #FFFF;
+    border: 0;
+    padding: 12px 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 10px;
+    width: 100%;
+    height: 55px;
 }
 

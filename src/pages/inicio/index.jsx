@@ -10,13 +10,13 @@ import '@splidejs/react-splide/css/core';
 import '@splidejs/react-splide/css';
 
 
-import inicioHero1 from '../../assets/img/inicio/inicio-hero-1.png';
-import inicioHero2 from '../../assets/img/inicio/inicio-hero-2.png';
-import inicioHero3 from '../../assets/img/inicio/inicio-hero-3.png';
+import inicioHeroImg1 from '../../assets/img/inicio/transportes-azteca-inicio-hero-trailer-1.webp';
+import inicioHeroImg2 from '../../assets/img/inicio/transportes-azteca-inicio-hero-trailer-2.webp';
+import inicioHeroImg3 from '../../assets/img/inicio/transportes-azteca-inicio-hero-puntos.png';
 
-import inicioSoluciones1 from '../../assets/img/inicio/inicio-soluciones-1.png';
-import inicioSoluciones2 from '../../assets/img/inicio/inicio-soluciones-2.png';
-import inicioSoluciones3 from '../../assets/img/inicio/inicio-soluciones-3.png';
+import inicioSolucionesImg1 from '../../assets/img/inicio/transportes-azteca-inicio-soluciones-trailer.webp';
+import inicioSolucionesImg2 from '../../assets/img/inicio/transportes-azteca-inicio-soluciones-trailero.webp';
+import inicioSolucionesImg3 from '../../assets/img/inicio/inicio-soluciones-3.png';
 import inicioSoluciones4 from '../../assets/img/inicio/inicio-soluciones-4.png';
 import inicioSoluciones5 from '../../assets/img/inicio/inicio-soluciones-5.png';
 import inicioSoluciones6 from '../../assets/img/inicio/inicio-soluciones-6.png';
@@ -47,26 +47,7 @@ import proyectosEstacion from '../../assets/img/inicio/proyectos-esatcion.jpg';
 
 import './inicio.scss';
 
-const useScrollAnimation = (selector,Setter, stateSetter) => {
-    useEffect(() => {
-      const handleScroll = () => {
-        const containerPanel = document.querySelector(selector);
-        const posicionContainerPanel = containerPanel.getBoundingClientRect().top;
-        const puntoEspecifico = 100;
 
-        if(!Setter){
-            
-            stateSetter(posicionContainerPanel < puntoEspecifico);
-        }
-      };
-  
-      window.addEventListener("scroll", handleScroll);
-  
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, [selector, stateSetter]);
-};
 
 
 
@@ -121,7 +102,13 @@ const Index = () => {
                 'Content-Type': 'application/json',
             },
         });
-            console.log('Respuesta del servidor:', response.data);
+            alert(response.data.message);
+            setNombre('')
+            setApellidos('')
+            setEmail('')
+            setEmpresa('')
+            setTelefono('')
+            setMensaje('')
       
         } catch (error) {
           console.error('Error en la petición:', error.message);
@@ -166,9 +153,9 @@ const Index = () => {
 
             <div className="azteca-inicio-hero">
                 <div className="azteca-inicio-hero_box">
-                    <img src={inicioHero1} alt="Imagen de trailer" /> 
-                    <img src={inicioHero2} alt="" />
-                    <img src={inicioHero3} alt="" />
+                    <img src={inicioHeroImg1} alt="Imagen de trailer" /> 
+                    <img src={inicioHeroImg3} alt="" />
+                    <img src={inicioHeroImg2} alt="" />
                 </div>
                 <div className="azteca-inicio-hero_container">
 
@@ -199,7 +186,7 @@ const Index = () => {
                     <div className="iniciar-servicios"></div>
                     <div className="azteca-inicio-soluciones_content_panel">
 
-                        <div className="azteca-inicio-soluciones_content_panel_card animaciones-inicio" style={{ backgroundImage: `url(${inicioSoluciones1})`}}>
+                        <div className="azteca-inicio-soluciones_content_panel_card animaciones-inicio" style={{ backgroundImage: `url(${inicioSolucionesImg1})`}}>
                             <div className="azteca-inicio-soluciones_content_panel_card_text">
 
                                 <div className="azteca-inicio-soluciones_content_panel_card_text_content">
@@ -216,7 +203,7 @@ const Index = () => {
                             </div>
                         </div>
 
-                        <div className="azteca-inicio-soluciones_content_panel_card animaciones-inicio" style={{ backgroundImage: `url(${inicioSoluciones2})`}}>
+                        <div className="azteca-inicio-soluciones_content_panel_card animaciones-inicio" style={{ backgroundImage: `url(${inicioSolucionesImg2})`}}>
                             <div className="azteca-inicio-soluciones_content_panel_card_text">
 
                                 <div className="azteca-inicio-soluciones_content_panel_card_text_content">
@@ -234,7 +221,7 @@ const Index = () => {
                             </div>
                         </div>
 
-                        <div className="azteca-inicio-soluciones_content_panel_card animaciones-inicio" style={{ backgroundImage: `url(${inicioSoluciones3})`}}>
+                        <div className="azteca-inicio-soluciones_content_panel_card animaciones-inicio" style={{ backgroundImage: `url(${inicioSolucionesImg3})`}}>
                             <div className="azteca-inicio-soluciones_content_panel_card_text">
 
                                 <div className="azteca-inicio-soluciones_content_panel_card_text_content">
@@ -488,7 +475,7 @@ const Index = () => {
 
                         <div className="col-xl-12">
                             
-                            <Splide options={{ type: 'loop', perPage: numeroCards, rewind: true, gap: '1.4rem', width: '100%' }} className='splide'>
+                            <Splide options={{ type: 'loop', perPage: numeroCards, rewind: true, gap: '1.4rem', width: '100%' }} className=''>
                                 <SplideSlide>
                                     <div className="item-slidd">
     
@@ -497,12 +484,15 @@ const Index = () => {
                                         </div>
 
                                         <div className="texto">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, vero? Ratione dolore dolorem dolorum in quidem esse iure at repellat, quia repellendus laboriosam, similique maxime officiis temporibus tempore tempora debitis!
+                                            ¡Emocionante Noticia! ¡Hemos 
+                                            obtenido la certificación ISO 14001! 
+                                            Nuestro compromiso con la calidad 
+                                            y la excelencia en el servicio...
                                         </div>
 
                                         <div className="footer">
                                             <div className="footer_fecha">
-                                                12/12/12
+                                                03/02/2023
                                             </div>
 
                                             <div className="footer_img">
@@ -521,12 +511,15 @@ const Index = () => {
                                         </div>
 
                                         <div className="texto">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, vero? Ratione dolore dolorem dolorum in quidem esse iure at repellat, quia repellendus laboriosam, similique maxime officiis temporibus tempore tempora debitis!
+                                            ¡Emocionante Noticia! ¡Hemos 
+                                            obtenido la certificación ISO 22000! 
+                                            Nuestro compromiso con la calidad 
+                                            y la excelencia en el servicio...
                                         </div>
 
                                         <div className="footer">
                                             <div className="footer_fecha">
-                                                12/12/12
+                                                15/22/2022
                                             </div>
 
                                             <div className="footer_img">
@@ -545,12 +538,15 @@ const Index = () => {
                                         </div>
 
                                         <div className="texto">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, vero? Ratione dolore dolorem dolorum in quidem esse iure at repellat, quia repellendus laboriosam, similique maxime officiis temporibus tempore tempora debitis!
+                                            ¡Nada nos detiene! ¡Hemos 
+                                            construido nuestra nueva estación
+                                            de Diésel exclusiva! 
+                                            Con sede en Chinameca, nuestra...
                                         </div>
 
                                         <div className="footer">
                                             <div className="footer_fecha">
-                                                12/12/12
+                                                26/08/2020
                                             </div>
 
                                             <div className="footer_img">
