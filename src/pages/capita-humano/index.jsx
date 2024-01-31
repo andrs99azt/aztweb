@@ -235,8 +235,8 @@ const Index = () => {
                                     <img src={capitalHumanoPrestaciones1} alt="" /> 
                                 </div>
                                 <div className="azteca-capital-humano-prestaciones_content_panel_section_card_texto">
-                                    Nuestras prestaciones van más allá de los requisitos legales, ofreciendo 
-                                    beneficios excepcionales que valoran y cuidan a nuestros empleados.
+                                    Nuestras prestaciones son <span>superiores a las de la ley</span>, ofreciendo beneficios excepcionales 
+                                    que valoran y cuidan a nuestros empleados.
                                 </div>
                             </div>
                             <div className="azteca-capital-humano-prestaciones_content_panel_section_card elemento2 animaciones-prestaciones">
@@ -244,7 +244,7 @@ const Index = () => {
                                     <img src={capitalHumanoPrestaciones2} alt="" /> 
                                 </div>
                                 <div className="azteca-capital-humano-prestaciones_content_panel_section_card_texto">
-                                    Nuestra caja de ahorro brinda a nuestros empleados la oportunidad de planificar 
+                                    Nuestra <span>caja de ahorro</span> brinda a nuestros empleados la oportunidad de planificar 
                                     un futuro financiero sólido.
                                 </div>
                             </div>
@@ -253,7 +253,7 @@ const Index = () => {
                                     <img src={capitalHumanoPrestaciones3} alt="" /> 
                                 </div>
                                 <div className="azteca-capital-humano-prestaciones_content_panel_section_card_texto">
-                                    Ofrecemos uniformes gratuitos para garantizar la comodidad y profesionalismo 
+                                    Ofrecemos <span>uniformes gratuitos</span> para garantizar la comodidad y profesionalismo 
                                     de nuestro personal en todo momento.
                                 </div>
                             </div>
@@ -262,8 +262,8 @@ const Index = () => {
                                     <img src={capitalHumanoPrestaciones4} alt="" /> 
                                 </div>
                                 <div className="azteca-capital-humano-prestaciones_content_panel_section_card_texto">
-                                    Brindamos una despensa mensual como un beneficio adicional para apoyar el 
-                                    bienestar de nuestros empleados.
+                                    Brindamos una <span>despensa mensual en especie</span> como un beneficio adicional 
+                                    para apoyar el bienestar de nuestros empleados.
                                 </div>
                             </div>
                             <div className="azteca-capital-humano-prestaciones_content_panel_section_card elemento5 animaciones-prestaciones">
@@ -271,7 +271,7 @@ const Index = () => {
                                     <img src={capitalHumanoPrestaciones5} alt="" /> 
                                 </div>
                                 <div className="azteca-capital-humano-prestaciones_content_panel_section_card_texto">
-                                    La despensa navideña es nuestro regalo para compartir la alegría de la 
+                                    La <span>despensa navideña</span> es nuestro regalo para compartir la alegría de la 
                                     temporada festiva con nuestros colaboradores.
                                 </div>
                             </div>
@@ -280,7 +280,7 @@ const Index = () => {
                                     <img src={capitalHumanoPrestaciones6} alt="" /> 
                                 </div>
                                 <div className="azteca-capital-humano-prestaciones_content_panel_section_card_texto">
-                                    Seguro de Vida por $300,000 y $600,000
+                                <span>Seguro de Vida</span> por $300,000 y $600,000
                                 </div>
                             </div>
                             <div className="iniciar-testimonios"></div>
@@ -289,7 +289,7 @@ const Index = () => {
                                     <img src={capitalHumanoPrestaciones7} alt="" /> 
                                 </div>
                                 <div className="azteca-capital-humano-prestaciones_content_panel_section_card_texto">
-                                    Apoyo en gastos funerarios: Estamos aquí en los momentos que más importan.
+                                    <span>Apoyo en gastos funerarios:</span> Estamos aquí en los momentos que más importan.
                                 </div>
                             </div>
                             <div className="azteca-capital-humano-prestaciones_content_panel_section_card elemento8 animaciones-prestaciones">
@@ -297,7 +297,7 @@ const Index = () => {
                                     <img src={capitalHumanoPrestaciones8} alt="" /> 
                                 </div>
                                 <div className="azteca-capital-humano-prestaciones_content_panel_section_card_texto">
-                                    30 días de aguinaldo: Un beneficio que refleja nuestro compromiso con el 
+                                    <span>30 días de aguinaldo:</span> Un beneficio que refleja nuestro compromiso con el 
                                     bienestar financiero de nuestros empleados.
                                 </div>
                             </div>

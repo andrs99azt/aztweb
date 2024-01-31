@@ -440,6 +440,7 @@
     justify-content: center;
     font-size: 12px;
     // overflow: hidden;
+    transform: translateY(-80px);
 
     &_content {
         width: 100%;
@@ -524,6 +525,7 @@
 
 @media (max-width: 900px) {
     .azteca-servicios-unidades {
+        transform: translateY(0px);
         &_content {
             &_botones {
                 &_boton {

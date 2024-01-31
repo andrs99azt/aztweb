@@ -132,13 +132,13 @@ const Footer = () => {
 
                     <div className="azteca-footer_navegacion_panel_redes">
                         <div className="azteca-footer_navegacion_panel_redes_icon">
-                            <NavLink to="https://facebook.com">
+                            <NavLink to="https://www.facebook.com/tlazteca" target="_blank">
                                 <img src={facebook} className="img-fluid" alt="Facebook"/>
                             </NavLink>
                         </div>
 
                         <div className="azteca-footer_navegacion_panel_redes_icon">
-                            <NavLink to="https://linkedin.com">
+                            <NavLink to="https://www.linkedin.com/company/transportes-azteca" target="_blank">
                                 <img src={linkedin} className="img-fluid" alt="Facebook"/>
                             </NavLink>
                         </div>

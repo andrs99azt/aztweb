@@ -200,7 +200,7 @@ const Index = () => {
                             </SplideSlide>
                         </Splide>
                     </div>
-                    <div className="azteca-servicios-soluciones_content_texto servicios-animaciones">
+                    <div id="logistica" className="azteca-servicios-soluciones_content_texto servicios-animaciones">
                         <div className="azteca-servicios-soluciones_content_texto_header">
                             <label className='azteca-servicios-soluciones_content_texto_header_titulo raleway_bold'>Soluciones logísticas</label>
                             <label className='azteca-servicios-soluciones_content_texto_header_subtitulo'>ADECUADO A TUS NECESIDADES</label>
@@ -234,7 +234,7 @@ const Index = () => {
                             inigualable en su eficiencia y confiabilidad.
                         </p>
                     </div>
-                    <div className="azteca-servicios-monitoreo_content_galeria animaciones-monitoreo">
+                    <div id="monitoreo" className="azteca-servicios-monitoreo_content_galeria animaciones-monitoreo">
                         <Splide options={{ type: 'loop', perPage: 1, rewind: true, gap: '1.4rem' }} className="azteca-servicios-monitoreo_content_galeria_split" >  
                             <SplideSlide>
                                 <div className="azteca-servicios-monitoreo_content_galeria_split_img" style={{ backgroundImage: `url(${serviciosMonitoreo1})` }}></div>
@@ -270,7 +270,7 @@ const Index = () => {
                             </SplideSlide>
                         </Splide>
                     </div>
-                    <div className="azteca-servicios-servicios_content_texto animaciones-servicios">
+                    <div id="lavado" className="azteca-servicios-servicios_content_texto animaciones-servicios">
                         <div className="azteca-servicios-servicios_content_texto_header">
                             <label className='azteca-servicios-servicios_content_texto_header_titulo raleway_bold'>Servicio de Lavado</label>
                             <label className='azteca-servicios-servicios_content_texto_header_subtitulo'>CALIDAD E INOCUIDAD</label>

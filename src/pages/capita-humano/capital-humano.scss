@@ -28,7 +28,9 @@
             transform: translateX(-400px);
             opacity: 0;
 
+
             >img{
+                transform: translateY(-50px);
                 object-fit: cover;
                 height: auto;
                 max-width: 100%; 
@@ -419,6 +421,10 @@
                         padding-top: 20px;
                         text-align: center;
                         color: #2E4054;
+
+                        >span{
+                            font-weight: bold;
+                        }
                         
                     }
                 }

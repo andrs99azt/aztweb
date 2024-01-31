@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import '@splidejs/splide/dist/css/splide.min.css';
 import Header from '../../components/header/Index';
@@ -298,12 +299,14 @@ const Index = () => {
                                         reduciendo los tiempos de espera.
                                     </p>
                                 </div>
-                                <div className="azteca-servicios_content_elements_box_panel-content_enlace">
-                                    <div className="azteca-servicios_content_elements_box_panel-content_enlace_img">
-                                        <img src={inicioServiciosIcon11} alt="" /> 
+                                <NavLink to="/servicios#logistica" style={{ textDecoration: 'none' }}>
+                                    <div className="azteca-servicios_content_elements_box_panel-content_enlace">
+                                        <div className="azteca-servicios_content_elements_box_panel-content_enlace_img">
+                                                <img src={inicioServiciosIcon11} alt="" /> 
+                                        </div>
+                                        <span>Saber más</span>
                                     </div>
-                                    <span>Saber más</span>
-                                </div>
+                                </NavLink>
                             </div>
                         </div>
 
@@ -321,12 +324,14 @@ const Index = () => {
                                         eficiencia en sus operaciones logísticas.
                                     </p>
                                 </div>
-                                <div className="azteca-servicios_content_elements_box_panel-content_enlace">
-                                    <div className="azteca-servicios_content_elements_box_panel-content_enlace_img">
-                                        <img src={inicioServiciosIcon11} alt="" /> 
+                                <NavLink to="/servicios#monitoreo" style={{ textDecoration: 'none' }}>
+                                    <div className="azteca-servicios_content_elements_box_panel-content_enlace">
+                                        <div className="azteca-servicios_content_elements_box_panel-content_enlace_img">
+                                            <img src={inicioServiciosIcon11} alt="" /> 
+                                        </div>
+                                        <span>Saber más</span>
                                     </div>
-                                    <span>Saber más</span>
-                                </div>
+                                </NavLink>
                             </div>
                         </div>
 
@@ -344,12 +349,14 @@ const Index = () => {
                                         transporte.
                                     </p>
                                 </div>
-                                <div className="azteca-servicios_content_elements_box_panel-content_enlace">
-                                    <div className="azteca-servicios_content_elements_box_panel-content_enlace_img">
-                                        <img src={inicioServiciosIcon11} alt="" /> 
+                                <NavLink to="/servicios#lavado" style={{ textDecoration: 'none' }}>
+                                    <div className="azteca-servicios_content_elements_box_panel-content_enlace">
+                                        <div className="azteca-servicios_content_elements_box_panel-content_enlace_img">
+                                            <img src={inicioServiciosIcon11} alt="" /> 
+                                        </div>
+                                        <span>Saber más</span>
                                     </div>
-                                    <span>Saber más</span>
-                                </div>
+                                </NavLink>
                             </div>
                         </div>
 
