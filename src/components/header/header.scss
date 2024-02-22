@@ -45,7 +45,7 @@
                 white-space: nowrap;
 
                 li {
-                    margin: 10px;
+                    margin: 20px;
                     color: #2e4054a9;
                     font-size: 14px;
                     font-weight: bold;
@@ -61,7 +61,7 @@
                 }
             
                 li a.active {
-                    border-bottom: 1px solid #2E4054;
+                    border-bottom: 2px solid #2E4054;
                     color: #2E4054;
                 }
             }
@@ -205,6 +205,20 @@
 
             img{
                 width: 40px;
+            }
+        }
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .azteca-header {
+        &_content{
+            &_nav{
+                ul {
+                    li {
+                        margin: 10px;
+                    }
+                }
             }
         }
     }

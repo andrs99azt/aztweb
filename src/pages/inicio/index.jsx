@@ -10,47 +10,39 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/core';
 import '@splidejs/react-splide/css';
 
-
+// ----------- IMAGENES HERO
 import inicioHeroImg1 from '../../assets/img/inicio/transportes-azteca-inicio-hero-trailer-1.webp';
 import inicioHeroImg2 from '../../assets/img/inicio/transportes-azteca-inicio-hero-trailer-2.webp';
 import inicioHeroImg3 from '../../assets/img/inicio/transportes-azteca-inicio-hero-puntos.png';
-
-import inicioSolucionesImg1 from '../../assets/img/inicio/transportes-azteca-inicio-soluciones-trailer.webp';
-import inicioSolucionesImg2 from '../../assets/img/inicio/transportes-azteca-inicio-soluciones-trailero.webp';
-import inicioSolucionesImg3 from '../../assets/img/inicio/inicio-soluciones-3.png';
-import inicioSoluciones4 from '../../assets/img/inicio/inicio-soluciones-4.png';
-import inicioSoluciones5 from '../../assets/img/inicio/inicio-soluciones-5.png';
-import inicioSoluciones6 from '../../assets/img/inicio/inicio-soluciones-6.png';
-import inicioSoluciones7 from '../../assets/img/inicio/inicio-soluciones-7.png';
-import logoAzteca from '../../assets/icons/logo-azteca.png';
-
-
-
-import solucionesHeader from '../../assets/img/soluciones-title.png';
-
-
-import inicioServicios1 from '../../assets/img/inicio/inicio-servicios-1.png';
-import inicioServiciosIcon5 from '../../assets/icons/inicio/inicio-servicios-icon-5.png';
-import inicioServiciosIcon6 from '../../assets/icons/inicio/inicio-servicios-icon-6.png';
-import inicioServiciosIcon7 from '../../assets/icons/inicio/inicio-servicios-icon-7.png';
-import inicioServiciosIcon8 from '../../assets/icons/inicio/inicio-servicios-icon-8.png';
-import inicioServiciosIcon9 from '../../assets/icons/inicio/inicio-servicios-icon-9.png';
-import inicioServiciosIcon10 from '../../assets/icons/inicio/inicio-servicios-icon-10.png';
-import inicioServiciosIcon11 from '../../assets/icons/inicio/inicio-servicios-icon-11.png';
-
-import proyectosCamion from '../../assets/img/proyectos-img-camion.png';
-import proyectosPipa from '../../assets/img/proyectos-img-pipa.png';
-
-import proyectosHeader from '../../assets/img/inicio/proyectos-header.jpg';
-import proyectosIso from '../../assets/img/inicio/proyectos-iso.jpg';
-import proyectosLavado from '../../assets/img/inicio/proyectos-lavado.jpg';
-import proyectosEstacion from '../../assets/img/inicio/proyectos-esatcion.jpg';
+// ----------- IMAGENES SOLUCIONES
+import inicioSolucionesImg1 from '../../assets/img/inicio/transportes-azteca-inicio-soluciones-trailer.png';
+import inicioSolucionesImg2 from '../../assets/img/inicio/transportes-azteca-inicio-soluciones-trailero.png';
+import inicioSolucionesImg3 from '../../assets/img/inicio/transportes-azteca-inicio-soluciones-equipo.png';
+import inicioSolucionesIcon1 from '../../assets/icons/inicio/transportes-azteca-inicio-soluciones-certificado.ico';
+import inicioSolucionesIcon2 from '../../assets/icons/inicio/transportes-azteca-inicio-soluciones-rutas.ico';
+import inicioSolucionesIcon3 from '../../assets/icons/inicio/transportes-azteca-inicio-soluciones-camion.ico';
+import inicioSolucionesIcon4 from '../../assets/icons/inicio/transportes-azteca-inicio-soluciones-clientes.ico';
+import inicioSolucionesIcon5 from '../../assets/icons/inicio/transportes-azteca-inicio-soluciones-logo.ico';
+import inicioSolucionesIcon6 from '../../assets/icons/inicio/transportes-azteca-inicio-soluciones-titulo.png';
+// ----------- IMAGENES SERVICIOS
+import inicioServiciosImg1 from '../../assets/img/inicio/transportes-azteca-inicio-servicios-titulo.png';
+import inicioServiciosIcon5 from '../../assets/icons/inicio/transportes-azteca-inicio-servicios-certificado.png';
+import inicioServiciosIcon6 from '../../assets/icons/inicio/transportes-azteca-inicio-servicios-logistica.ico';
+import inicioServiciosIcon7 from '../../assets/icons/inicio/transportes-azteca-inicio-servicios-lavado.ico';
+import inicioServiciosIcon8 from '../../assets/icons/inicio/transportes-azteca-inicio-servicios-capacitacion.png';
+import inicioServiciosIcon9 from '../../assets/icons/inicio/transportes-azteca-inicio-servicios-antidoping.png';
+import inicioServiciosIcon10 from '../../assets/icons/inicio/transportes-azteca-inicio-servicios-limpieza.ico';
+import inicioServiciosIcon11 from '../../assets/icons/inicio/transportes-azteca-inicio-servicios-flecha.png';
+// ----------- IMAGENES EXPERIENCIA
+import inicioExperienciaImg1 from '../../assets/img/inicio/transportes-azteca-inicio-experiencia-trailer-1.png';
+import inicioExperienciaImg2 from '../../assets/img/inicio/transportes-azteca-inicio-experiencia-trailer-2.png';
+// ----------- IMAGENES PROYECTOS
+import inicioProyectosImg1 from '../../assets/img/inicio/transportes-azteca-inicio-proyectos-titulo.png';
+import inicioProyectosImg2 from '../../assets/img/inicio/transportes-azteca-inicio-proyectos-iso14001.webp';
+import inicioProyectosImg3 from '../../assets/img/inicio/transportes-azteca-inicio-proyectos-lavado.webp';
+import inicioProyectosImg4 from '../../assets/img/inicio/transportes-azteca-inicio-proyectos-estacion.webp';
 
 import './inicio.scss';
-
-
-
-
 
 const Index = () => {
 
@@ -179,7 +171,7 @@ const Index = () => {
             <div className="azteca-inicio-soluciones">
                <div className="azteca-inicio-soluciones_content">
                     <div className="azteca-inicio-soluciones_content_header animaciones-inicio">
-                        <img src={solucionesHeader} alt="" /> 
+                        <img src={inicioSolucionesIcon6} alt="" /> 
                     </div>
                     <div className="azteca-inicio-soluciones_content_texto animaciones-inicio">
                         Te ayudamos con sistemas eficientes para mejorar tu fill rate y proyectos Just in Time!!
@@ -187,7 +179,8 @@ const Index = () => {
                     <div className="iniciar-servicios"></div>
                     <div className="azteca-inicio-soluciones_content_panel">
 
-                        <div className="azteca-inicio-soluciones_content_panel_card animaciones-inicio" style={{ backgroundImage: `url(${inicioSolucionesImg1})`}}>
+                        <div className="azteca-inicio-soluciones_content_panel_card animaciones-inicio">
+                            <img src={inicioSolucionesImg1} className="azteca-inicio-soluciones_content_panel_card_img" alt="" /> 
                             <div className="azteca-inicio-soluciones_content_panel_card_text">
 
                                 <div className="azteca-inicio-soluciones_content_panel_card_text_content">
@@ -199,12 +192,13 @@ const Index = () => {
                                     </p>
                                 </div>
                                 <div className="azteca-inicio-soluciones_content_panel_card_text_footer">
-                                        <img src={logoAzteca} alt="Logo Azteca" style={{ height: '30px' }}/>
+                                        <img src={inicioSolucionesIcon5} alt="Logo Azteca" style={{ height: '30px' }}/>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="azteca-inicio-soluciones_content_panel_card animaciones-inicio" style={{ backgroundImage: `url(${inicioSolucionesImg2})`}}>
+                        <div className="azteca-inicio-soluciones_content_panel_card animaciones-inicio">
+                            <img src={inicioSolucionesImg2} className="azteca-inicio-soluciones_content_panel_card_img" alt="" /> 
                             <div className="azteca-inicio-soluciones_content_panel_card_text">
 
                                 <div className="azteca-inicio-soluciones_content_panel_card_text_content">
@@ -217,12 +211,13 @@ const Index = () => {
                                     </p>
                                 </div>
                                 <div className="azteca-inicio-soluciones_content_panel_card_text_footer">
-                                        <img src={logoAzteca} alt="Logo Azteca" style={{ height: '30px' }}/>
+                                        <img src={inicioSolucionesIcon5} alt="Logo Azteca" style={{ height: '30px' }}/>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="azteca-inicio-soluciones_content_panel_card animaciones-inicio" style={{ backgroundImage: `url(${inicioSolucionesImg3})`}}>
+                        <div className="azteca-inicio-soluciones_content_panel_card animaciones-inicio">
+                            <img src={inicioSolucionesImg3} className="azteca-inicio-soluciones_content_panel_card_img" alt="" /> 
                             <div className="azteca-inicio-soluciones_content_panel_card_text">
 
                                 <div className="azteca-inicio-soluciones_content_panel_card_text_content">
@@ -235,38 +230,39 @@ const Index = () => {
                                     </p>
                                 </div>
                                 <div className="azteca-inicio-soluciones_content_panel_card_text_footer">
-                                        <img src={logoAzteca} alt="Logo Azteca" style={{ height: '30px' }}/>
+                                        <img src={inicioSolucionesIcon5} alt="Logo Azteca" style={{ height: '30px' }}/>
                                 </div>
                             </div>
                         </div>
+
 
                     </div>
                     <div className="azteca-inicio-soluciones_content_informacion animaciones-inicio">
                         <div className="azteca-inicio-soluciones_content_informacion_card">
                             <section className='elemento1 roboto_bold'>30+</section>
                                 <section className='elemento2'>
-                                    <img src={inicioSoluciones4} alt="" /> 
+                                    <img src={inicioSolucionesIcon1} alt="" /> 
                                 </section>
                             <section className='elemento3 roboto_bold'>Años de Experiencia</section>
                         </div>
                         <div className="azteca-inicio-soluciones_content_informacion_card">
                             <section className='elemento1 roboto_bold'>18k+</section>
                                 <section className='elemento2'>
-                                    <img src={inicioSoluciones5} alt="" /> 
+                                    <img src={inicioSolucionesIcon2} alt="" /> 
                                 </section>
                             <section className='elemento3 roboto_bold'>Viajes al año</section>
                         </div>
                         <div className="azteca-inicio-soluciones_content_informacion_card">
                             <section className='elemento1 roboto_bold'>150+</section>
                                 <section className='elemento2'>
-                                    <img src={inicioSoluciones6} alt="" /> 
+                                    <img src={inicioSolucionesIcon3} alt="" /> 
                                 </section>
                             <section className='elemento3 roboto_bold'>Unidades en todo el país</section>
                         </div>
                         <div className="azteca-inicio-soluciones_content_informacion_card">
                             <section className='elemento1 roboto_bold'>100+</section>
                                 <section className='elemento2'>
-                                    <img src={inicioSoluciones7} alt="" /> 
+                                    <img src={inicioSolucionesIcon4} alt="" /> 
                                 </section>
                             <section className='elemento3 roboto_bold'>Clientes satisfechos</section>
                         </div>
@@ -280,7 +276,7 @@ const Index = () => {
             <div className="azteca-servicios">
                 <div className="azteca-servicios_content">
                     <div className="azteca-servicios_content_header">
-                        <img src={inicioServicios1} alt="" /> 
+                        <img src={inicioServiciosImg1} alt="" /> 
                     </div>
                     <div className="iniciar-experiencia"></div>
                     <div className="azteca-servicios_content_elements animaciones-servicios">
@@ -452,7 +448,7 @@ const Index = () => {
                 <div className="azteca-inicio-experiencia_content-button">
                     <div className="azteca-inicio-experiencia_content-button_card card1 animaciones-experiencia">
                         <div className="azteca-inicio-experiencia_content-button_card_img">
-                            <img src={proyectosPipa} alt="" /> 
+                            <img src={inicioExperienciaImg1} alt="" /> 
                         </div>
                         <div className="azteca-inicio-experiencia_content-button_card_text raleway_light" style={{ color: '#2E4054' }} >
                             Medio siglo de operaciones exitosas a tu servicio.
@@ -460,7 +456,7 @@ const Index = () => {
                     </div>
                     <div className="azteca-inicio-experiencia_content-button_card card2 animaciones-experiencia">
                         <div className="azteca-inicio-experiencia_content-button_card_img">
-                            <img src={proyectosCamion} alt="" /> 
+                            <img src={inicioExperienciaImg2} alt="" /> 
                         </div>
                         <div className="azteca-inicio-experiencia_content-button_card_text raleway_light" style={{ color: '#F9FBFC' }}>
                             Nos acompaña el éxito y te lo compartimos profesionalmente para fortalecer nuestra alianza.
@@ -474,7 +470,7 @@ const Index = () => {
 
                     <div className="container_header">
                         <div className="container_header_img">
-                            <img src={proyectosHeader} alt="Logo Azteca" className=""/>
+                            <img src={inicioProyectosImg1} alt="Logo Azteca" className=""/>
                         </div>
                     </div>
 
@@ -487,7 +483,7 @@ const Index = () => {
                                     <div className="item-slidd">
     
                                         <div className="img">
-                                            <img src={proyectosIso} alt="Logo Azteca" className=""/>
+                                            <img src={inicioProyectosImg2} alt="Logo Azteca" className=""/>
                                         </div>
 
                                         <div className="texto">
@@ -503,7 +499,7 @@ const Index = () => {
                                             </div>
 
                                             <div className="footer_img">
-                                                <img src={logoAzteca} alt="Logo Azteca" className=""/>
+                                                <img src={inicioSolucionesIcon5} alt="Logo Azteca" className=""/>
                                             </div>
                                         </div>
                                       
@@ -514,7 +510,7 @@ const Index = () => {
                                     <div className="item-slidd">
     
                                         <div className="img">
-                                            <img src={proyectosLavado} alt="Logo Azteca" className=""/>
+                                            <img src={inicioProyectosImg3} alt="Logo Azteca" className=""/>
                                         </div>
 
                                         <div className="texto">
@@ -530,7 +526,7 @@ const Index = () => {
                                             </div>
 
                                             <div className="footer_img">
-                                                <img src={logoAzteca} alt="Logo Azteca" className=""/>
+                                                <img src={inicioSolucionesIcon5} alt="Logo Azteca" className=""/>
                                             </div>
                                         </div>
                                       
@@ -541,7 +537,7 @@ const Index = () => {
                                     <div className="item-slidd">
     
                                         <div className="img">
-                                            <img src={proyectosEstacion} alt="Logo Azteca" className=""/>
+                                            <img src={inicioProyectosImg4} alt="Logo Azteca" className=""/>
                                         </div>
 
                                         <div className="texto">
@@ -557,7 +553,7 @@ const Index = () => {
                                             </div>
 
                                             <div className="footer_img">
-                                                <img src={logoAzteca} alt="Logo Azteca" className=""/>
+                                                <img src={inicioSolucionesIcon5} alt="Logo Azteca" className=""/>
                                             </div>
                                         </div>
                                       
@@ -587,7 +583,7 @@ const Index = () => {
                                 <li>(33) 3151-0720</li>
                                 <li>ventas@tlazteca.com.mx</li>
                             </ul>
-                            <img src={logoAzteca} alt="Transportes Azteca" className='img-luid logo'/>
+                            <img src={inicioSolucionesIcon5} alt="Transportes Azteca" className='img-luid logo'/>
                         </div>
 
                     </div>

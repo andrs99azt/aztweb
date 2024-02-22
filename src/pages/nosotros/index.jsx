@@ -24,9 +24,9 @@ import nosotrosVision2 from '../../assets/img/nosotros/vision-2.jpg'
 import nosotrosVision3 from '../../assets/img/nosotros/vision-3.jpg'
 
 
-import nosotrosTestimoniosIcon1 from '../../assets/icons/nosotros/nosotros-testimonios-icon-1.png';
-import nosotrosTestimonios1 from '../../assets/img/nosotros/nosotros-testimonios-1.jpg';
-import nosotrosTestimonios5 from '../../assets/img/nosotros/nosotros-testimonios-5.jpg';
+// import nosotrosTestimoniosIcon1 from '../../assets/icons/nosotros/nosotros-testimonios-icon-1.png';
+// import nosotrosTestimonios1 from '../../assets/img/nosotros/nosotros-testimonios-1.jpg';
+// import nosotrosTestimonios5 from '../../assets/img/nosotros/nosotros-testimonios-5.jpg';
 
 import nosotrosUnete1 from '../../assets/img/nosotros/nosotros-vacantes-1.png'
 
@@ -48,26 +48,26 @@ import nosotrosCertificacionesImg11 from '../../assets/img/nosotros/nosotros-cer
 //Styles
 import './nosotros.scss';
 
-const useScrollAnimation = (selector,Setter, stateSetter) => {
-    useEffect(() => {
-      const handleScroll = () => {
-        const containerPanel = document.querySelector(selector);
-        const posicionContainerPanel = containerPanel.getBoundingClientRect().top;
-        const puntoEspecifico = 100;
+// const useScrollAnimation = (selector,Setter, stateSetter) => {
+//     useEffect(() => {
+//       const handleScroll = () => {
+//         const containerPanel = document.querySelector(selector);
+//         const posicionContainerPanel = containerPanel.getBoundingClientRect().top;
+//         const puntoEspecifico = 100;
 
-        if(!Setter){
+//         if(!Setter){
             
-            stateSetter(posicionContainerPanel < puntoEspecifico);
-        }
-      };
+//             stateSetter(posicionContainerPanel < puntoEspecifico);
+//         }
+//       };
   
-      window.addEventListener("scroll", handleScroll);
+//       window.addEventListener("scroll", handleScroll);
   
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, [selector, stateSetter]);
-};
+//       return () => {
+//         window.removeEventListener("scroll", handleScroll);
+//       };
+//     }, [selector, stateSetter]);
+// };
 
 const useCallAnimation = (selector, Setter, stateSetter, animacion) => {
     useEffect(() => {
@@ -112,37 +112,37 @@ const Index = () => {
     useCallAnimation('.iniciar-mision',animation,setAnimation, 'animaciones-mision')
     useCallAnimation('.iniciar-vision',animation,setAnimation, 'animaciones-vision')
     useCallAnimation('.iniciar-certificaciones',animation,setAnimation, 'animaciones-certificaciones')
-    useCallAnimation('.iniciar-testimonios',animation,setAnimation, 'animaciones-testimonios')
+    // useCallAnimation('.iniciar-testimonios',animation,setAnimation, 'animaciones-testimonios')
     useCallAnimation('.iniciar-unete',animation,setAnimation, 'animaciones-unete')
 
     // Variables
 
     
 
-    const [nosotrosAnimacion, setNosotrosAnimacion] = useState(false);
-    const [misionAnimacion, setMisionAnimacion] = useState(false);
-    const [visionAnimacion, setVisionAnimacion] = useState(false);
-    const [certificacionesAnimacion, setCertificacionesAnimacion] = useState(false);
-    const [testimoniosAnimacion, setTestimoniosAnimacion] = useState(false);
-    const [vacantesAnimacion, setVacantesAnimacion] = useState(false);
+    // const [nosotrosAnimacion, setNosotrosAnimacion] = useState(false);
+    // const [misionAnimacion, setMisionAnimacion] = useState(false);
+    // const [visionAnimacion, setVisionAnimacion] = useState(false);
+    // const [certificacionesAnimacion, setCertificacionesAnimacion] = useState(false);
+    // const [testimoniosAnimacion, setTestimoniosAnimacion] = useState(false);
+    // const [vacantesAnimacion, setVacantesAnimacion] = useState(false);
 
-    const [numeroCards, setNumeroCartds] = useState(3);
+    // const [numeroCards, setNumeroCartds] = useState(3);
 
-    useEffect(() => {
-        const handleResize = () => {
-            const windowWidth = window.innerWidth;
-            if (windowWidth <= 900) {
-                setNumeroCartds(1);
-            } else {
-                setNumeroCartds(3);
-            }
-            };
-            window.addEventListener('resize', handleResize);
-            handleResize();
-            return () => {
-          window.removeEventListener('resize', handleResize);
-        };
-      }, []);
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         const windowWidth = window.innerWidth;
+    //         if (windowWidth <= 900) {
+    //             setNumeroCartds(1);
+    //         } else {
+    //             setNumeroCartds(3);
+    //         }
+    //         };
+    //         window.addEventListener('resize', handleResize);
+    //         handleResize();
+    //         return () => {
+    //       window.removeEventListener('resize', handleResize);
+    //     };
+    //   }, []);
 
     // Puntos de inicio de animacion
 
@@ -302,7 +302,8 @@ const Index = () => {
                             servicio de calidad a nuestros clientes.
                         </p>
                     </div>
-                    <span className="iniciar-testimonios"></span>
+                    {/* <span className="iniciar-testimonios"></span> */}
+                    <span className="iniciar-unete"></span>
                     <div className="azteca-nosotros-certificaciones_content_cards">
                         <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
                             <img src={nosotrosCertificacionesImg1} alt="ISO 9001"/>
@@ -341,7 +342,7 @@ const Index = () => {
                 </div>
             </div>
 
-            <div className="azteca-nosotros-testimonios">
+            {/* <div className="azteca-nosotros-testimonios">
                 <div className="azteca-nosotros-testimonios_content">
                     <div className="azteca-nosotros-testimonios_content_img animaciones-testimonios">
                         <img src={nosotrosTestimonios5} alt="" />
@@ -475,7 +476,7 @@ const Index = () => {
                         </Splide>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className="azteca-nosotros-unete" style={{ backgroundImage: `url(${nosotrosUnete1})` }}>
                 <div className="azteca-nosotros-unete_content">

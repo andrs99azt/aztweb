@@ -6,9 +6,6 @@ import { NavLink } from 'react-router-dom';  // Importa NavLink
 
 
 
-import aceite from '../../assets/img/servicios/aceite.png';
-import trailer from '../../assets/img/servicios/trailer.jpg';
-
 //Splide slider
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/core';
@@ -17,18 +14,21 @@ import '@splidejs/react-splide/css';
 //Styles
 import './servicios.scss';
 
-import serviciosHero1 from "../../assets/img/servicios/cabecera-servicios.jpg"
-
-import serviciosSoluciones1 from "../../assets/img/servicios/servicios-soluciones-1.jpg"
-import serviciosSoluciones2 from "../../assets/img/servicios/servicios-soluciones-2.jpg"
-import serviciosMonitoreo1 from "../../assets/img/servicios/servicios-monitoreo-1.jpg"
-import serviciosMonitoreo2 from "../../assets/img/servicios/servicios-monitoreo-2.jpg"
-import serviciosMonitoreo3 from "../../assets/img/servicios/servicios-monitoreo-3.jpg"
-import serviciosServicios1 from "../../assets/img/servicios/servicios-servicios-1.jpg"
-import serviciosServicios2 from "../../assets/img/servicios/servicios-servicios-2.jpg"
-import serviciosServicios3 from "../../assets/img/servicios/servicios-servicios-3.jpg"
-
-import serviciosUnidades1 from "../../assets/img/servicios/servicios-unidades-1.jpg"
+// ----------- IMAGENES HERO
+import serviciosHeroImg1 from "../../assets/img/servicios/transportes-azteca-servicios-hero-fondo.jpg"
+// ----------- IMAGENES SOLICIONES
+import serviciosSolucionesImg1 from "../../assets/img/servicios/transportes-azteca-servicios-soluciones-trailer.webp"
+import serviciosSolucionesImg2 from "../../assets/img/servicios/transportes-azteca-servicios-soluciones-sistema.webp"
+// ----------- IMAGENES MONITOREO
+import serviciosMonitoreoImg1 from "../../assets/img/servicios/transportes-azteca-servicios-monitoreo-vigilancia-1.webp"
+import serviciosMonitoreoImg2 from "../../assets/img/servicios/transportes-azteca-servicios-monitoreo-vigilancia-2.webp"
+import serviciosMonitoreoImg3 from "../../assets/img/servicios/transportes-azteca-servicios-monitoreo-vigilancia-3.webp"
+// ----------- IMAGENES SERVICIOS
+import serviciosServiciosImg1 from "../../assets/img/servicios/transportes-azteca-servicios-servicios-limpieza-1.webp"
+import serviciosServiciosImg2 from "../../assets/img/servicios/transportes-azteca-servicios-servicios-limpieza-2.webp"
+import serviciosServiciosImg3 from "../../assets/img/servicios/transportes-azteca-servicios-servicios-limpieza-3.webp"
+// ----------- IMAGENES UNIDADES
+import serviciosUnidades1 from "../../assets/img/servicios/servicios-unidades-1.webp"
 import serviciosUnidades2 from "../../assets/img/servicios/servicios-unidades-2.jpg"
 import serviciosUnidades3 from "../../assets/img/servicios/servicios-unidades-3.jpg"
 
@@ -48,12 +48,6 @@ import serviciosContactoIcon2 from '../../assets/img/servicios/liquido-derecho.p
 
 
 import serviciosSucursalesImg1 from '../../assets/img/servicios/servicios-sucursales-1.png';
-
-
-
-
-import liquido from '../../assets/img/servicios/liquido-derecho.png';
-import maguey from '../../assets/img/servicios/maguey.png';
 
 
 
@@ -170,7 +164,7 @@ const Index = () => {
         <div>
             <Header/>
 
-            <div className="azteca-servicios-hero" style={{ backgroundImage: `url(${serviciosHero1})` }}>
+            <div className="azteca-servicios-hero" style={{ backgroundImage: `url(${serviciosHeroImg1})` }}>
                 <div className="azteca-servicios-hero_content servicios-animaciones">
                     <h3 className='raleway_medium'>Los servicios que ofrece</h3>
                     <h1 className='square_bold'>AZTECA</h1>
@@ -192,11 +186,11 @@ const Index = () => {
                     <div className="azteca-servicios-soluciones_content_galeria servicios-animaciones">
                         <Splide options={{ type: 'loop', perPage: 1, rewind: true, gap: '1.4rem' }} className="azteca-servicios-soluciones_content_galeria_split" >  
                             <SplideSlide>
-                                <div className="azteca-servicios-soluciones_content_galeria_split_img" style={{ backgroundImage: `url(${serviciosSoluciones1})` }}></div>
+                                <div className="azteca-servicios-soluciones_content_galeria_split_img" style={{ backgroundImage: `url(${serviciosSolucionesImg1})` }}></div>
                             </SplideSlide>
 
                             <SplideSlide>
-                                <div className="azteca-servicios-soluciones_content_galeria_split_img" style={{ backgroundImage: `url(${serviciosSoluciones2})` }}></div>
+                                <div className="azteca-servicios-soluciones_content_galeria_split_img" style={{ backgroundImage: `url(${serviciosSolucionesImg2})` }}></div>
                             </SplideSlide>
                         </Splide>
                     </div>
@@ -237,15 +231,15 @@ const Index = () => {
                     <div id="monitoreo" className="azteca-servicios-monitoreo_content_galeria animaciones-monitoreo">
                         <Splide options={{ type: 'loop', perPage: 1, rewind: true, gap: '1.4rem' }} className="azteca-servicios-monitoreo_content_galeria_split" >  
                             <SplideSlide>
-                                <div className="azteca-servicios-monitoreo_content_galeria_split_img" style={{ backgroundImage: `url(${serviciosMonitoreo1})` }}></div>
+                                <div className="azteca-servicios-monitoreo_content_galeria_split_img" style={{ backgroundImage: `url(${serviciosMonitoreoImg1})` }}></div>
                             </SplideSlide>
 
                             <SplideSlide>
-                                <div className="azteca-servicios-monitoreo_content_galeria_split_img" style={{ backgroundImage: `url(${serviciosMonitoreo2})` }}></div>
+                                <div className="azteca-servicios-monitoreo_content_galeria_split_img" style={{ backgroundImage: `url(${serviciosMonitoreoImg2})` }}></div>
                             </SplideSlide>
 
                             <SplideSlide>
-                                <div className="azteca-servicios-monitoreo_content_galeria_split_img" style={{ backgroundImage: `url(${serviciosMonitoreo3})` }}></div>
+                                <div className="azteca-servicios-monitoreo_content_galeria_split_img" style={{ backgroundImage: `url(${serviciosMonitoreoImg3})` }}></div>
                             </SplideSlide>
                         </Splide>
                     </div>
@@ -258,15 +252,15 @@ const Index = () => {
                     <div className="azteca-servicios-servicios_content_galeria animaciones-servicios">
                         <Splide options={{ type: 'loop', perPage: 1, rewind: true, gap: '1.4rem' }} className="azteca-servicios-servicios_content_galeria_split" >  
                             <SplideSlide>
-                                <div className="azteca-servicios-servicios_content_galeria_split_img" style={{ backgroundImage: `url(${serviciosServicios1})` }}></div>
+                                <div className="azteca-servicios-servicios_content_galeria_split_img" style={{ backgroundImage: `url(${serviciosServiciosImg1})` }}></div>
                             </SplideSlide>
 
                             <SplideSlide>
-                                <div className="azteca-servicios-servicios_content_galeria_split_img" style={{ backgroundImage: `url(${serviciosServicios2})` }}></div>
+                                <div className="azteca-servicios-servicios_content_galeria_split_img" style={{ backgroundImage: `url(${serviciosServiciosImg2})` }}></div>
                             </SplideSlide>
 
                             <SplideSlide>
-                                <div className="azteca-servicios-servicios_content_galeria_split_img" style={{ backgroundImage: `url(${serviciosServicios3})` }}></div>
+                                <div className="azteca-servicios-servicios_content_galeria_split_img" style={{ backgroundImage: `url(${serviciosServiciosImg3})` }}></div>
                             </SplideSlide>
                         </Splide>
                     </div>
@@ -430,7 +424,7 @@ const Index = () => {
 
                 <div className="azteca-servicios-sucursales_content">
                     <div className="azteca-servicios-sucursales_content_header">
-                        <h2 className='square_bold'>ALCANCE Y REDES</h2>
+                        <h2 className='square_bold'>ALCANCE Y SEDES</h2>
                     </div>
                     <div className="azteca-servicios-sucursales_content_panel">
                         <div className="azteca-servicios-sucursales_content_panel_media">
@@ -456,37 +450,8 @@ const Index = () => {
 
                             <div>
                                 <header>
-                                    <h3 className='raleway_bold'>Durango</h3>
-                                    <span className='raleway_light'>Francisco Montejano Palacios 25-A Col, 45221 La Venta del Astillero</span>
-                                </header>
-                                <br />
-                                <p>
-                                    Nuestro compromiso con la eficiencia y la atención al detalle 
-                                    se refleja en cada aspecto de esta sede, garantizando que podamos 
-                                    cumplir con las necesidades de nuestros clientes en Durango y 
-                                    sus alrededores de manera confiable.
-                                </p>
-                            </div>
-
-                            <div>
-                                <header>
-                                    <h3 className='raleway_bold'>Monterrey</h3>
-                                    <span className='raleway_light'>Francisco Montejano Palacios 25-A Col, 45221 La Venta del Astillero</span>
-                                </header>
-                                <br />
-                                <p>
-                                    Esta sede en Monterrey nos permite atender las necesidades 
-                                    logísticas locales y regionales de manera eficiente. A pesar 
-                                    de su tamaño más reducido, mantenemos los mismos estándares 
-                                    de calidad y atención al detalle que en nuestras sedes más 
-                                    grandes.
-                                </p>
-                            </div>
-
-                            <div>
-                                <header>
                                     <h3 className='raleway_bold'>Chinameca, Veracruz</h3>
-                                    <span className='raleway_light'>Francisco Montejano Palacios 25-A Col, 45221 La Venta del Astillero</span>
+                                    <span className='raleway_light'>Altamirano 225, La Maseca, 95980 Chinameca, Veracruz</span>
                                 </header>
                                 <br />
                                 <p>
@@ -499,8 +464,23 @@ const Index = () => {
 
                             <div>
                                 <header>
+                                    <h3 className='raleway_bold'>Monterrey</h3>
+                                    {/* <span className='raleway_light'>Francisco Montejano Palacios 25-A Col, 45221 La Venta del Astillero</span> */}
+                                </header>
+                                <br />
+                                <p>
+                                    Esta sede en Monterrey nos permite atender las necesidades 
+                                    logísticas locales y regionales de manera eficiente. A pesar 
+                                    de su tamaño más reducido, mantenemos los mismos estándares 
+                                    de calidad y atención al detalle que en nuestras sedes más 
+                                    grandes.
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <header>
                                     <h3 className='raleway_bold'>Estados Unidos</h3>
-                                    <span className='raleway_light'>Francisco Montejano Palacios 25-A Col, 45221 La Venta del Astillero</span>
+                                    {/* <span className='raleway_light'>Francisco Montejano Palacios 25-A Col, 45221 La Venta del Astillero</span> */}
                                 </header>
                                 <br />
                                 <p>
@@ -509,6 +489,20 @@ const Index = () => {
                                     los Estados Unidos de manera puntual y segura. Ya sea que 
                                     se trate de productos químicos, alimentos líquidos, u otros 
                                     líquidos.
+                                </p>
+                            </div>
+
+                            <div>
+                                <header>
+                                    <h3 className='raleway_bold'>Durango</h3>
+                                    {/* <span className='raleway_light'>Francisco Montejano Palacios 25-A Col, 45221 La Venta del Astillero</span> */}
+                                </header>
+                                <br />
+                                <p>
+                                    Nuestro compromiso con la eficiencia y la atención al detalle 
+                                    se refleja en cada aspecto de esta sede, garantizando que podamos 
+                                    cumplir con las necesidades de nuestros clientes en Durango y 
+                                    sus alrededores de manera confiable.
                                 </p>
                             </div>
                         </div>

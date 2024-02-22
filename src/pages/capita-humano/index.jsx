@@ -23,7 +23,9 @@ import capitalHumanoPrestaciones5 from '../../assets/img/capital-humano/capital-
 import capitalHumanoPrestaciones6 from '../../assets/img/capital-humano/capital-humano-prestaciones-6.png'
 import capitalHumanoPrestaciones7 from '../../assets/img/capital-humano/capital-humano-prestaciones-7.png'
 import capitalHumanoPrestaciones8 from '../../assets/img/capital-humano/capital-humano-prestaciones-8.png'
-import capitalHumanoTestimonios1 from '../../assets/img/capital-humano/capital-humano-testimonios-1.jpeg'
+import capitalHumanoTestimonios1 from '../../assets/img/capital-humano/capital-humano-testimonios-1.png'
+import capitalHumanoTestimonios2 from '../../assets/img/capital-humano/capital-humano-testimonios-2.png'
+import capitalHumanoTestimonios3 from '../../assets/img/capital-humano/capital-humano-testimonios-3.png'
 import clip from '../../assets/img/capital-humano/capital-humano-vacantes-position.png'
 
 const useCallAnimation = (selector, Setter, stateSetter, animacion) => {
@@ -315,21 +317,20 @@ const Index = () => {
                                 <img src={capitalHumanoTestimonios1} alt="" /> 
                             </div>
                             <div className="azteca-capital-humano-testimonios_content_card_usuario_descripcion">
-                                <h5 className='raleway_bold'>Braulio Miramontes</h5>
-                                <span className='raleway_light'>Desarrollador</span>
+                                <h5 className='raleway_bold'>Emilio Antonio García Delgado </h5>
+                                <span className='raleway_light'>Normatividad</span>
                             </div>
                         </div>
                         <p className='raleway_bold'>
-                            "Cada proyecto es una oportunidad para crecer y aprender, y estoy 
-                            emocionado de ser parte de un equipo que valora el progreso y la 
-                            excelencia en cada línea de código."
+                            "Transportes Azteca una empresa de clase mundial. Siempre ofreciendo un 
+                            servicio con excelencia a sus partes interesadas."
                         </p>
                     </div>
 
                     <div className="azteca-capital-humano-testimonios_content_card card2 animaciones-testimonios">
                         <div className="azteca-capital-humano-testimonios_content_card_usuario">
                             <div className="azteca-capital-humano-testimonios_content_card_usuario_img">
-                                <img src={capitalHumanoTestimonios1} alt="" /> 
+                                <img src={capitalHumanoTestimonios2} alt="" /> 
                             </div>
                             <div className="azteca-capital-humano-testimonios_content_card_usuario_descripcion">
                                 <h5 className='raleway_bold'>Sánchez Martínez Miriam Lizeth</h5>
@@ -347,17 +348,16 @@ const Index = () => {
                     <div className="azteca-capital-humano-testimonios_content_card card3 animaciones-testimonios">
                         <div className="azteca-capital-humano-testimonios_content_card_usuario">
                             <div className="azteca-capital-humano-testimonios_content_card_usuario_img">
-                                <img src={capitalHumanoTestimonios1} alt="" /> 
+                                <img src={capitalHumanoTestimonios3} alt="" /> 
                             </div>
                             <div className="azteca-capital-humano-testimonios_content_card_usuario_descripcion">
-                                <h5 className='raleway_bold'>Moreno Marín Gabriel</h5>
-                                <span className='raleway_light'>Operador de trailer</span>
+                                <h5 className='raleway_bold'>Saúl Vaca Sánchez</h5>
+                                <span className='raleway_light'>Mecánico en suspensiones</span>
                             </div>
                         </div>
                         <p className='raleway_bold'>
-                            "Cada entrega es un desafío emocionante y me enorgullece ser parte 
-                            de un equipo que valora la responsabilidad y la entrega puntual 
-                            de la carga."
+                            "En mis años en Transportes Azteca, he vivido la lealtad, 
+                            disciplina y el trabajo en equipo entre mis compañeros."
 
                         </p>
                     </div>
