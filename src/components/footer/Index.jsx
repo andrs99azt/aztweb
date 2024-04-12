@@ -121,6 +121,17 @@ const Footer = () => {
                             <div className="azteca-footer_navegacion_panel_links_item_icon">
                                 <img src={vinieta} alt="" />
                             </div>
+                            <NavLink to="/bolsa-de-trabajo" style={{ textDecoration: 'none' }}>
+                                <div className="azteca-footer_navegacion_panel_links_item_texto roboto">
+                                    BOLSA DE TRABAJO
+                                </div>
+                            </NavLink>
+                        </div>
+
+                        <div className='azteca-footer_navegacion_panel_links_item'>
+                            <div className="azteca-footer_navegacion_panel_links_item_icon">
+                                <img src={vinieta} alt="" />
+                            </div>
                             <NavLink to="/contacto" style={{ textDecoration: 'none' }}>
                                 <div className="azteca-footer_navegacion_panel_links_item_texto roboto">
                                     CONTACTO

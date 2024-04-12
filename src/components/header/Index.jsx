@@ -51,6 +51,7 @@ const Header = () => {
                         <li className='raleway_ExtraBold'><NavLink to="/nosotros"><span>NOSOTROS</span></NavLink></li>
                         <li className='raleway_ExtraBold'><NavLink to="/servicios"><span>SERVICIOS</span></NavLink></li>
                         <li className='raleway_ExtraBold'><NavLink to="/capital-humano"><span>CAPITAL HUMANO</span></NavLink></li>
+                        <li className='raleway_ExtraBold'><NavLink to="/bolsa-de-trabajo"><span>BOLSA DE TRABAJO</span></NavLink></li>
                         <li className='raleway_ExtraBold'><NavLink to="/contacto"><span>CONTACTO</span></NavLink></li>
                     </ul>
                 </div>
@@ -125,6 +126,17 @@ const Header = () => {
                         <div className="azteca-header_menu_nav_item">
                             <div className="azteca-header_menu_nav_item_texto">
                                 CAPITAL HUMANO
+                            </div>
+                            <div className="azteca-header_menu_nav_item_icon">
+                                <img src={flecha} alt="" />
+                            </div>
+                        </div>
+                    </NavLink>
+
+                    <NavLink to="/bolsa-de-trabajo" style={{ textDecoration: 'none' }}>
+                        <div className="azteca-header_menu_nav_item">
+                            <div className="azteca-header_menu_nav_item_texto">
+                                BOLSA DE TRABAJO
                             </div>
                             <div className="azteca-header_menu_nav_item_icon">
                                 <img src={flecha} alt="" />

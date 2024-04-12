@@ -147,6 +147,7 @@
             padding: 0px 20px;
             opacity: 0;
             transform: translateX(200px);
+            
 
 
             &_header {
@@ -176,6 +177,7 @@
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
+                text-align: justify;
             }
         }
     }
@@ -294,6 +296,7 @@
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
+                text-align: justify;
             }
         }
     }
@@ -405,6 +408,8 @@
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
+
+                text-align: justify;
             }
         }
     }
@@ -877,6 +882,7 @@
 
                     p {
                         font-size: 1em;
+                        text-align: justify;
                     }
                 }
 

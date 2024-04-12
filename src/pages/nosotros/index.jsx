@@ -10,7 +10,7 @@ import logoAzteca from '../../assets/icons/logo-azteca.png';
 import Header from '../../components/header/Index';
 import Footer from '../../components/footer/Index';
 
-import nosotrosHero1 from '../../assets/img/nosotros/nosotros-header.jpg'
+import nosotrosHero1 from '../../assets/img/nosotros/nosotros-header.png'
 
 import nosotrosNosotros1 from '../../assets/img/nosotros/nosotros-1.jpg'
 import nosotrosNosotros2 from '../../assets/img/nosotros/nosotros-2.jpg'
@@ -156,6 +156,7 @@ const Index = () => {
     return (
         <div>
             <Header/>
+            <div className="iniciar-certificaciones"></div>
 
             <div className="azteca-nosotros-hero" style={{ backgroundImage: `url(${nosotrosHero1})` }}>
                 <div className="azteca-nosotros-hero_content nosotros-animaciones">
@@ -170,6 +171,208 @@ const Index = () => {
                         a nuestros clientes en todo momento.
                     </p>
                     <div className="iniciar-nosotros"></div>
+                </div>
+            </div>
+
+            <div className="azteca-nosotros-certificaciones">
+                <div className="azteca-nosotros-certificaciones_content">
+                    <div className="azteca-nosotros-certificaciones_content_header animaciones-certificaciones">
+                        <h2 className='text-center square_bold animaciones-prestaciones'>CERTIFICACIONES</h2>
+                        <p className='raleway_light'>
+                            Nuestra empresa cuenta con certificaciones que respaldan nuestra excelencia
+                            y compromiso con la seguridad en el transporte de líquidos, garantizando un
+                            servicio de calidad a nuestros clientes.
+                        </p>
+                    </div>
+                    {/* <span className="iniciar-testimonios"></span> */}
+                    <span className="iniciar-unete"></span>
+                    <div className="azteca-nosotros-certificaciones_content_cards">
+                        
+                        <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg1} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>ISO 9001:2015</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Sistemas de gestión de calidad, garantizando que las organizaciones 
+                                        satisfacen las necesidades de los clientes y mejoran continuamente 
+                                        su desempeño.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg2} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>ISO 14001:2015</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Sistemas de gestión ambiental, ayudando a las organizaciones 
+                                        a mejorar su desempeño ambiental y gestionar sus impactos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg3} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>ISO 22000:2018</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Sistemas de gestión de seguridad alimentaria, garantizando 
+                                        la seguridad de los alimentos en toda la cadena de suministro, 
+                                        desde la producción primaria hasta la venta al consumidor final.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg4} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>ISO 37001:2016</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Sistemas de gestión antisoborno, ayudando a las organizaciones 
+                                        a prevenir, detectar y abordar el soborno y promover una cultura 
+                                        de integridad, transparencia y cumplimiento legal.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg5} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>ISO 9001:2015</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Sistemas de gestión de la seguridad vial, ayudando a 
+                                        las organizaciones a reducir los riesgos de accidentes 
+                                        de tráfico, mejorar la seguridad vial y cumplir con las 
+                                        leyes y regulaciones aplicables.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg6} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>ISO 45001:2018</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Sistemas de gestión de seguridad y salud ocupacional, 
+                                        asegurando un entorno de trabajo seguro y saludable para 
+                                        los empleados.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg7} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>Transporte Limpio</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Reconocimiento otorgado a empresas de transporte que implementan 
+                                        medidas para reducir sus emisiones de gases de efecto invernadero 
+                                        y mejorar su eficiencia energética.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg8} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>CANACAR</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Se enfoca en garantizar que las empresas de autotransporte 
+                                        de carga cumplan con estándares de calidad, seguridad y 
+                                        eficiencia en sus operaciones.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg9} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>Kosher</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Verifica que un producto alimenticio cumple 
+                                        con las leyes dietéticas judías.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg10} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>CTPAT</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Busca fortalecer la seguridad de la cadena de 
+                                        suministro y prevenir el terrorismo.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg11} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>Juice Products Association</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        JPA es otorgada a empresas que cumplen con la más alta 
+                                        exigencia de calidad y seguridad alimentaria en lavado 
+                                        de tanques.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -215,7 +418,6 @@ const Index = () => {
                         </div>
                         <div className='animaciones-nosotros'>
                             <p className='raleway_bold'>"Transformamos líquidos en soluciones, proporcionando confianza en cada viaje."</p>
-                            <label className='raleway_medium' htmlFor="">/Santiago Pérez</label>
                         </div>
                     </div>
                 </div>
@@ -289,10 +491,10 @@ const Index = () => {
                         </div>
                     </div>
                 </div>
-                <div className="iniciar-certificaciones"></div>
+                <span className="iniciar-unete"></span>
             </div>
 
-            <div className="azteca-nosotros-certificaciones">
+            {/* <div className="azteca-nosotros-certificaciones">
                 <div className="azteca-nosotros-certificaciones_content">
                     <div className="azteca-nosotros-certificaciones_content_header animaciones-certificaciones">
                         <h2 className='text-center square_bold animaciones-prestaciones'>CERTIFICACIONES</h2>
@@ -302,45 +504,198 @@ const Index = () => {
                             servicio de calidad a nuestros clientes.
                         </p>
                     </div>
-                    {/* <span className="iniciar-testimonios"></span> */}
                     <span className="iniciar-unete"></span>
                     <div className="azteca-nosotros-certificaciones_content_cards">
+                        
                         <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
-                            <img src={nosotrosCertificacionesImg1} alt="ISO 9001"/>
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg1} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>ISO 9001:2015</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Sistemas de gestión de calidad, garantizando que las organizaciones 
+                                        satisfacen las necesidades de los clientes y mejoran continuamente 
+                                        su desempeño.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
+
                         <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
-                            <img src={nosotrosCertificacionesImg2} alt="ISO 14001"/>
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg2} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>ISO 9001:2015</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Sistemas de gestión de calidad, garantizando que las organizaciones 
+                                        satisfacen las necesidades de los clientes y mejoran continuamente 
+                                        su desempeño.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
+
                         <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
-                            <img src={nosotrosCertificacionesImg3} alt="ISO 22000"/>
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg3} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>ISO 9001:2015</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Sistemas de gestión de calidad, garantizando que las organizaciones 
+                                        satisfacen las necesidades de los clientes y mejoran continuamente 
+                                        su desempeño.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
+
                         <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
-                            <img src={nosotrosCertificacionesImg4} alt="ISO 37001"/>
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg4} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>ISO 9001:2015</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Sistemas de gestión de calidad, garantizando que las organizaciones 
+                                        satisfacen las necesidades de los clientes y mejoran continuamente 
+                                        su desempeño.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
+
                         <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
-                            <img src={nosotrosCertificacionesImg5} alt="ISO 39001"/>
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg5} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>ISO 9001:2015</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Sistemas de gestión de calidad, garantizando que las organizaciones 
+                                        satisfacen las necesidades de los clientes y mejoran continuamente 
+                                        su desempeño.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
+
                         <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
-                            <img src={nosotrosCertificacionesImg6} alt="ISO 45001" />
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg6} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>ISO 9001:2015</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Sistemas de gestión de calidad, garantizando que las organizaciones 
+                                        satisfacen las necesidades de los clientes y mejoran continuamente 
+                                        su desempeño.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
+
                         <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
-                            <img src={nosotrosCertificacionesImg7} alt="" />
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg7} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>ISO 9001:2015</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Sistemas de gestión de calidad, garantizando que las organizaciones 
+                                        satisfacen las necesidades de los clientes y mejoran continuamente 
+                                        su desempeño.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
+
                         <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
-                            <img src={nosotrosCertificacionesImg8} alt="" />
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg8} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>ISO 9001:2015</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Sistemas de gestión de calidad, garantizando que las organizaciones 
+                                        satisfacen las necesidades de los clientes y mejoran continuamente 
+                                        su desempeño.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
+
                         <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
-                            <img src={nosotrosCertificacionesImg9} alt="" />
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg9} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>ISO 9001:2015</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Sistemas de gestión de calidad, garantizando que las organizaciones 
+                                        satisfacen las necesidades de los clientes y mejoran continuamente 
+                                        su desempeño.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
+
                         <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
-                            <img src={nosotrosCertificacionesImg10} alt="" />
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg10} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>ISO 9001:2015</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Sistemas de gestión de calidad, garantizando que las organizaciones 
+                                        satisfacen las necesidades de los clientes y mejoran continuamente 
+                                        su desempeño.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
+
                         <div className="azteca-nosotros-certificaciones_content_cards_card animaciones-certificaciones">
-                            <img src={nosotrosCertificacionesImg11} alt="" />
+                            <div class="azteca-nosotros-certificaciones_content_cards_card_cubo">
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara">
+                                    <img src={nosotrosCertificacionesImg11} alt="ISO 9001"/>
+                                </div>
+                                <div class="azteca-nosotros-certificaciones_content_cards_card_cubo_cara text">
+                                    <label className='roboto_medium'>ISO 9001:2015</label>
+                                    <br />
+                                    <p className='raleway_medium'>
+                                        Sistemas de gestión de calidad, garantizando que las organizaciones 
+                                        satisfacen las necesidades de los clientes y mejoran continuamente 
+                                        su desempeño.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* <div className="azteca-nosotros-testimonios">
                 <div className="azteca-nosotros-testimonios_content">

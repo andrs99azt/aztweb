@@ -157,11 +157,8 @@ const Index = () => {
                         <label className='raleway_medium'>Sabemos lo que te importa</label><br />
                         <label className='raleway_bold'>Entregamos<br/> tu producto en<br/>tiempo y forma</label>
                         <p className='raleway_light'>
-                            Sabemos que la gestión segura y eficiente del transporte de
-                            líquidos plantea desafíos logísticos en términos de prevención
-                            de derrames, controles normativos y entrega puntual. Asegurar
-                            que tus productos líquidos lleguen sin contratiempos es una
-                            necesidad apremiante en muchas industrias.
+                            Somos expertos en el transporte de <br />
+                            líquidos para la industria.
                         </p>
                     </div>
                     
@@ -191,9 +188,9 @@ const Index = () => {
                                         en óptimas condiciones, formando la base de nuestra operación logística.
                                     </p>
                                 </div>
-                                <div className="azteca-inicio-soluciones_content_panel_card_text_footer">
+                                {/* <div className="azteca-inicio-soluciones_content_panel_card_text_footer">
                                         <img src={inicioSolucionesIcon5} alt="Logo Azteca" style={{ height: '30px' }}/>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 
@@ -210,9 +207,9 @@ const Index = () => {
                                         personalizadas aseguran eficiencia y tranquilidad para nuestros clientes.
                                     </p>
                                 </div>
-                                <div className="azteca-inicio-soluciones_content_panel_card_text_footer">
+                                {/* <div className="azteca-inicio-soluciones_content_panel_card_text_footer">
                                         <img src={inicioSolucionesIcon5} alt="Logo Azteca" style={{ height: '30px' }}/>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 
@@ -229,9 +226,9 @@ const Index = () => {
                                         experimentado asegura que lleguen a tiempo y en forma.
                                     </p>
                                 </div>
-                                <div className="azteca-inicio-soluciones_content_panel_card_text_footer">
+                                {/* <div className="azteca-inicio-soluciones_content_panel_card_text_footer">
                                         <img src={inicioSolucionesIcon5} alt="Logo Azteca" style={{ height: '30px' }}/>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 
@@ -441,7 +438,7 @@ const Index = () => {
 
                 <div className="azteca-inicio-experiencia_content-medium">
                     <div className="azteca-inicio-experiencia_content-medium_panel raleway_bold animaciones-experiencia">
-                        20+ años de experiencia
+                        <span className='roboto_bold'>+30 años</span> <label>de experiencia</label>
                     </div>
                 </div>
 
@@ -451,7 +448,7 @@ const Index = () => {
                             <img src={inicioExperienciaImg1} alt="" /> 
                         </div>
                         <div className="azteca-inicio-experiencia_content-button_card_text raleway_light" style={{ color: '#2E4054' }} >
-                            Medio siglo de operaciones exitosas a tu servicio.
+                            Una trayectoria de operaciones exitosas a tu servicio.
                         </div>
                     </div>
                     <div className="azteca-inicio-experiencia_content-button_card card2 animaciones-experiencia">
@@ -495,7 +492,7 @@ const Index = () => {
 
                                         <div className="footer">
                                             <div className="footer_fecha">
-                                                03/02/2023
+                                                02 - 2023
                                             </div>
 
                                             <div className="footer_img">
@@ -522,7 +519,7 @@ const Index = () => {
 
                                         <div className="footer">
                                             <div className="footer_fecha">
-                                                15/22/2022
+                                                22 - 2022
                                             </div>
 
                                             <div className="footer_img">
@@ -549,7 +546,7 @@ const Index = () => {
 
                                         <div className="footer">
                                             <div className="footer_fecha">
-                                                26/08/2020
+                                                08 - 2020
                                             </div>
 
                                             <div className="footer_img">
@@ -575,7 +572,7 @@ const Index = () => {
                     <div className="col-xl-6">
 
                         <div className="informacion">
-                            <p className='raleway_light'>Cuéntanos de que forma podemos ayudar a crecer tu negocio</p>
+                            <p className='raleway_semib'>Cuéntanos de que forma podemos ayudar a crecer tu negocio</p>
                             <ul>
                                 <li>Francisco Montejano Palacios 25-A</li>
                                 <li>La Venta del Astillero, Jalisco, C.P 45221.</li>

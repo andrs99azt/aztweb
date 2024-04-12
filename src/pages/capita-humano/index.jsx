@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import './capital-humano.scss';
 
@@ -141,7 +142,7 @@ const Index = () => {
     useCallAnimation('.iniciar-talento',animation,setAnimation, 'animaciones-talento')
     useCallAnimation('.iniciar-prestaciones',animation,setAnimation, 'animaciones-prestaciones')
     useCallAnimation('.iniciar-testimonios',animation,setAnimation, 'animaciones-testimonios')
-    useCallAnimation('.iniciar-vacantes',animation,setAnimation, 'animaciones-vacantes')
+    // useCallAnimation('.iniciar-vacantes',animation,setAnimation, 'animaciones-vacantes')
 
     return (
         <div>
@@ -166,7 +167,9 @@ const Index = () => {
                         <label className='raleway_medium'>Te interesa trabajar con nosotros?</label>
                         <br />
                         <br />
-                        <a className="boton" href="#vacantes">Ver vacantes</a>
+                        <NavLink to="/bolsa-de-trabajo" style={{ textDecoration: 'none', color: 'black' }}>
+                            <a className="boton" >Ver vacantes</a>
+                        </NavLink>
                     </div>
                 </div>
             </div>
@@ -219,7 +222,9 @@ const Index = () => {
                     <br />
                     <h3 className='raleway_light animaciones-talento'>¡Unete a Azteca!</h3>
                     <br />
-                    <a className="boton animaciones-talento" href="#vacantes">Ver vacantes</a>
+                    <NavLink to="/bolsa-de-trabajo" style={{ textDecoration: 'none', color: 'black' }}>
+                        <a className="boton animaciones-talento" href="#vacantes">Ver vacantes</a>
+                    </NavLink>
                 </div>
             </div>
 
@@ -361,180 +366,6 @@ const Index = () => {
 
                         </p>
                     </div>
-                </div>
-            </div>
-
-            <div id='vacantes' className="azteca-capital-humano-vacantes">
-            <div className="iniciar-vacantes"></div>
-                <div className="azteca-capital-humano-vacantes_content">
-                    <div className="azteca-capital-humano-vacantes_content_header">
-                        <h2 className='text-center square_bold animaciones-vacantes'>VACANTES</h2>
-                    </div>
-
-                    <div className="azteca-capital-humano-vacantes_content_panel">
-
-                        <div className="azteca-capital-humano-vacantes_content_panel_header animaciones-vacantes">
-                            <div className="azteca-capital-humano-vacantes_content_panel_header_icon">
-                                <img src={clip} alt="" /> 
-                            </div>
-                            <div className="azteca-capital-humano-vacantes_content_panel_header_text">
-                                <h4 className='raleway_light'>Zapopan, Jalisco, México</h4>
-                            </div>
-                        </div>
-
-                        <div className="azteca-capital-humano-vacantes_content_panel_section section1 animaciones-vacantes">
-                            <div className="azteca-capital-humano-vacantes_content_panel_section_content">
-                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_puesto">
-                                    <h2>Gerente de logística</h2>
-                                </div>
-                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion">
-                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_icon">
-                                        <img src={clip} alt="" /> 
-                                    </div>
-                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_texto">
-                                        La venta del Astillero, Zapopan, Jalisco, MX
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="azteca-capital-humano-vacantes_content_panel_section_boton" onClick={() => formulario('Gerente de logistica')}> 
-                                <div className="boton">Aplica</div>
-                            </div>
-                        </div>
-
-                        <div className="azteca-capital-humano-vacantes_content_panel_section section2 animaciones-vacantes">
-                            <div className="azteca-capital-humano-vacantes_content_panel_section_content">
-                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_puesto">
-                                    <h2>Auxiliar de logística</h2>
-                                </div>
-                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion">
-                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_icon">
-                                        <img src={clip} alt="" /> 
-                                    </div>
-                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_texto">
-                                        La venta del Astillero, Zapopan, Jalisco, MX
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="azteca-capital-humano-vacantes_content_panel_section_boton" onClick={() => formulario('auxiliar de logística')}>
-                                <a className="boton" href="#vacantes">Aplica</a>
-                            </div>
-                        </div>
-
-                        <div className="azteca-capital-humano-vacantes_content_panel_section section3 animaciones-vacantes">
-                            <div className="azteca-capital-humano-vacantes_content_panel_section_content">
-                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_puesto">
-                                    <h2>Operador de trailer</h2>
-                                </div>
-                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion">
-                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_icon">
-                                        <img src={clip} alt="" /> 
-                                    </div>
-                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_texto">
-                                        La venta del Astillero, Zapopan, Jalisco, MX
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="azteca-capital-humano-vacantes_content_panel_section_boton" onClick={() => formulario('operador de trailer')}>
-                                <a className="boton" href="#vacantes">Aplica</a>
-                            </div>
-                        </div>
-
-                        <div className="azteca-capital-humano-vacantes_content_panel_header animaciones-vacantes">
-                            <div className="azteca-capital-humano-vacantes_content_panel_header_icon">
-                                <img src={clip} alt="" /> 
-                            </div>
-                            <div className="azteca-capital-humano-vacantes_content_panel_header_text">
-                                <h4 className='raleway_light'>Chinameca, Veracruz, México</h4>
-                            </div>
-                        </div>
-
-                        <div className="azteca-capital-humano-vacantes_content_panel_section section4 animaciones-vacantes">
-                            <div className="azteca-capital-humano-vacantes_content_panel_section_content">
-                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_puesto">
-                                    <h2>Prevensionista</h2>
-                                </div>
-                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion">
-                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_icon">
-                                        <img src={clip} alt="" /> 
-                                    </div>
-                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_texto">
-                                        Chinameca, Veracruz, MX
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="azteca-capital-humano-vacantes_content_panel_section_boton" onClick={() => formulario('prevensionista')}>
-                                <a className="boton" href="#vacantes">Aplica</a>
-                            </div>
-                        </div>
-
-                        <div className="azteca-capital-humano-vacantes_content_panel_section section5 animaciones-vacantes">
-                            <div className="azteca-capital-humano-vacantes_content_panel_section_content">
-                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_puesto">
-                                    <h2>Monitorista</h2>
-                                </div>
-                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion">
-                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_icon">
-                                        <img src={clip} alt="" /> 
-                                    </div>
-                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_texto">
-                                        La venta del Astillero, Zapopan, Jalisco, MX
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="azteca-capital-humano-vacantes_content_panel_section_boton" onClick={() => formulario('monitorista')}>
-                                <a className="boton" href="#vacantes">Aplica</a>
-                            </div>
-                        </div>
-
-                        <div className="azteca-capital-humano-vacantes_content_panel_header animaciones-vacantes">
-                            <div className="azteca-capital-humano-vacantes_content_panel_header_icon">
-                                <img src={clip} alt="" /> 
-                            </div>
-                            <div className="azteca-capital-humano-vacantes_content_panel_header_text">
-                                <h4 className='raleway_light'>Gómez Palacio, Durango, México</h4>
-                            </div>
-                        </div>
-
-                        <div className="azteca-capital-humano-vacantes_content_panel_section section6 animaciones-vacantes">
-                            <div className="azteca-capital-humano-vacantes_content_panel_section_content">
-                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_puesto">
-                                    <h2>Prevensionista</h2>
-                                </div>
-                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion">
-                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_icon">
-                                        <img src={clip} alt="" /> 
-                                    </div>
-                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_texto">
-                                        Gómez Palacio, Durango, MX
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="azteca-capital-humano-vacantes_content_panel_section_boton" onClick={() => formulario('Prevensionista')}>
-                                <a className="boton" href="#vacantes">Aplica</a>
-                            </div>
-                        </div>
-
-                        <div className="azteca-capital-humano-vacantes_content_panel_section section7 animaciones-vacantes">
-                            <div className="azteca-capital-humano-vacantes_content_panel_section_content">
-                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_puesto">
-                                    <h2>Monitorista</h2>
-                                </div>
-                                <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion">
-                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_icon">
-                                        <img src={clip} alt="" /> 
-                                    </div>
-                                    <div className="azteca-capital-humano-vacantes_content_panel_section_content_ubicacion_texto">
-                                        Gómez Palacio, Durango, MX
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="azteca-capital-humano-vacantes_content_panel_section_boton">
-                                <a className="boton" href="#vacantes" onClick={() => formulario('monitorista')}>Aplica</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    
                 </div>
             </div>
 
